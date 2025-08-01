@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>beijiu.top 站点地图</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- 删除Font Awesome引入 -->
   
   <!-- 配置Tailwind自定义颜色和字体 -->
   <script>
@@ -128,19 +128,22 @@
   <header class="bg-white border-b border-gray-200">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center gap-2">
-        <i class="fa fa-sitemap text-primary text-xl"></i>
+        <!-- 替换站点地图图标 -->
+        <span class="text-primary text-xl">📊</span>
         <h1 class="text-lg font-semibold">beijiu.top</h1>
       </div>
       <div class="flex items-center gap-3 desktop-controls">
         <button id="resetBtn" class="btn btn-primary">
-          <i class="fa fa-refresh"></i>
+          <!-- 替换刷新图标 -->
           <span>重置</span>
         </button>
         <button id="zoomInBtn" class="btn bg-gray-200 hover:bg-gray-300">
-          <i class="fa fa-search-plus"></i>
+          <!-- 替换放大图标 -->
+          <span>🔍+</span>
         </button>
         <button id="zoomOutBtn" class="btn bg-gray-200 hover:bg-gray-300">
-          <i class="fa fa-search-minus"></i>
+          <!-- 替换缩小图标 -->
+          <span>🔍-</span>
         </button>
       </div>
     </div>
@@ -152,7 +155,8 @@
       <p class="text-gray-600 text-sm">
         <a href="#usage-instructions" class="text-primary hover:underline flex items-center inline-flex gap-1">
           <span>使用说明</span>
-          <i class="fa fa-external-link text-xs"></i>
+          <!-- 替换外部链接图标 -->
+          <span>↗</span>
         </a>
       </p>
     </div>
@@ -468,15 +472,15 @@
         // 设置移动端使用说明
         instructionsList.innerHTML = `
           <li class="flex items-start">
-            <i class="fa fa-chevron-down text-primary mt-1 mr-2"></i>
+            <span class="text-primary mt-1 mr-2">▼</span>
             <span>点击分类项旁的箭头可展开或折叠子菜单</span>
           </li>
           <li class="flex items-start">
-            <i class="fa fa-external-link text-primary mt-1 mr-2"></i>
+            <span class="text-primary mt-1 mr-2">↗</span>
             <span>点击项目名称可在新标签页打开对应链接</span>
           </li>
           <li class="flex items-start">
-            <i class="fa fa-star text-wechat mt-1 mr-2"></i>
+            <span class="text-wechat mt-1 mr-2">★</span>
             <span>建议关注 BeijiuX 公众号</span>
           </li>
         `;
@@ -489,23 +493,28 @@
         // 设置桌面端使用说明 - 更新为反映新的操作方式
         instructionsList.innerHTML = `
           <li class="flex items-start">
-            <i class="fa fa-mouse-pointer text-primary mt-1 mr-2"></i>
+         
+            <span class="text-primary mt-1 mr-2">🖱️</span>
             <span>右键点击任何节点可打开操作菜单，您可以访问链接或查看详情</span>
           </li>
           <li class="flex items-start">
-            <i class="fa fa-arrows text-primary mt-1 mr-2"></i>
+       
+            <span class="text-primary mt-1 mr-2">↔️</span>
             <span>在任何位置（包括节点）保持按下左键并拖动可移动地图，松开左键停止拖拽</span>
           </li>
           <li class="flex items-start">
-            <i class="fa fa-search text-primary mt-1 mr-2"></i>
+       
+            <span class="text-primary mt-1 mr-2">🔍</span>
             <span>使用缩放按钮或鼠标滚轮可放大缩小地图</span>
           </li>
           <li class="flex items-start">
-            <i class="fa fa-refresh text-primary mt-1 mr-2"></i>
+       
+            <span class="text-primary mt-1 mr-2">🔄</span>
             <span>点击"重置"按钮可将地图恢复到初始状态</span>
           </li>
           <li class="flex items-start">
-            <i class="fa fa-star text-wechat mt-1 mr-2"></i>
+        
+            <span class="text-wechat mt-1 mr-2">★</span>
             <span>建议关注 BeijiuX 公众号</span>
           </li>
         `;
