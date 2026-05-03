@@ -21,10 +21,11 @@
       >
     </div>
   </div>
+  <Loading v-if="!ready" />
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, nextTick, onMounted, onBeforeUnmount } from 'vue'
 
 const containerRef = ref(null)
 const layers = ref([])
@@ -34,6 +35,8 @@ const mouseX = ref(0)
 const mouseY = ref(0)
 const containerW = ref(1920)
 const containerH = ref(1080)
+const loadedCount = ref(0)
+const ready = ref(false)
 
 let rafId = 0
 
@@ -53,6 +56,14 @@ function onLoad(idx) {
   if (w && h) {
     el.style.width = containerH.value * (w / h) + 'px'
     el.style.height = containerH.value + 'px'
+    loadedCount.value++
+    tryShow()
+  }
+}
+
+function tryShow() {
+  if (layers.value.length > 0 && loadedCount.value >= layers.value.length) {
+    scheduleRender()
   }
 }
 
@@ -116,6 +127,10 @@ function renderFrame() {
     const s = baseS + (zoomS - baseS) * dist
 
     el.style.transform = `translate(${px + mvx}px, ${py + mvy}px) scale(${s})`
+  }
+
+  if (!ready.value) {
+    ready.value = true
   }
 }
 
