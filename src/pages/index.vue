@@ -2,7 +2,7 @@
   <div class="page">
     <div class="backimg-wrapper"><IndexBackimg /></div>
     <div class="overlay">
-      <h1 class="title">Beijiu</h1>
+      <h1 class="title">𝙱𝚎𝚒𝚓𝚒𝚞</h1>
       <IndexDesktopLinks />
     </div>
   </div>
@@ -46,9 +46,10 @@ body {
 
 .title {
   font-size: 80px;
-  font-weight: 700;
-  color: #1d1d1d;
-  text-shadow: 0 2px 20px rgba(77, 57, 3, 0.29);
+  font-weight: 1000;
+  font-family: serif;
+  color: #2D3A4A;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
   margin: 0;
   letter-spacing: 8px;
   user-select: none;

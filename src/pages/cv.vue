@@ -1,13 +1,24 @@
 <template>
   <div class="cv-wrapper">
+    <div v-if="isMobile" class="mobile-overlay"></div>
     <div class="cv-container">
       <CvToolbar />
       <CvContent />
+    </div>
+    <div v-if="isMobile" class="mobile-warning">
+      <p>页面不适合小屏，请转至桌面端查看</p>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+
+const isMobile = ref(false)
+
+onMounted(() => {
+  isMobile.value = window.innerWidth < 768
+})
 </script>
 
 <style>
@@ -56,13 +67,29 @@ body {
   min-width: 0;
 }
 
-@media (max-width: 768px) {
-  .cv-wrapper {
-    padding: 16px 0;
-  }
-  .cv-container {
-    width: 95%;
-  }
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.336);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 998;
+}
+
+.mobile-warning {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 999;
 }
 
 @media print {
@@ -72,6 +99,9 @@ body {
   }
   .cv-container {
     width: 100%;
+  }
+  .mobile-warning {
+    display: none;
   }
 }
 </style>

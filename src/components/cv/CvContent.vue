@@ -278,17 +278,4 @@
     page-break-after: auto;
   }
 }
-
-@media (max-width: 768px) {
-  .cv-content {
-    padding: 24px 20px;
-  }
-  .cv-name {
-    font-size: 22px;
-  }
-  .entry-date {
-    margin-left: 0;
-    width: 100%;
-  }
-}
 </style>

@@ -57,6 +57,9 @@ function print() {
 }
 
 @media (max-width: 768px) {
+  .cv-toolbar{
+    padding: 10px 18px;
+  }
   .toolbar-print {
     display: none;
   }

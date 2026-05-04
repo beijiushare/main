@@ -47,7 +47,7 @@ onMounted(async () => {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #b2b1b1;
   margin-bottom: 20px;
 }
 
@@ -88,18 +88,17 @@ onMounted(async () => {
 
 @media (max-width: 480px) {
   .header {
-    flex-direction: column;
     align-items: flex-start;
   }
 
   .right {
     margin-left: 0;
-    margin-top: 16px;
+    margin-top: 6px;
   }
 
   .qrcode {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
 }
 </style>
