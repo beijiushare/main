@@ -7,6 +7,7 @@
     </div>
   </div>
   <div class="mobile-page">
+    <div class="mobile-hint">请转至桌面端获取完整体验</div>
     <div class="mobile-overlay">
       <h1 class="title">Beijiu</h1>
       <IndexMobileLinks />
@@ -64,6 +65,19 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+}
+
+.mobile-hint {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333333c5;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  z-index: 100;
 }
 
 @media (max-width: 768px) {
