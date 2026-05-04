@@ -1,0 +1,119 @@
+<template>
+  <table class="mobile-table">
+    <tbody>
+      <tr>
+        <td>
+          <NuxtLink to="/cv" class="mobile-link">
+            <IconCv />CV
+          </NuxtLink>
+        </td>
+        <td>
+          <a
+            href="https://github.com/beijiushare"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-link"
+          >
+            <IconGithub />GitHub
+          </a>
+        </td>
+        <td>
+          <a
+            href="https://baidu.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-link"
+          >
+            <IconWechat />微信公众号
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a
+            href="https://blog.beijiu.top/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-link"
+          >
+            <IconBlog />Blog
+          </a>
+        </td>
+        <td>
+          <a
+            href="https://baidu.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-link"
+          >
+            测试3
+          </a>
+        </td>
+        <td>
+          <a
+            href="https://baidu.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-link"
+          >
+            测试4
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</template>
+
+<script setup>
+import IconCv from '~/components/svg/IconCv.vue'
+import IconGithub from '~/components/svg/IconGithub.vue'
+import IconWechat from '~/components/svg/IconWechat.vue'
+import IconBlog from '~/components/svg/IconBlog.vue'
+</script>
+
+<style scoped>
+.mobile-table {
+  width: calc(100vw - 40px);
+  max-width: 400px;
+  border-collapse: collapse;
+  border-style: hidden;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgb(0, 0, 0);
+}
+
+.mobile-table td {
+  width: 33.33%;
+  border: 1px solid rgba(0, 0, 0, 0.366);
+  padding: 0;
+}
+
+.mobile-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px 8px;
+  background: #fff;
+  color: #444;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.mobile-link:active {
+  background: #f5f5f5;
+}
+
+.mobile-link svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+</style>
