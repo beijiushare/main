@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="mobile-page">
-    <div class="mobile-hint">请转至桌面端获取完整体验</div>
+    <div class="mobile-hint">请转至桌面端获取更佳体验</div>
     <div class="mobile-overlay">
       <h1 class="title">Beijiu</h1>
       <IndexMobileLinks />
