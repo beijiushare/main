@@ -42,7 +42,7 @@ const isZh = ref(true)
 const platformList = ref([
   { name: '个人主页', nameEn: 'Homepage', url: 'https://www.beijiu.top/', qrDataUrl: '' },
   { name: 'GitHub', nameEn: 'GitHub', url: 'https://github.com/beijiushare', qrDataUrl: '' },
-  { name: '邮箱', nameEn: 'Email', url: 'beijiushare@outlook.com', qrDataUrl: '' },
+  { name: '邮箱', nameEn: 'Email', url: 'beijiushare@foxmail.com 或 beijiushare@outlook.com', qrDataUrl: '' },
   { name: 'B站', nameEn: 'Bilibili', url: 'https://space.bilibili.com/3494379710842912', qrDataUrl: '' },
   { name: '微信公众号', nameEn: 'WeChatPublic', url: 'http://weixin.qq.com/r/mp/XBcLE5PE8s6Nrddw90JO', qrDataUrl: '' },
 ])
@@ -210,5 +210,12 @@ defineExpose({ isZh })
   transform: rotate(25deg);
   top: 10px;
   left: -5px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    transform: rotate(90deg);
+    min-height: auto;
+  }
 }
 </style>
