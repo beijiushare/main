@@ -4,10 +4,10 @@
       <div class="content-section">
         <h1 class="name">{{ isZh ? '程欣' : 'Xin Cheng' }}</h1>
         <p class="bio" v-if="isZh">
-          <span>一个人，一个</span><span class="small">没能</span><span>脱离低级趣味的人，喜欢折腾无用之物，热衷于在无意义的事情上找到自己的乐子。永远保持学习，永远拥抱变化，永远不放弃说“不”……</span>
+          <span>一个意义的逃兵，一个</span><span class="small">没能</span><span>脱离低级趣味的人，喜欢折腾无用之物，热衷在“不是正事”的事情里找乐子。永远保持学习，永远拥抱变化，永远不放弃说“不”……</span>
         </p>
         <p class="bio" v-else>
-          <span>A person who </span><span class="small">fails to</span><span> get rid of the vulgar interests, likes to fiddle with useless things, and is keen on finding their own fun in meaningless things. Always keep learning, always accept changes, never give up...</span>
+          <span>A deserter of meaning, a person </span><span class="small">never</span><span> quite above vulgar tastes — who loves fiddling with useless things and finds joy in what is “not proper business.” Forever learning, forever embracing change, and forever refusing to give up saying “no”…</span>
         </p>
       </div>
 
@@ -216,6 +216,7 @@ defineExpose({ isZh })
   .card {
     transform: rotate(90deg);
     min-height: auto;
+    margin-top: 15px;
   }
 }
 </style>

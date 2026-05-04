@@ -63,6 +63,12 @@ async function saveAsImage() {
       if (qrcodeSection) {
         qrcodeSection.style.marginLeft = '-16px'
       }
+      const card = clonedDoc.querySelector('.card')
+      if (card) {
+        card.style.transform = 'none'
+        card.style.marginTop = '0px'
+        card.style.marginBottom = '0px'
+      }
     }
   })
   const link = document.createElement('a')
@@ -147,8 +153,17 @@ body {
 }
 
 @media (max-width: 768px) {
-  .page-container {
-    width: 95%;
+  .toolbar {
+    position: fixed;
+    top: 35px;
+    left: 170px;
+    z-index: 100;
+  }
+  .card-wrapper {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
   }
 }
 </style>
