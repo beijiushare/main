@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-05-03',
+  srcDir: 'src/',
   ssr: true,
   nitro: {
     preset: 'static'
@@ -8,10 +9,10 @@ export default defineNuxtConfig({
     head: {
       title: 'Beijiu',
       htmlAttrs: {
-        style: 'overflow: hidden; height: 100%;'
+        style: 'margin: 0;'
       },
       bodyAttrs: {
-        style: 'overflow: hidden; height: 100%; margin: 0;'
+        style: 'margin: 0;'
       }
     }
   }

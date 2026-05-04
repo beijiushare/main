@@ -11,14 +11,9 @@
     >
       <IconGithub />GitHub
     </a>
-    <a
-      href="https://baidu.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="link"
-    >
-      <IconWechat />微信公众号
-    </a>
+    <NuxtLink to="/wechat" class="link">
+      <IconWechat />公众号
+    </NuxtLink>
     <a
       href="https://blog.beijiu.top/"
       target="_blank"

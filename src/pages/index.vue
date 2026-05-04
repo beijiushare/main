@@ -1,29 +1,24 @@
 <template>
   <div class="page">
-    <div class="backimg-wrapper"><Backimg /></div>
+    <div class="backimg-wrapper"><IndexBackimg /></div>
     <div class="overlay">
       <h1 class="title">Beijiu</h1>
-      <DesktopLinks />
+      <IndexDesktopLinks />
     </div>
   </div>
   <div class="mobile-page">
     <div class="mobile-overlay">
       <h1 class="title">Beijiu</h1>
-      <MobileLinks />
+      <IndexMobileLinks />
     </div>
   </div>
 </template>
 
-<script setup>
-import DesktopLinks from '~/components/DesktopLinks.vue'
-import MobileLinks from '~/components/MobileLinks.vue'
-</script>
+<script setup></script>
 
 <style>
 html,
 body {
-  overflow: hidden;
-  height: 100%;
   margin: 0;
 }
 </style>
@@ -36,6 +31,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .overlay {
@@ -79,6 +75,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
   }
   .title {
     font-size: 40px;

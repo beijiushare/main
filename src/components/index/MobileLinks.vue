@@ -18,14 +18,9 @@
           </a>
         </td>
         <td>
-          <a
-            href="https://baidu.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mobile-link"
-          >
-            <IconWechat />微信公众号
-          </a>
+          <NuxtLink to="/wechat" class="mobile-link">
+            <IconWechat />公众号
+          </NuxtLink>
         </td>
       </tr>
       <tr>
