@@ -39,6 +39,7 @@ onMounted(async () => {
   border-radius: 12px;
   padding: 32px;
   border: 1px solid #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .header {

@@ -6,7 +6,7 @@
         <button class="save-btn" @click="saveAsImage">保存</button>
       </div>
       <div class="card-wrapper" ref="cardWrapperRef">
-        <WechatCard />
+        <VCardContent />
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@ async function saveAsImage() {
     }
   })
   const link = document.createElement('a')
-  link.download = 'Beijiu_公众号.png'
+  link.download = 'Beijiu_vCard.png'
   link.href = canvas.toDataURL('image/png')
   link.click()
 }

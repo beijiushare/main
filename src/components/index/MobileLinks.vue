@@ -3,6 +3,11 @@
     <tbody>
       <tr>
         <td>
+          <NuxtLink to="/vCard" class="mobile-link">
+            <IconVCard />vCard
+          </NuxtLink>
+        </td>
+        <td>
           <NuxtLink to="/cv" class="mobile-link">
             <IconCv />CV
           </NuxtLink>
@@ -17,13 +22,13 @@
             <IconGithub />GitHub
           </a>
         </td>
-        <td>
-          <NuxtLink to="/wechat" class="mobile-link">
-            <IconWechat />公众号
-          </NuxtLink>
-        </td>
       </tr>
       <tr>
+        <td>
+          <NuxtLink to="/WechatPublic" class="mobile-link">
+            <IconWechatPublic />公众号
+          </NuxtLink>
+        </td>
         <td>
           <a
             href="https://blog.beijiu.top/"
@@ -36,22 +41,12 @@
         </td>
         <td>
           <a
-            href="https://baidu.com"
+            href="https://space.bilibili.com/3494379710842912"
             target="_blank"
             rel="noopener noreferrer"
             class="mobile-link"
           >
-            测试3
-          </a>
-        </td>
-        <td>
-          <a
-            href="https://baidu.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mobile-link"
-          >
-            测试4
+            <IconBilibili />Bilibili
           </a>
         </td>
       </tr>
@@ -62,8 +57,10 @@
 <script setup>
 import IconCv from '~/components/svg/IconCv.vue'
 import IconGithub from '~/components/svg/IconGithub.vue'
-import IconWechat from '~/components/svg/IconWechat.vue'
+import IconWechatPublic from '~/components/svg/IconWechatPublic.vue'
 import IconBlog from '~/components/svg/IconBlog.vue'
+import IconVCard from '~/components/svg/IconVcard.vue'
+import IconBilibili from '~/components/svg/IconBilibili.vue'
 </script>
 
 <style scoped>

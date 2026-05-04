@@ -1,8 +1,7 @@
 <template>
   <div class="links">
-    <NuxtLink to="/cv" class="link">
-      <IconCv />CV
-    </NuxtLink>
+    <NuxtLink to="/vCard" class="link"> <IconVCard />vCard </NuxtLink>
+    <NuxtLink to="/cv" class="link"> <IconCv />CV </NuxtLink>
     <a
       href="https://github.com/beijiushare"
       target="_blank"
@@ -11,9 +10,7 @@
     >
       <IconGithub />GitHub
     </a>
-    <NuxtLink to="/wechat" class="link">
-      <IconWechat />公众号
-    </NuxtLink>
+    <NuxtLink to="/WechatPublic" class="link"> <IconWechatPublic />公众号 </NuxtLink>
     <a
       href="https://blog.beijiu.top/"
       target="_blank"
@@ -23,29 +20,23 @@
       <IconBlog />Blog
     </a>
     <a
-      href="https://baidu.com"
+      href="https://space.bilibili.com/3494379710842912"
       target="_blank"
       rel="noopener noreferrer"
       class="link"
     >
-      测试3
-    </a>
-    <a
-      href="https://baidu.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="link"
-    >
-      测试4
+      <IconBilibili />Bilibili
     </a>
   </div>
 </template>
 
 <script setup>
-import IconCv from '~/components/svg/IconCv.vue'
-import IconGithub from '~/components/svg/IconGithub.vue'
-import IconWechat from '~/components/svg/IconWechat.vue'
-import IconBlog from '~/components/svg/IconBlog.vue'
+import IconCv from "~/components/svg/IconCv.vue";
+import IconGithub from "~/components/svg/IconGithub.vue";
+import IconWechatPublic from "~/components/svg/IconWechatPublic.vue";
+import IconBlog from "~/components/svg/IconBlog.vue";
+import IconVCard from "~/components/svg/IconVcard.vue";
+import IconBilibili from "~/components/svg/IconBilibili.vue";
 </script>
 
 <style scoped>
