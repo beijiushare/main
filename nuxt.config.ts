@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   ssr: true,
   nitro: {
-    preset: 'static'
+    preset: 'vercel'
   },
   app: {
     head: {
