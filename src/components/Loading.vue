@@ -1,12 +1,6 @@
 <template>
   <div class="load-overlay">
-    <div class="load20">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <div class="load_6"></div>
   </div>
 </template>
 
@@ -18,49 +12,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: #180000;
 }
-.load20 {
+.load_6 {
+  display: inline-block;
   position: relative;
+  width: 64px;
+  height: 64px;
 }
-.load20 > div:nth-child(2) {
-  -webkit-animation: pacman-balls 1s -0.99s infinite linear;
-  animation: pacman-balls 1s -0.99s infinite linear;
+.load_6:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 6px;
+  box-sizing: border-box;
+  border: 26px solid #61E8EA;
+  border-color: #61E8EA transparent #61E8EA transparent;
+  animation: load_6 1.2s infinite;
 }
-.load20 > div:nth-child(3) {
-  -webkit-animation: pacman-balls 1s -0.66s infinite linear;
-  animation: pacman-balls 1s -0.66s infinite linear;
-}
-.load20 > div:nth-child(4) {
-  -webkit-animation: pacman-balls 1s -0.33s infinite linear;
-  animation: pacman-balls 1s -0.33s infinite linear;
-}
-.load20 > div:nth-child(5) {
-  -webkit-animation: pacman-balls 1s 0s infinite linear;
-  animation: pacman-balls 1s 0s infinite linear;
-}
-@-webkit-keyframes pacman-balls {
+@keyframes load_6 {
   0% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-    opacity: 1;
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   100% {
-    -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0);
-    opacity: 0;
-  }
-}
-@keyframes pacman-balls {
-  0% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0);
-    opacity: 0;
+    transform: rotate(1800deg);
   }
 }
 </style>
