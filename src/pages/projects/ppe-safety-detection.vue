@@ -63,4 +63,24 @@ function goHome() {
 .btn:hover {
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .status {
+    font-size: 18px;
+  }
+
+  .content {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 16px;
+  }
+}
 </style>
