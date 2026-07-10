@@ -498,45 +498,44 @@ function goHome() {
 .class-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: 8px;
 }
 
 .cls {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 10px;
-  border-radius: 8px;
-  background: #f7f9fc;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #eef1f5;
+  background: #fff;
+  transition: border-color 0.2s;
 }
 
-.cls-safe { border-left: 3px solid #43a047; }
-.cls-violation { border-left: 3px solid #e53935; }
-.cls-neutral { border-left: 3px solid #1e88e5; }
-.cls-ext { border-left: 3px solid #9c27b0; }
+.cls-safe { border-color: #c8e6c9; background: #fafff5; }
+.cls-violation { border-color: #ffcdd2; background: #fff5f5; }
+.cls-neutral { border-color: #bbdefb; background: #f5faff; }
+.cls-ext { border-color: #e1bee7; background: #fdf5ff; }
 
 .cls-badge {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
-  line-height: 1.4;
-  padding: 1px 5px;
-  border-radius: 3px;
+  padding: 2px 8px;
+  border-radius: 10px;
   letter-spacing: 0.3px;
   flex-shrink: 0;
+  color: #fff;
 }
 
-.cls-badge-safe { background: #e8f5e9; color: #2e7d32; }
-.cls-badge-vio { background: #ffebee; color: #c62828; }
-.cls-badge-nl { background: #e3f2fd; color: #1565c0; }
-.cls-badge-ext { background: #f3e5f5; color: #7b1fa2; }
+.cls-badge-safe { background: #43a047; }
+.cls-badge-vio { background: #e53935; }
+.cls-badge-nl { background: #1e88e5; }
+.cls-badge-ext { background: #9c27b0; }
 
 .cls-name {
-  font-size: 12px;
-  font-weight: 500;
-  color: #333;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 /* ===== Metric Grid ===== */
