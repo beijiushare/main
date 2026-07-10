@@ -36,7 +36,7 @@
             <div class="func-icon func-icon-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
             </div>
-            <span class="func-label">十类识别</span>
+            <span class="func-label">十七类监测</span>
           </div>
           <div class="func-item">
             <div class="func-icon func-icon-alert">
@@ -107,6 +107,35 @@
           <div class="cls cls-neutral">
             <div class="cls-badge cls-badge-nl">中性</div>
             <span class="cls-name">车辆</span>
+          </div>
+          <div class="cls-divider"></div>
+          <div class="cls cls-ext">
+            <div class="cls-badge cls-badge-ext">扩展</div>
+            <span class="cls-name">区域入侵</span>
+          </div>
+          <div class="cls cls-ext">
+            <div class="cls-badge cls-badge-ext">扩展</div>
+            <span class="cls-name">吸烟</span>
+          </div>
+          <div class="cls cls-ext">
+            <div class="cls-badge cls-badge-ext">扩展</div>
+            <span class="cls-name">玩手机</span>
+          </div>
+          <div class="cls cls-ext">
+            <div class="cls-badge cls-badge-ext">扩展</div>
+            <span class="cls-name">违规动火</span>
+          </div>
+          <div class="cls cls-ext">
+            <div class="cls-badge cls-badge-ext">扩展</div>
+            <span class="cls-name">跨越警戒线</span>
+          </div>
+          <div class="cls cls-ext">
+            <div class="cls-badge cls-badge-ext">扩展</div>
+            <span class="cls-name">设备操作失范</span>
+          </div>
+          <div class="cls cls-ext">
+            <div class="cls-badge cls-badge-ext">扩展</div>
+            <span class="cls-name">消防通道堵塞</span>
           </div>
         </div>
       </section>
@@ -498,6 +527,19 @@ function goHome() {
 .cls-badge-safe { background: #e8f5e9; color: #2e7d32; }
 .cls-badge-vio { background: #ffebee; color: #c62828; }
 .cls-badge-nl { background: #e3f2fd; color: #1565c0; }
+
+.cls-ext { border-left: 3px solid #9c27b0; }
+
+.cls-badge-ext {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.cls-divider {
+  height: 1px;
+  background: #e8ecf0;
+  margin: 2px 0;
+}
 
 .cls-name {
   font-size: 13px;
