@@ -108,7 +108,6 @@
             <div class="cls-badge cls-badge-nl">中性</div>
             <span class="cls-name">车辆</span>
           </div>
-          <div class="cls-divider"></div>
           <div class="cls cls-ext">
             <div class="cls-badge cls-badge-ext">扩展</div>
             <span class="cls-name">区域入侵</span>
@@ -497,54 +496,47 @@ function goHome() {
 
 /* ===== Class Grid ===== */
 .class-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 6px;
 }
 
 .cls {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: 10px;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 8px;
   background: #f7f9fc;
 }
 
 .cls-safe { border-left: 3px solid #43a047; }
 .cls-violation { border-left: 3px solid #e53935; }
 .cls-neutral { border-left: 3px solid #1e88e5; }
+.cls-ext { border-left: 3px solid #9c27b0; }
 
 .cls-badge {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 4px;
-  letter-spacing: 0.5px;
+  line-height: 1.4;
+  padding: 1px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.3px;
   flex-shrink: 0;
 }
 
 .cls-badge-safe { background: #e8f5e9; color: #2e7d32; }
 .cls-badge-vio { background: #ffebee; color: #c62828; }
 .cls-badge-nl { background: #e3f2fd; color: #1565c0; }
-
-.cls-ext { border-left: 3px solid #9c27b0; }
-
-.cls-badge-ext {
-  background: #f3e5f5;
-  color: #7b1fa2;
-}
-
-.cls-divider {
-  height: 1px;
-  background: #e8ecf0;
-  margin: 2px 0;
-}
+.cls-badge-ext { background: #f3e5f5; color: #7b1fa2; }
 
 .cls-name {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* ===== Metric Grid ===== */
