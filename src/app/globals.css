@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "ZSFT-342";
+  src: url("https://fontsapi.zeoseven.com/342/main.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'ZSFT-342', sans-serif;
+  font-weight: normal;
+}

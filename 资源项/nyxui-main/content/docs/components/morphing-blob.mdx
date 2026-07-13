@@ -1,0 +1,80 @@
+---
+title: Morphing Blob
+date: 2025-07-09
+description: A dynamic 3D morphing blob with customizable themes, animated particles, and interactive effects powered by Three.js and shaders.
+author: nyxui
+published: true
+tags: ["3D", "Effects", "Animation", "Interactive"]
+---
+
+<ComponentPreview name="morphing-blob-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://nyxui.com/r/morphing-blob.json"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies</Step>
+
+```bash
+npm install @react-three/fiber @react-three/drei @react-three/postprocessing three
+npm install -D @types/three
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="morphing-blob" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { MorphingBlob } from "@/components/ui/morphing-blob";
+```
+
+### Basic Usage
+
+```tsx
+export default function MyComponent() {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-900">
+      <MorphingBlob size={400} theme="aurora" complexity={3} speed={2} />
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop            | Type              | Default     | Description                                                           |
+| --------------- | ----------------- | ----------- | --------------------------------------------------------------------- |
+| `size`          | `number`          | `400`       | The size of the blob container in pixels                              |
+| `theme`         | `string`          | `"aurora"`  | The color theme of the blob (primary, aurora, cosmic, liquid, danger) |
+| `complexity`    | `number`          | `3`         | The complexity of the morphing effect (1-5)                           |
+| `speed`         | `number`          | `3`         | The speed of the morphing animation (1-5)                             |
+| `particleCount` | `number`          | `150`       | The number of animated particles around the blob                      |
+| `enableEffects` | `boolean`         | `true`      | Whether to enable post-processing effects (bloom, etc.)               |
+| `children`      | `React.ReactNode` | `undefined` | Content to display over the blob                                      |
+| `className`     | `string`          | `undefined` | Additional CSS classes for the container                              |

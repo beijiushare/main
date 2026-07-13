@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Layout Debug — beijiu-homepage</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0a0a14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Segoe UI', system-ui, monospace;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  #layout {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border: 2px solid rgba(255,255,255,0.5);
+    background: #0f0f1a;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  .layer {
+    position: absolute;
+    transition: opacity 0.25s;
+  }
+  .layer.hidden { opacity: 0 !important; pointer-events: none !important; }
+
+  .layer-label {
+    position: absolute;
+    font: 10px/1 monospace;
+    color: rgba(255,255,255,0.45);
+    pointer-events: none;
+    z-index: 999;
+    transition: opacity 0.25s;
+    white-space: nowrap;
+  }
+  .layer-label.hidden { opacity: 0; }
+
+  /* z:1 Backdrop */
+  #layer-backdrop {
+    inset: 0;
+    border: 1.5px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.015);
+    z-index: 1;
+  }
+  #label-backdrop { top: 4px; left: 4px; }
+
+  /* z:2 Foreground */
+  #layer-foreground {
+    inset: 0;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    z-index: 2;
+  }
+  #label-foreground { top: 4px; left: 100px; }
+
+  /* Top Section — 1/3 */
+  #layer-top-section {
+    top: 0; left: 0; right: 0;
+    height: 33.3%;
+    border: 1.5px solid rgba(255,255,255,0.18);
+  }
+  #label-top-section { top: 4px; left: 230px; }
+
+  #layer-header-bar {
+    top: 0; left: 0; right: 0;
+    height: 75%;
+    border: 1.5px solid rgba(255,255,255,0.18);
+  }
+  #label-header-bar { top: 4px; left: 4px; }
+
+  #layer-identity {
+    top: 0; left: 0;
+    width: 50%; height: 100%;
+    border: 1.5px solid rgba(255,255,255,0.1);
+  }
+  #label-identity { top: 22px; left: 4px; }
+
+  #layer-utility {
+    top: 0; right: 0;
+    width: 50%; height: 100%;
+    border: 1.5px solid rgba(255,255,255,0.1);
+  }
+  #label-utility { top: 22px; left: calc(50% + 4px); }
+
+  #layer-top-spacer {
+    bottom: 0; left: 0; right: 0;
+    height: 25%;
+    border: 1.5px solid rgba(255,255,255,0.08);
+  }
+  #label-top-spacer { top: calc(75% + 4px); left: 4px; }
+
+  /* Body — 2/3 */
+  #layer-body-zone {
+    bottom: 0; left: 0; right: 0;
+    height: 66.7%;
+    border: 1.5px solid rgba(255,255,255,0.18);
+  }
+  #label-body-zone { top: calc(33.3% + 4px); left: 4px; }
+
+  #layer-body-left {
+    top: 0; left: 0;
+    width: 54.5%; height: 100%;
+    border: 1.5px solid rgba(255,255,255,0.1);
+  }
+  #label-body-left { top: calc(33.3% + 22px); left: 4px; }
+
+  #layer-body-right {
+    top: 0; right: 0;
+    width: 45.5%; height: 100%;
+    border: 1.5px solid rgba(255,255,255,0.1);
+  }
+  #label-body-right { top: calc(33.3% + 22px); left: calc(54.5% + 4px); }
+
+  /* ══════ 图层面板 ══════ */
+  #legend {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    width: fit-content;
+    background: rgba(10,10,20,0.94);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  }
+
+  #legend-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px 4px 12px;
+    cursor: grab;
+  }
+  #legend-header:active { cursor: grabbing; }
+  #legend-header .title {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.3px;
+  }
+
+  #drag-handle {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.05);
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 6px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  #drag-handle:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.45); }
+  #drag-handle:active { cursor: grabbing; }
+  #drag-handle::after {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+  }
+  #drag-handle:hover::after { background: rgba(255,255,255,0.45); }
+
+  #legend-body {
+    padding: 2px 4px 6px;
+  }
+
+  .tree-node {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.12s;
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+  }
+  .tree-node:hover { background: rgba(255,255,255,0.06); }
+
+  .tree-node .arrow {
+    width: 13px;
+    font-size: 7px;
+    color: rgba(255,255,255,0.25);
+    flex-shrink: 0;
+    text-align: center;
+    transition: transform 0.15s;
+  }
+  .tree-node .arrow.open { transform: rotate(90deg); }
+
+  .tree-node .name {
+    flex: 1;
+    font-family: monospace;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .tree-node .badge {
+    font-size: 9px;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.25);
+    font-family: monospace;
+    flex-shrink: 0;
+  }
+
+  .tree-node .copy-btn {
+    width: 18px; height: 18px;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    transition: background 0.15s, border-color 0.15s;
+    flex-shrink: 0;
+    line-height: 1;
+    color: rgba(255,255,255,0.2);
+    opacity: 0;
+  }
+  .tree-node:hover .copy-btn { opacity: 1; }
+  .tree-node .copy-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6); }
+  .tree-node .copy-btn.copied { color: rgba(100,220,150,0.8); border-color: rgba(100,220,150,0.4); }
+
+  .tree-node.off .name { color: rgba(255,255,255,0.2); }
+  .tree-node.off .badge { opacity: 0.25; }
+
+  .tree-children-wrap {
+    padding-left: 14px;
+  }
+  .tree-children-wrap.closed { display: none; }
+
+  #hint {
+    position: fixed;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.12);
+    font-size: 10px;
+    font-family: monospace;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+  <div id="layout">
+    <!-- z:1 -->
+    <div class="layer" id="layer-backdrop"></div>
+    <div class="layer-label" id="label-backdrop">Backdrop (z:1)</div>
+
+    <!-- z:2 Foreground -->
+    <div class="layer" id="layer-foreground">
+      <!-- Top Section 1/3 -->
+      <div class="layer" id="layer-top-section">
+        <div class="layer" id="layer-header-bar">
+          <div class="layer" id="layer-identity"></div>
+          <div class="layer" id="layer-utility"></div>
+        </div>
+        <div class="layer" id="layer-top-spacer"></div>
+      </div>
+      <!-- Body 2/3 -->
+      <div class="layer" id="layer-body-zone">
+        <div class="layer" id="layer-body-left"></div>
+        <div class="layer" id="layer-body-right"></div>
+      </div>
+    </div>
+
+    <div class="layer-label" id="label-foreground">Foreground (z:2)</div>
+    <div class="layer-label" id="label-top-section">Top Section (flex:1)</div>
+    <div class="layer-label" id="label-header-bar">Header (flex:3)</div>
+    <div class="layer-label" id="label-identity">Identity (1:1)</div>
+    <div class="layer-label" id="label-utility">Utility (1:1)</div>
+    <div class="layer-label" id="label-top-spacer">Spacer (flex:1)</div>
+    <div class="layer-label" id="label-body-zone">Body (flex:2)</div>
+  </div>
+
+  <div id="legend">
+    <div id="legend-header">
+      <span class="title">📐 Layers</span>
+      <div id="drag-handle"></div>
+    </div>
+    <div id="legend-body"></div>
+  </div>
+
+  <div id="hint">⊙ drag · ▶ collapse · 📋 click to copy layer path</div>
+
+<script>
+const tree = [
+  { id:'backdrop',       name:'Backdrop',       badge:'z:1' },
+  { id:'foreground',     name:'Foreground',     badge:'z:2', children: [
+    { id:'top-section',  name:'Top Section',    badge:'flex:1', children: [
+      { id:'header-bar', name:'Header',          badge:'flex:3', children: [
+        { id:'identity', name:'Identity',        badge:'flex:1' },
+        { id:'utility',  name:'Utility',         badge:'flex:1' },
+      ]},
+      { id:'top-spacer', name:'Top Spacer',      badge:'flex:1' },
+    ]},
+    { id:'body-zone',    name:'Body',           badge:'flex:2', children: [
+      { id:'body-left',  name:'Body Left',      badge:'flex:6' },
+      { id:'body-right', name:'Body Right',     badge:'flex:5' },
+    ]},
+  ]},
+];
+
+const labelMap = {
+  backdrop:'label-backdrop',
+  foreground:'label-foreground',
+  'top-section':'label-top-section',
+  'header-bar':'label-header-bar',
+  identity:'label-identity',
+  utility:'label-utility',
+  'top-spacer':'label-top-spacer',
+  'body-zone':'label-body-zone',
+  'body-left':'label-body-left',
+  'body-right':'label-body-right',
+};
+
+// 收集所有叶子 id
+const allIds = new Set();
+(function collect(nodes) {
+  for (const n of nodes) {
+    if (n.id) allIds.add(n.id);
+    if (n.children) collect(n.children);
+  }
+})(tree);
+
+// ─── 构建树 ───
+const body = document.getElementById('legend-body');
+
+function renderNode(node, parentEl) {
+  const hasChildren = node.children && node.children.length > 0;
+  const nodeKey = node.id || node.name;
+
+  const wrap = document.createElement('div');
+
+  const row = document.createElement('div');
+  row.className = 'tree-node';
+  if (node.id) row.dataset.lid = node.id;
+  wrap.appendChild(row);
+
+  const arrow = document.createElement('span');
+  arrow.className = 'arrow' + (hasChildren ? ' open' : '');
+  arrow.textContent = '▶';
+  row.appendChild(arrow);
+
+  const name = document.createElement('span');
+  name.className = 'name';
+  name.textContent = node.name;
+  row.appendChild(name);
+
+  if (node.badge) {
+    const b = document.createElement('span');
+    b.className = 'badge'; b.textContent = node.badge;
+    row.appendChild(b);
+  }
+
+  const copyBtn = document.createElement('span');
+  copyBtn.className = 'copy-btn';
+  copyBtn.textContent = '📋';
+  copyBtn.title = '复制图层路径';
+  row.appendChild(copyBtn);
+
+  let childWrap = null;
+  if (hasChildren) {
+    childWrap = document.createElement('div');
+    childWrap.className = 'tree-children-wrap';
+    wrap.appendChild(childWrap);
+
+    arrow.addEventListener('click', e => {
+      e.stopPropagation();
+      arrow.classList.toggle('open');
+      childWrap.classList.toggle('closed');
+    });
+
+    node.children.forEach(c => renderNode(c, childWrap));
+  } else {
+    arrow.style.visibility = 'hidden';
+  }
+
+  if (node.id) {
+    const toggleFn = () => {
+      const show = toggleLayer(node.id);
+      updateRowUI(row, show);
+      if (!show && hasChildren) hideAllDescendants(node, childWrap);
+      if (show && hasChildren) showAllDescendants(node, childWrap);
+    };
+    row.addEventListener('click', e => {
+      if (e.target === arrow || e.target === copyBtn) return;
+      toggleFn();
+    });
+  }
+
+  copyBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const path = buildPath(node.id);
+    const info = `${path}  [${node.badge || ''}]`.trim();
+    navigator.clipboard.writeText(info).then(() => {
+      copyBtn.textContent = '✓';
+      copyBtn.classList.add('copied');
+      setTimeout(() => {
+        copyBtn.textContent = '📋';
+        copyBtn.classList.remove('copied');
+      }, 1200);
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = info; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+      document.body.removeChild(ta);
+      copyBtn.textContent = '✓';
+      copyBtn.classList.add('copied');
+      setTimeout(() => {
+        copyBtn.textContent = '📋';
+        copyBtn.classList.remove('copied');
+      }, 1200);
+    });
+  });
+
+  parentEl.appendChild(wrap);
+}
+
+function hideAllDescendants(node, childWrap) {
+  if (!node.children) return;
+  node.children.forEach(c => {
+    if (!c.id) return;
+    toggleLayerDOM(c.id, false);
+    const childRow = childWrap?.querySelector(`[data-lid="${c.id}"]`);
+    if (childRow) updateRowUI(childRow, false);
+    const sw = childWrap?.querySelector(`[data-lid="${c.id}"] + .tree-children-wrap`);
+    if (sw) hideAllDescendants(c, sw);
+  });
+}
+
+function showAllDescendants(node) {
+  if (!node.children) return;
+  node.children.forEach(c => {
+    if (!c.id) return;
+    toggleLayerDOM(c.id, true);
+    const el = document.querySelector(`[data-lid="${c.id}"]`);
+    if (el) updateRowUI(el, true);
+    showAllDescendants(c);
+  });
+}
+
+function toggleLayer(id) {
+  const el = document.getElementById(`layer-${id}`);
+  const label = document.getElementById(labelMap[id]);
+  const nowHidden = el ? el.classList.contains('hidden') : false;
+  const show = nowHidden;
+  if (el) el.classList.toggle('hidden', !show);
+  if (label) label.classList.toggle('hidden', !show);
+  return show;
+}
+
+function toggleLayerDOM(id, show) {
+  const el = document.getElementById(`layer-${id}`);
+  const label = document.getElementById(labelMap[id]);
+  if (el) el.classList.toggle('hidden', !show);
+  if (label) label.classList.toggle('hidden', !show);
+}
+
+function updateRowUI(row, show) {
+  if (!row) return;
+  row.classList.toggle('off', !show);
+}
+
+function buildPath(id) {
+  const parts = [];
+  function walk(nodes) {
+    for (const n of nodes) {
+      if (n.id === id) { parts.push(n.name); return true; }
+      if (n.children) {
+        parts.push(n.name);
+        if (walk(n.children)) return true;
+        parts.pop();
+      }
+    }
+    return false;
+  }
+  walk(tree);
+  return parts.join(' > ');
+}
+
+// ─── 拖拽 ───
+const legend = document.getElementById('legend');
+const header = document.getElementById('legend-header');
+const handle = document.getElementById('drag-handle');
+let drag = false, sx, sy, ox, oy;
+
+function sd(e) {
+  drag = true; const t = e.touches ? e.touches[0] : e;
+  sx = t.clientX; sy = t.clientY;
+  ox = legend.offsetLeft; oy = legend.offsetTop;
+}
+function md(e) {
+  if (!drag) return; const t = e.touches ? e.touches[0] : e;
+  legend.style.left = (ox + t.clientX - sx) + 'px';
+  legend.style.top = (oy + t.clientY - sy) + 'px';
+  legend.style.right = 'auto';
+}
+function su() { drag = false; }
+
+header.addEventListener('mousedown', sd);
+handle.addEventListener('mousedown', e => { e.stopPropagation(); sd(e); });
+document.addEventListener('mousemove', md);
+document.addEventListener('mouseup', su);
+header.addEventListener('touchstart', sd, { passive: true });
+handle.addEventListener('touchstart', e => { e.stopPropagation(); sd(e); }, { passive: true });
+document.addEventListener('touchmove', md, { passive: true });
+document.addEventListener('touchend', su);
+
+// ─── 启动 ───
+tree.forEach(n => renderNode(n, body));
+</script>
+</body>
+</html>

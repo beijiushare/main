@@ -1,0 +1,117 @@
+---
+title: Lamp Heading
+date: 2025-05-09
+description: An elegant section heading with a customizable gradient underline and a stunning lamp-like glow effect with particles, light rays, and smooth animations.
+author: MihirJaiswal
+published: true
+tags: ["Typography", "Effects", "Futuristic", "Particles", "Animation"]
+---
+
+<ComponentPreview name="lamp-heading-demo" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://nyxui.com/r/lamp-heading.json"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Install dependencies.</Step>
+
+```bash
+npm install motion clsx tailwind-merge
+```
+
+<Step>Create a utils.ts file with the cn utility function.</Step>
+
+```tsx
+// lib/utils.ts
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="lamp-heading" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { LampHeading } from "@/components/ui/lamp-heading";
+```
+
+```tsx
+// Basic usage with default settings
+<LampHeading text="Featured Products" />
+
+// Custom styling with className
+<LampHeading
+  text="About Us"
+  className="text-3xl font-bold tracking-tight"
+  textSize="3xl"
+/>
+
+// Custom gradient colors with via color
+<LampHeading
+  text="Our Services"
+  gradientColors={{
+    from: "#8a2be2",
+    via: "#ff69b4",
+    to: "#ff8c00"
+  }}
+/>
+
+// Modified glow effect with particles
+<LampHeading
+  text="Portfolio"
+  glowIntensity={1.2}
+  glowSize={35}
+  direction="above"
+  showParticles={true}
+  showLightRays={true}
+/>
+```
+
+## Props
+
+| Prop             | Type                 | Default                                              | Description                                                                                          |
+| ---------------- | -------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `text`           | `string`             | `""`                                                 | The text content of the heading                                                                      |
+| `className`      | `string`             | `""`                                                 | Additional CSS classes to apply for styling the heading                                              |
+| `gradientColors` | `object`             | `{ from: "#FF33C7", via: "#CD35FF", to: "#4533F7" }` | The gradient colors used for the underline and effects. Object with 'from', optional 'via', and 'to' |
+| `lineHeight`     | `number`             | `4`                                                  | The height of the underline in pixels                                                                |
+| `lampHeight`     | `number`             | `80`                                                 | The height of the lamp cone effect in pixels                                                         |
+| `glowIntensity`  | `number`             | `1.0`                                                | The intensity of the glow effect (0-2)                                                               |
+| `glowSize`       | `number`             | `30`                                                 | The size of the glow effect in pixels                                                                |
+| `animationSpeed` | `number`             | `4`                                                  | The speed of animations in seconds                                                                   |
+| `direction`      | `"above" \| "below"` | `"below"`                                            | The direction of the lamp effect (above or below the text)                                           |
+| `showParticles`  | `boolean`            | `true`                                               | Whether to show floating particles effect                                                            |
+| `showLightRays`  | `boolean`            | `false`                                              | Whether to show light rays emerging from the underline                                               |
+| `interactive`    | `boolean`            | `true`                                               | Whether the lamp responds to hover interactions                                                      |
+| `textSize`       | `string`             | `"4xl"`                                              | The size of the text (sm, md, lg, xl, 2xl, 3xl, 4xl)                                                 |
+| `pulseEffect`    | `boolean`            | `true`                                               | Whether to show a subtle pulse animation on the underline                                            |
