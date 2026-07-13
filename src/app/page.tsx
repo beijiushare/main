@@ -3,7 +3,7 @@
 import SideRays from '@/components/SideRays'
 import ShinyText from '@/components/ShinyText'
 import MobileLinks from '@/components/MobileLinks'
-import AnimatedCodeBlock from '@/components/animated-code-block/AnimatedCodeBlock'
+import { AnimatedCodeBlock } from '@/components/ui/animated-code-block'
 
 const demoCode = `import { useState, useEffect } from 'react';
 

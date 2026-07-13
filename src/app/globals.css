@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @font-face {
   font-family: "ZSFT-342";
   src: url("https://fontsapi.zeoseven.com/342/main.woff2") format("woff2");
