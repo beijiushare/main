@@ -619,10 +619,7 @@ export function AnimatedCodeBlock({
                 onClick={togglePlay}
                 onMouseEnter={() => setShowTooltip("play")}
                 onMouseLeave={() => setShowTooltip("")}
-                className={cn(
-                  "p-1.5 rounded-full hover:bg-white/10 transition-colors relative",
-                  isPlaying ? themeStyles.accent : "",
-                )}
+                className="p-1.5 rounded-full hover:bg-white/10 transition-colors relative"
                 aria-label={isPlaying ? "Pause" : "Play"}
               >
                 {isPlaying ? <Pause size={14} /> : <Play size={14} />}
