@@ -3,6 +3,24 @@
 import SideRays from '@/components/SideRays'
 import ShinyText from '@/components/ShinyText'
 import MobileLinks from '@/components/MobileLinks'
+import AnimatedCodeBlock from '@/components/animated-code-block/AnimatedCodeBlock'
+
+const demoCode = `import { useState, useEffect } from 'react';
+
+function useDataFetching(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.json())
+      .then(setData)
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, [url]);
+
+  return { data, loading };
+}`
 
 export default function HomePage() {
   return (
@@ -44,7 +62,20 @@ export default function HomePage() {
             <div className="top-spacer" />
           </div>
           <div className="body-zone">
-            <div className="body-left">{/* 待设计 */}</div>
+            <div className="body-left">
+              <AnimatedCodeBlock
+                code={demoCode}
+                theme="terminal"
+                title="fetch-data.jsx"
+                typingSpeed={50}
+                showLineNumbers={true}
+                autoPlay={true}
+                loop={true}
+                language="typescript"
+                highlightLines={[1, 4, 10]}
+                className="code-block-left"
+              />
+            </div>
             <div className="body-right">{/* 待设计 */}</div>
           </div>
         </div>
@@ -125,6 +156,10 @@ export default function HomePage() {
         }
         .body-right {
           flex: 5;
+        }
+        .code-block-left {
+          width: 100%;
+          max-width: 560px;
         }
         .mobile-page {
           display: none;
