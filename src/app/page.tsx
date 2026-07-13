@@ -65,7 +65,7 @@ export default function HomePage() {
             <div className="body-left">
               <AnimatedCodeBlock
                 code={demoCode}
-                theme="terminal"
+                theme="dark"
                 title="fetch-data.jsx"
                 typingSpeed={50}
                 showLineNumbers={true}
