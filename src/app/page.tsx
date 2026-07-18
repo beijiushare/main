@@ -1,25 +1,21 @@
 'use client'
 
-import SideRays from '@/components/SideRays'
+import CursorGrid from '@/components/CursorGrid'
 import ShinyText from '@/components/ShinyText'
 import MobileLinks from '@/components/MobileLinks'
 import { AnimatedCodeBlock } from '@/components/ui/animated-code-block'
 
-const demoCode = `import { useState, useEffect } from 'react';
-
-function useDataFetching(url) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch(url)
-      .then(res => res.json())
-      .then(setData)
-      .catch(console.error)
-      .finally(() => setLoading(false));
-  }, [url]);
-
-  return { data, loading };
+const bresenhamCode = `void line(int x0, int y0, int x1, int y1) {
+    int dx = abs(x1-x0), dy = -abs(y1-y0);
+    int sx = x0<x1 ? 1 : -1, sy = y0<y1 ? 1 : -1;
+    int err = dx + dy;
+    while (1) {
+        plot(x0, y0);
+        if (x0 == x1 && y0 == y1) break;
+        int e2 = 2 * err;
+        if (e2 >= dy) { err += dy; x0 += sx; }
+        if (e2 <= dx) { err += dx; y0 += sy; }
+    }
 }`
 
 export default function HomePage() {
@@ -28,55 +24,57 @@ export default function HomePage() {
       {/* 桌面端 */}
       <div className="page">
         <div className="backdrop">
-          <SideRays
-            speed={2.5}
-            rayColor1="#EAB308"
-            rayColor2="#96c8ff"
-            intensity={2.8}
-            spread={2}
-            origin="top-right"
-            tilt={0}
-            saturation={1.5}
-            blend={0.75}
-            falloff={1.6}
-            opacity={1.0}
+          <CursorGrid
+            cellSize={70}
+            color="#D946EF"
+            radius={140}
+            falloff="smooth"
+            holdTime={400}
+            fadeDuration={800}
+            lineWidth={1.2}
+            maxOpacity={1}
+            fillOpacity={0}
+            gridOpacity={0}
+            cellRadius={0}
+            clickPulse
+            pulseSpeed={600}
           />
-        </div>
-        <div className="foreground">
-          <div className="top-section">
-            <div className="header-bar">
-              <div className="identity-zone">
-                <h1 className="title">
-                  <ShinyText
-                    text="✨BEIJIU.TOP"
-                    speed={3}
-                    color="rgba(210,210,210,0.6)"
-                    shineColor="#ffffff"
-                    spread={150}
-                    direction="left"
-                  />
-                </h1>
+          <div className="foreground">
+            <div className="top-section">
+              <div className="header-bar">
+                <div className="identity-zone">
+                  <h1 className="title">
+                    <ShinyText
+                      text="✨BEIJIU.TOP"
+                      speed={3}
+                      color="rgba(210,210,210,0.6)"
+                      shineColor="#ffffff"
+                      spread={150}
+                      direction="left"
+                    />
+                  </h1>
+                </div>
+                <div className="utility-zone">{/* 待设计 */}</div>
               </div>
-              <div className="utility-zone">{/* 待设计 */}</div>
+              <div className="top-spacer" />
             </div>
-            <div className="top-spacer" />
-          </div>
-          <div className="body-zone">
-            <div className="body-left">
-              <AnimatedCodeBlock
-                code={demoCode}
-                theme="dark"
-                title="fetch-data.jsx"
-                typingSpeed={50}
-                showLineNumbers={true}
-                autoPlay={true}
-                loop={true}
-                language="typescript"
-                highlightLines={[1, 4, 10]}
-                className="code-block-left"
-              />
+            <div className="body-zone">
+              <div className="body-left">
+                <AnimatedCodeBlock
+                  code={bresenhamCode}
+                  theme="dark"
+                  title="bresenham.c"
+                  typingSpeed={40}
+                  showLineNumbers={true}
+                  autoPlay={true}
+                  loop={true}
+                  language="c"
+                  highlightLines={[2, 4, 9, 10]}
+                  className="code-block-left"
+                />
+              </div>
+              <div className="body-right">{/* 待设计 */}</div>
             </div>
-            <div className="body-right">{/* 待设计 */}</div>
           </div>
         </div>
       </div>
@@ -98,18 +96,21 @@ export default function HomePage() {
           overflow: hidden;
         }
         .backdrop {
-          position: fixed;
+          position: absolute;
           inset: 0;
           z-index: 1;
           background: #0a0a14;
         }
         .foreground {
-          position: relative;
+          position: absolute;
+          inset: 0;
           z-index: 2;
-          width: 100%;
-          height: 100vh;
+          pointer-events: none;
           display: flex;
           flex-direction: column;
+        }
+        .body-left {
+          pointer-events: auto;
         }
         .top-section {
           flex: 1;

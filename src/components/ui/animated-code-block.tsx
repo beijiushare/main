@@ -18,6 +18,8 @@ import "prismjs/components/prism-typescript";
 import "prismjs/components/prism-jsx";
 import "prismjs/components/prism-tsx";
 import "prismjs/components/prism-css";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-c";
 import "prismjs/components/prism-scss";
 import "prismjs/components/prism-json";
 import "prismjs/components/prism-python";
@@ -507,11 +509,11 @@ export function AnimatedCodeBlock({
     const element = document.createElement("a");
     const file = new Blob([code], { type: "text/plain" });
     element.href = URL.createObjectURL(file);
-    element.download = `code.${language}`;
+    element.download = title || `code.${language}`;
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
-  }, [code, language]);
+  }, [code, language, title]);
 
   const codeLines = useMemo(() => code.split("\n"), [code]);
 
