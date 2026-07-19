@@ -164,7 +164,7 @@ export default function HomePage() {
           >
             <div className="w-screen h-full" />
             <div className="w-screen h-full relative overflow-hidden">
-              <div
+              {/* <div
                 ref={codeWrapRef}
                 className="absolute inset-0 flex items-center justify-center pointer-events-auto opacity-0"
               >
@@ -182,7 +182,7 @@ export default function HomePage() {
                     className="code-block-scroll"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="w-screen h-full" />
           </div>
