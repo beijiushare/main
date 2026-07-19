@@ -45,7 +45,7 @@ export default function HomePage() {
       gsap.set(indicatorRef.current, { xPercent: -50 })
       gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
 
-      // ─── 标题：居中 → 左上角 (0 → 160vh) ───
+      // ─── 标题：居中 → 左上角 (0 → 320vh) ───
       gsap.to(titleRef.current, {
         top: 20,
         left: 16,
@@ -56,41 +56,41 @@ export default function HomePage() {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=160vh',
+          end: '+=320vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 独角兽：缩小 (0 → 240vh) ───
+      // ─── 独角兽：缩小 (0 → 480vh) ───
       gsap.to(unicornRef.current, {
         scale: 0.7,
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=240vh',
+          end: '+=480vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 独角兽：左移淡出 (440 → 690vh) 慢速 ───
+      // ─── 独角兽：左移淡出 (780 → 1000vh) 慢速 ───
       gsap.to(unicornRef.current, {
         x: '-70vw',
         opacity: 0.3,
         scrollTrigger: {
           trigger: section,
-          start: '+=440vh',
-          end: '+=690vh',
+          start: '+=780vh',
+          end: '+=1000vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 水平轨道：向左平移 200vw (0 → 690vh) ───
+      // ─── 水平轨道：向左平移 200vw (0 → 1000vh) ───
       gsap.to(trackRef.current, {
         x: '-200vw',
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=690vh',
+          end: '+=1000vh',
           scrub: 0.5,
         },
       })
@@ -123,11 +123,11 @@ export default function HomePage() {
     <>
       {/* ========== 桌面端 ========== */}
       {/*
-        h-[800vh] 提供 8 屏滚动空间
+        h-[1000vh] 提供 10 屏滚动空间
         子元素 position:sticky 让内容始终钉在视口内
         GSAP 跟踪 section 的滚动位置驱动动画（不用 GSAP pin）
       */}
-      <section ref={sectionRef} className="desktop-section relative h-[800vh] bg-[#0a0a14]">
+      <section ref={sectionRef} className="desktop-section relative h-[1000vh] bg-[#0a0a14]">
         <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
           <div className="relative w-full h-full">
 
