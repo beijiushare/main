@@ -166,7 +166,7 @@ export default function HomePage() {
             <div className="w-screen h-full relative overflow-hidden">
               <div
                 ref={codeWrapRef}
-                className="absolute inset-0 flex items-center justify-center pointer-events-auto"
+                className="absolute inset-0 flex items-center justify-center pointer-events-auto opacity-0"
               >
                 <div className="w-full max-w-[580px] px-8">
                   <AnimatedCodeBlock
