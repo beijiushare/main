@@ -183,38 +183,42 @@ export default function HomePage() {
           {/* ---- 第 2 层：纸飞机路径动画 + 链接卡片 ---- */}
           <PathAnimation sectionRef={sectionRef} />
 
-          {/* ---- 第 3 层：水平轨道 ---- */}
+          {/* ---- 第 3 层：水平轨道（仅装饰性背景平移） ---- */}
           <div
             ref={trackRef}
             className="absolute inset-0 flex pointer-events-none"
             style={{ zIndex: 10, width: '300vw' }}
           >
             <div className="w-screen h-full" />
-            <div className="w-screen h-full relative overflow-hidden">
-              <div
-                ref={codeWrapRef}
-                className="absolute inset-0 flex items-center justify-center pointer-events-auto opacity-0"
-                style={{ background: 'rgba(255,0,0,0.1)', border: '2px solid red' }}
-              >
-                <div className="w-full max-w-[580px] px-8">
-                  {showCode && (
-                    <AnimatedCodeBlock
-                      code={bresenhamCode}
-                      theme="dark"
-                      title="bresenham.c"
-                      typingSpeed={40}
-                      showLineNumbers
-                      autoPlay
-                      loop
-                      language="c"
-                      highlightLines={[2, 4, 9, 10]}
-                      className="code-block-scroll"
-                    />
-                  )}
-                </div>
-              </div>
-            </div>
             <div className="w-screen h-full" />
+            <div className="w-screen h-full" />
+          </div>
+
+          {/* ---- 第 3.5 层：代码块（独立于轨道，居中升起） ---- */}
+          <div
+            ref={codeWrapRef}
+            className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0"
+            style={{ zIndex: 15 }}
+          >
+            <div
+              className="w-full max-w-[580px] px-8"
+              style={{ pointerEvents: showCode ? 'auto' : 'none' }}
+            >
+              {showCode && (
+                <AnimatedCodeBlock
+                  code={bresenhamCode}
+                  theme="dark"
+                  title="bresenham.c"
+                  typingSpeed={40}
+                  showLineNumbers
+                  autoPlay
+                  loop
+                  language="c"
+                  highlightLines={[2, 4, 9, 10]}
+                  className="code-block-scroll"
+                />
+              )}
+            </div>
           </div>
 
           {/* ---- 第 4 层：标题 ---- */}

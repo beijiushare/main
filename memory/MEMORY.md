@@ -1,0 +1,2 @@
+- [beijiu-homepage 首页布局进展](beijiu-homepage-layout-progress.md) — reactrefactor 分支 GSAP 动画进展与遗留问题
+- [GSAP 滚动动画进度](scroll-animation-progress.md) — 首页 GSAP 滚动驱动动画，8 屏时间线，关键 bug 已修复
