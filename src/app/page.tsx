@@ -129,8 +129,9 @@ export default function HomePage() {
       */}
       <section ref={sectionRef} className="desktop-section relative h-[500vh] bg-[#0a0a14]">
         <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
+          <div className="relative w-full h-full">
 
-          {/* ---- 第 0 层：CursorGrid 交互网格 ---- */}
+            {/* ---- 第 0 层：CursorGrid 交互网格 ---- */}
           <div className="absolute inset-0" style={{ zIndex: 0 }}>
             <CursorGrid
               cellSize={70}
@@ -237,6 +238,8 @@ export default function HomePage() {
             className="absolute z-30 bottom-8 left-1/2"
           >
             <ScrollIndicator />
+          </div>
+
           </div>
 
         </div>
