@@ -54,7 +54,7 @@ export default function HomePage() {
           trigger: section,
           start: 'top top',
           end: '+=60vh',
-          scrub: true,
+          scrub: 0.5,
         },
       })
 
@@ -65,7 +65,7 @@ export default function HomePage() {
           trigger: section,
           start: 'top top',
           end: '+=80vh',
-          scrub: true,
+          scrub: 0.5,
         },
       })
 
@@ -76,7 +76,7 @@ export default function HomePage() {
           trigger: section,
           start: 'top top',
           end: '+=300vh',
-          scrub: true,
+          scrub: 0.5,
         },
       })
 
@@ -88,7 +88,7 @@ export default function HomePage() {
           trigger: section,
           start: '+=200vh',
           end: '+=50vh',
-          scrub: true,
+          scrub: 0.5,
         },
       })
     }, section)
