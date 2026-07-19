@@ -45,7 +45,7 @@ export default function HomePage() {
       gsap.set(indicatorRef.current, { xPercent: -50 })
       gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
 
-      // ─── 标题：居中 → 左上角 (0 → 80vh) ───
+      // ─── 标题：居中 → 左上角 (0 → 160vh) ───
       gsap.to(titleRef.current, {
         top: 20,
         left: 16,
@@ -56,53 +56,53 @@ export default function HomePage() {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=80vh',
+          end: '+=160vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 独角兽：缩小 (0 → 120vh) ───
+      // ─── 独角兽：缩小 (0 → 240vh) ───
       gsap.to(unicornRef.current, {
         scale: 0.7,
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=120vh',
+          end: '+=240vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 独角兽：左移淡出 (80 → 450vh) 慢速 ───
+      // ─── 独角兽：左移淡出 (160 → 640vh) 慢速 ───
       gsap.to(unicornRef.current, {
         x: '-70vw',
         opacity: 0.3,
         scrollTrigger: {
           trigger: section,
-          start: '+=80vh',
-          end: '+=450vh',
+          start: '+=160vh',
+          end: '+=640vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 水平轨道：向左平移 200vw (0 → 450vh) ───
+      // ─── 水平轨道：向左平移 200vw (0 → 640vh) ───
       gsap.to(trackRef.current, {
         x: '-200vw',
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=450vh',
+          end: '+=640vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 代码块：从下方升起 (380 → 430vh) ───
+      // ─── 代码块：从下方升起 (580 → 640vh) ───
       gsap.to(codeWrapRef.current, {
         y: 0,
         opacity: 1,
         scrollTrigger: {
           trigger: section,
-          start: '+=380vh',
-          end: '+=430vh',
+          start: '+=580vh',
+          end: '+=640vh',
           scrub: 0.5,
         },
       })
@@ -110,7 +110,7 @@ export default function HomePage() {
       // ─── 懒挂载 AnimatedCodeBlock ───
       ScrollTrigger.create({
         trigger: section,
-        start: '+=370vh',
+        start: '+=560vh',
         onEnter: () => setShowCode(true),
         once: true,
       })
@@ -123,11 +123,11 @@ export default function HomePage() {
     <>
       {/* ========== 桌面端 ========== */}
       {/*
-        h-[400vh] 提供 4 屏滚动空间
+        h-[800vh] 提供 8 屏滚动空间
         子元素 position:sticky 让内容始终钉在视口内
         GSAP 跟踪 section 的滚动位置驱动动画（不用 GSAP pin）
       */}
-      <section ref={sectionRef} className="desktop-section relative h-[500vh] bg-[#0a0a14]">
+      <section ref={sectionRef} className="desktop-section relative h-[800vh] bg-[#0a0a14]">
         <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
           <div className="relative w-full h-full">
 
