@@ -175,7 +175,6 @@ export default function HomePage() {
               tintColor="#D946EF"
               tintStrength={0.12}
               objectFit="contain"
-              className="pointer-events-auto"
             />
           </div>
 
