@@ -365,8 +365,12 @@ export const PixelatedCanvas: React.FC<PixelatedCanvasProps> = ({
 
       const onPointerMove = (e: PointerEvent) => {
         const rect = canvasEl.getBoundingClientRect();
-        targetMouseRef.current.x = e.clientX - rect.left;
-        targetMouseRef.current.y = e.clientY - rect.top;
+        // 修正 GSAP 缩放造成的坐标偏移：canvas 内部坐标 ≠ 视觉坐标
+        // 用 canvas 原始 CSS 尺寸与视觉尺寸的比值反算内部坐标
+        const cssW = parseFloat(canvasEl.style.width) || rect.width;
+        const cssH = parseFloat(canvasEl.style.height) || rect.height;
+        targetMouseRef.current.x = ((e.clientX - rect.left) / rect.width) * cssW;
+        targetMouseRef.current.y = ((e.clientY - rect.top) / rect.height) * cssH;
         pointerInsideRef.current = true;
         activityTargetRef.current = 1;
       };
