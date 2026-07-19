@@ -1,9 +1,16 @@
 'use client'
 
+import { useRef, useLayoutEffect } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CursorGrid from '@/components/CursorGrid'
 import ShinyText from '@/components/ShinyText'
 import MobileLinks from '@/components/MobileLinks'
+import ScrollIndicator from '@/components/ScrollIndicator'
 import { AnimatedCodeBlock } from '@/components/ui/animated-code-block'
+import { PixelatedCanvas } from '@/components/ui/pixelated-canvas'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const bresenhamCode = `void line(int x0, int y0, int x1, int y1) {
     int dx = abs(x1-x0), dy = -abs(y1-y0);
@@ -19,67 +26,223 @@ const bresenhamCode = `void line(int x0, int y0, int x1, int y1) {
 }`
 
 export default function HomePage() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const titleRef = useRef<HTMLDivElement>(null)
+  const trackRef = useRef<HTMLDivElement>(null)
+  const codeWrapRef = useRef<HTMLDivElement>(null)
+  const indicatorRef = useRef<HTMLDivElement>(null)
+  const unicornRef = useRef<HTMLDivElement>(null)
+
+  // ── 用 useLayoutEffect 避免首帧闪烁 ──
+  useLayoutEffect(() => {
+    const section = sectionRef.current
+    if (!section) return
+
+    const ctx = gsap.context(() => {
+      // ─── GSAP 接管所有 transform，初始化居中状态 ───
+      // 标题：GSAP 内控 transform（CSS 只负责 top/left 50%）
+      gsap.set(titleRef.current, { xPercent: -50, yPercent: -50, scale: 1 })
+      // 指示器：修正 left:50% 无偏移的问题
+      gsap.set(indicatorRef.current, { xPercent: -50 })
+      // 代码块：预置在视口下方，初始隐藏
+      gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
+
+      // ─── 钉住 section，提供 400vh 滚动空间 ───
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'top top',
+        end: '+=400vh',
+        pin: true,
+        invalidateOnRefresh: true,
+      })
+
+      // ─── ① 标题：居中 → 左上角 (0 → 60vh) ───
+      //    用 top/left 替代 x/y 解决方向问题
+      gsap.to(titleRef.current, {
+        top: 24,
+        left: 24,
+        xPercent: 0,
+        yPercent: 0,
+        scale: 0.28,
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: '+=60vh',
+          scrub: true,
+        },
+      })
+
+      // ─── ② 独角兽：略微缩小 (0 → 80vh) ───
+      gsap.to(unicornRef.current, {
+        scale: 0.7,
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: '+=80vh',
+          scrub: true,
+        },
+      })
+
+      // ─── ③ 水平轨道：向左平移 200vw (0 → 300vh) ───
+      gsap.to(trackRef.current, {
+        x: '-200vw',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: '+=300vh',
+          scrub: true,
+        },
+      })
+
+      // ─── ④ 代码块：从下方升起 (200 → 250vh) ───
+      gsap.to(codeWrapRef.current, {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: '+=200vh',
+          end: '+=50vh',
+          scrub: true,
+        },
+      })
+    }, section)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
     <>
-      {/* 桌面端 */}
-      <div className="page">
-        <div className="backdrop">
-          <CursorGrid
-            cellSize={70}
-            color="#D946EF"
-            radius={140}
-            falloff="smooth"
-            holdTime={400}
-            fadeDuration={800}
-            lineWidth={1.2}
-            maxOpacity={1}
-            fillOpacity={0}
-            gridOpacity={0}
-            cellRadius={0}
-            clickPulse
-            pulseSpeed={600}
-          />
-          <div className="foreground">
-            <div className="top-section">
-              <div className="header-bar">
-                <div className="identity-zone">
-                  <h1 className="title">
-                    <ShinyText
-                      text="✨BEIJIU.TOP"
-                      speed={3}
-                      color="rgba(210,210,210,0.6)"
-                      shineColor="#ffffff"
-                      spread={150}
-                      direction="left"
-                    />
-                  </h1>
-                </div>
-                <div className="utility-zone">{/* 待设计 */}</div>
-              </div>
-              <div className="top-spacer" />
-            </div>
-            <div className="body-zone">
-              <div className="body-left">
-                <AnimatedCodeBlock
-                  code={bresenhamCode}
-                  theme="dark"
-                  title="bresenham.c"
-                  typingSpeed={40}
-                  showLineNumbers={true}
-                  autoPlay={true}
-                  loop={true}
-                  language="c"
-                  highlightLines={[2, 4, 9, 10]}
-                  className="code-block-left"
-                />
-              </div>
-              <div className="body-right">{/* 待设计 */}</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* ========== 桌面端 ========== */}
+      <section ref={sectionRef} className="desktop-section relative bg-[#0a0a14]">
+        <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
 
-      {/* 移动端 */}
+          {/* ---- 第 0 层：CursorGrid 交互网格 ---- */}
+          <div className="absolute inset-0" style={{ zIndex: 0 }}>
+            <CursorGrid
+              cellSize={70}
+              color="#D946EF"
+              radius={140}
+              falloff="smooth"
+              holdTime={400}
+              fadeDuration={800}
+              lineWidth={1.2}
+              maxOpacity={1}
+              fillOpacity={0}
+              gridOpacity={0}
+              cellRadius={0}
+              clickPulse
+              pulseSpeed={600}
+            />
+          </div>
+
+          {/* ---- 第 1 层：独角兽 ---- */}
+          {/*
+            pointer-events:none → 鼠标穿透到 CursorGrid
+            canvas 自有 pointer-events-auto 确保鼠标悬浮画布时有漩涡
+           */}
+          <div
+            ref={unicornRef}
+            className="absolute inset-0 flex items-center justify-center pointer-events-none"
+            style={{ zIndex: 1 }}
+          >
+            <PixelatedCanvas
+              src="/unicorn.webp"
+              width={740}
+              height={560}
+              cellSize={5}
+              dotScale={0.8}
+              shape="circle"
+              backgroundColor="#0a0a14"
+              dropoutStrength={0.4}
+              interactive
+              distortionStrength={7}
+              distortionRadius={80}
+              distortionMode="swirl"
+              followSpeed={0.2}
+              jitterStrength={4}
+              jitterSpeed={4}
+              sampleAverage
+              tintColor="#D946EF"
+              tintStrength={0.12}
+              objectFit="contain"
+              className="pointer-events-auto"
+            />
+          </div>
+
+          {/* ---- 第 2 层：水平轨道（内容面板） ---- */}
+          {/*
+            pointer-events:none → 鼠标穿透到 CursorGrid 和独角兽
+            仅代码块 wrapper 恢复 pointer-events:auto
+          */}
+          <div
+            ref={trackRef}
+            className="absolute inset-0 flex pointer-events-none"
+            style={{ zIndex: 10, width: '300vw' }}
+          >
+            {/* 面板 0：留空，靠 CursorGrid + 独角兽填充 */}
+            <div className="w-screen h-full" />
+
+            {/* 面板 1：代码块 */}
+            <div className="w-screen h-full relative overflow-hidden">
+              <div
+                ref={codeWrapRef}
+                className="absolute inset-0 flex items-center justify-center pointer-events-auto"
+              >
+                <div className="w-full max-w-[580px] px-8">
+                  <AnimatedCodeBlock
+                    code={bresenhamCode}
+                    theme="dark"
+                    title="bresenham.c"
+                    typingSpeed={40}
+                    showLineNumbers
+                    autoPlay
+                    loop
+                    language="c"
+                    highlightLines={[2, 4, 9, 10]}
+                    className="code-block-scroll"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* 面板 2：预留 */}
+            <div className="w-screen h-full" />
+          </div>
+
+          {/* ---- 第 3 层：标题 ---- */}
+          {/*
+            CSS top/left:50% 提供初始位置
+            useLayoutEffect 内 GSAP set xPercent/yPercent:-50 实现居中
+            动画后 top/left → 24px，xPercent/yPercent → 0，scale → 0.28
+          */}
+          <div
+            ref={titleRef}
+            className="absolute z-20 top-1/2 left-1/2"
+          >
+            <h1 className="hero-title">
+              <ShinyText
+                text="✨BEIJIU.TOP"
+                speed={3}
+                color="rgba(210,210,210,0.6)"
+                shineColor="#ffffff"
+                spread={150}
+                direction="left"
+              />
+            </h1>
+          </div>
+
+          {/* ---- 向下滚动指示器（永久可见） ---- */}
+          <div
+            ref={indicatorRef}
+            className="absolute z-30 bottom-8 left-1/2"
+          >
+            <ScrollIndicator />
+          </div>
+
+        </div>
+      </section>
+
+      {/* ========== 移动端 ========== */}
       <div className="mobile-page">
         <div className="mobile-hint">请转至桌面端获取更佳体验</div>
         <div className="mobile-overlay">
@@ -89,82 +252,20 @@ export default function HomePage() {
       </div>
 
       <style>{`
-        .page {
-          position: relative;
-          width: 100%;
-          height: 100vh;
-          overflow: hidden;
-        }
-        .backdrop {
-          position: absolute;
-          inset: 0;
-          z-index: 1;
-          background: #0a0a14;
-        }
-        .foreground {
-          position: absolute;
-          inset: 0;
-          z-index: 2;
-          pointer-events: none;
-          display: flex;
-          flex-direction: column;
-        }
-        .body-left {
-          pointer-events: auto;
-        }
-        .top-section {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-        }
-        .header-bar {
-          flex: 3;
-          display: flex;
-          flex-direction: row;
-        }
-        .top-spacer {
-          flex: 1;
-        }
-        .identity-zone {
-          flex: 1;
-          display: flex;
-          align-items: center;
-          padding-left: 2px;
-        }
-        .utility-zone {
-          flex: 1;
-        }
-        .title {
+        .hero-title {
           margin: 0;
-          font-size: clamp(48px, 7vw, 96px);
+          font-size: clamp(80px, 12vw, 160px);
           font-weight: 800;
           letter-spacing: 4px;
           font-family: 'ZSFT-342', 'Segoe UI', system-ui, -apple-system, sans-serif;
           user-select: none;
+          line-height: 1;
+          white-space: nowrap;
         }
-        .body-zone {
-          flex: 2;
-          display: flex;
-          flex-direction: row;
-        }
-        .body-left {
-          flex: 6;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 24px;
-        }
-        .body-right {
-          flex: 5;
-        }
-        .code-block-left {
-          width: 100%;
-          max-width: 560px;
-        }
-        .mobile-page {
-          display: none;
-        }
+
+        .code-block-scroll { width: 100%; }
+
+        .mobile-page { display: none; }
         .mobile-overlay {
           display: flex;
           flex-direction: column;
@@ -183,9 +284,7 @@ export default function HomePage() {
         }
         .mobile-hint {
           position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
+          top: 0; left: 0; right: 0;
           background: #333333c5;
           color: #fff;
           text-align: center;
@@ -193,8 +292,9 @@ export default function HomePage() {
           font-size: 14px;
           z-index: 100;
         }
+
         @media (max-width: 768px) {
-          .page { display: none; }
+          .desktop-section { display: none; }
           .mobile-page {
             display: flex;
             align-items: center;
@@ -202,6 +302,7 @@ export default function HomePage() {
             width: 100%;
             height: 100vh;
             overflow: hidden;
+            background: #0a0a14;
           }
           .mobile-title { font-size: 40px; }
         }
