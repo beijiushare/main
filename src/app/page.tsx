@@ -162,7 +162,7 @@ export default function HomePage() {
               cellSize={5}
               dotScale={0.8}
               shape="circle"
-              backgroundColor="#0a0a14"
+              backgroundColor=""
               dropoutStrength={0.4}
               interactive
               distortionStrength={7}
