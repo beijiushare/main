@@ -39,7 +39,7 @@ export default function HomePage() {
 
     const ctx = gsap.context(() => {
       // 初始化 GSAP 内控状态
-      gsap.set(titleRef.current, { xPercent: -50, yPercent: -50, scale: 1 })
+      gsap.set(titleRef.current, { scale: 1 })
       gsap.set(indicatorRef.current, { xPercent: -50 })
       gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
 
@@ -190,7 +190,7 @@ export default function HomePage() {
           {/* ---- 第 3 层：标题 ---- */}
           <div
             ref={titleRef}
-            className="absolute z-20 top-1/2 left-1/2"
+            className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           >
             <h1 className="hero-title">
               <ShinyText
