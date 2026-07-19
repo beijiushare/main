@@ -59,13 +59,15 @@ export default function HomePage() {
         },
       })
 
-      // ─── 独角兽：略微缩小 (0 → 80vh) ───
+      // ─── 独角兽：缩小 + 左移让位 (0 → 200vh) ───
       gsap.to(unicornRef.current, {
         scale: 0.7,
+        x: '-40vw',
+        opacity: 0.5,
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=80vh',
+          end: '+=200vh',
           scrub: 0.5,
         },
       })
