@@ -365,23 +365,10 @@ export const PixelatedCanvas: React.FC<PixelatedCanvasProps> = ({
 
       const onPointerMove = (e: PointerEvent) => {
         const rect = canvasEl.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const inside = x >= 0 && x <= rect.width && y >= 0 && y <= rect.height;
-        targetMouseRef.current.x = x;
-        targetMouseRef.current.y = y;
-        if (inside) {
-          pointerInsideRef.current = true;
-          activityTargetRef.current = 1;
-        } else if (pointerInsideRef.current) {
-          pointerInsideRef.current = false;
-          if (fadeOnLeave) {
-            activityTargetRef.current = 0;
-          } else {
-            targetMouseRef.current.x = -9999;
-            targetMouseRef.current.y = -9999;
-          }
-        }
+        targetMouseRef.current.x = e.clientX - rect.left;
+        targetMouseRef.current.y = e.clientY - rect.top;
+        pointerInsideRef.current = true;
+        activityTargetRef.current = 1;
       };
       document.addEventListener("pointermove", onPointerMove);
 
