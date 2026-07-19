@@ -71,45 +71,45 @@ export default function HomePage() {
         },
       })
 
-      // ─── 独角兽：左移淡出 (80 → 200vh) ───
+      // ─── 独角兽：左移淡出 (80 → 330vh) ───
       gsap.to(unicornRef.current, {
         x: '-100vw',
         opacity: 0.3,
         scrollTrigger: {
           trigger: section,
           start: '+=80vh',
-          end: '+=200vh',
+          end: '+=330vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 水平轨道：向左平移 200vw (0 → 300vh) ───
+      // ─── 水平轨道：向左平移 200vw (0 → 450vh) ───
       gsap.to(trackRef.current, {
         x: '-200vw',
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=300vh',
+          end: '+=450vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 代码块：从下方升起 (200 → 250vh) ───
+      // ─── 代码块：从下方升起 (380 → 430vh) ───
       gsap.to(codeWrapRef.current, {
         y: 0,
         opacity: 1,
         scrollTrigger: {
           trigger: section,
-          start: '+=200vh',
-          end: '+=50vh',
+          start: '+=380vh',
+          end: '+=430vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 懒挂载 AnimatedCodeBlock（接近 200vh 时才挂载，消除 Framer Motion 合成伪影） ───
+      // ─── 懒挂载 AnimatedCodeBlock ───
       ScrollTrigger.create({
         trigger: section,
-        start: '+=190vh',
+        start: '+=370vh',
         onEnter: () => setShowCode(true),
         once: true,
       })
@@ -126,7 +126,7 @@ export default function HomePage() {
         子元素 position:sticky 让内容始终钉在视口内
         GSAP 跟踪 section 的滚动位置驱动动画（不用 GSAP pin）
       */}
-      <section ref={sectionRef} className="desktop-section relative h-[400vh] bg-[#0a0a14]">
+      <section ref={sectionRef} className="desktop-section relative h-[500vh] bg-[#0a0a14]">
         <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
 
           {/* ---- 第 0 层：CursorGrid 交互网格 ---- */}

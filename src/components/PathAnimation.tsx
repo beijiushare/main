@@ -116,13 +116,24 @@ export default function PathAnimation({
     trail.style.strokeDashoffset = String(pathLength)
 
     const ctx = gsap.context(() => {
+      // ─── 容器渐显（独角兽移走后出现） ───
+      gsap.to(containerRef.current, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: '+=240vh',
+          end: '+=270vh',
+          scrub: 1,
+        },
+      })
+
       // ─── 纸飞机沿路径飞行（由滚动驱动，scrub: 1.5 产生后延性） ───
       gsap.to({ p: 0 }, {
         p: 1,
         scrollTrigger: {
           trigger: section,
-          start: '+=160vh',
-          end: '+=300vh',
+          start: '+=270vh',
+          end: '+=400vh',
           scrub: 1.5,
         },
         onUpdate: function () {
@@ -157,8 +168,8 @@ export default function PathAnimation({
           scale: 1,
           scrollTrigger: {
             trigger: section,
-            start: '+=270vh',
-            end: '+=300vh',
+            start: '+=370vh',
+            end: '+=400vh',
             scrub: 1,
           },
         },
@@ -171,7 +182,7 @@ export default function PathAnimation({
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 pointer-events-none"
+      className="absolute inset-0 pointer-events-none opacity-0 invisible"
       style={{ zIndex: 5 }}
     >
       {/* SVG 层：飞行路径 + 拖尾 + 纸飞机 */}
