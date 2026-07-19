@@ -3,7 +3,7 @@
 import { useRef, useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Github, FileText, QrCode, ExternalLink, Play, User } from 'lucide-react'
+import { Globe, FileText, QrCode, ExternalLink, Play, User } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,7 +14,7 @@ const FLIGHT_PATH =
 const LINK_ITEMS = [
   { label: 'vCard', href: '/vCard', icon: User },
   { label: 'CV', href: '/cv', icon: FileText },
-  { label: 'GitHub', href: 'https://github.com/beijiushare', icon: Github },
+  { label: 'GitHub', href: 'https://github.com/beijiushare', icon: Globe },
   { label: '公众号', href: '/WechatPublic', icon: QrCode },
   { label: 'Blog', href: 'https://blog.beijiu.top/', icon: ExternalLink },
   { label: 'Bilibili', href: 'https://space.bilibili.com/3494379710842912', icon: Play },
@@ -146,7 +146,6 @@ export default function PathAnimation({
             {LINK_ITEMS.map((link) => {
               const Icon = link.icon
               const isExternal = link.href.startsWith('http')
-              const Comp = isExternal ? 'a' : 'a'
               const extraProps = isExternal
                 ? { target: '_blank' as const, rel: 'noopener noreferrer' as const }
                 : {}
