@@ -45,12 +45,8 @@ export default function HomePage() {
       gsap.set(indicatorRef.current, { xPercent: -50 })
       gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
 
-      // ─── 标题：居中 → 左上角 (0 → 80vh) ───
+      // ─── 标题：左上角缩小 (0 → 80vh) ───
       gsap.to(titleRef.current, {
-        top: 8,
-        left: 8,
-        xPercent: 0,
-        yPercent: 0,
         scale: 0.28,
         scrollTrigger: {
           trigger: section,
@@ -217,7 +213,7 @@ export default function HomePage() {
           {/* ---- 第 4 层：标题 ---- */}
           <div
             ref={titleRef}
-            className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            className="absolute z-20 top-2 left-2"
           >
             <h1 className="hero-title">
               <ShinyText
