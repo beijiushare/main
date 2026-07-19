@@ -224,9 +224,9 @@ export default function HomePage() {
               <ShinyText
                 text="✨BEIJIU.TOP"
                 speed={3}
-                color="rgba(210,210,210,0.6)"
+                color="rgba(230,230,230,0.9)"
                 shineColor="#ffffff"
-                spread={150}
+                spread={120}
                 direction="left"
               />
             </h1>
