@@ -72,13 +72,13 @@ export default function HomePage() {
         },
       })
 
-      // ─── 独角兽：左移淡出 (160 → 640vh) 慢速 ───
+      // ─── 独角兽：左移淡出 (240 → 640vh) 慢速 ───
       gsap.to(unicornRef.current, {
         x: '-70vw',
         opacity: 0.3,
         scrollTrigger: {
           trigger: section,
-          start: '+=160vh',
+          start: '+=240vh',
           end: '+=640vh',
           scrub: 0.5,
         },
