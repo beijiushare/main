@@ -47,8 +47,8 @@ export default function HomePage() {
 
       // ─── 标题：居中 → 左上角 (0 → 80vh) ───
       gsap.to(titleRef.current, {
-        top: 4,
-        left: 4,
+        top: 0,
+        left: 0,
         xPercent: 0,
         yPercent: 0,
         scale: 0.28,
