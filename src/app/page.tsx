@@ -72,25 +72,25 @@ export default function HomePage() {
         },
       })
 
-      // ─── 独角兽：左移淡出 (240 → 640vh) 慢速 ───
+      // ─── 独角兽：左移淡出 (290 → 690vh) 慢速 ───
       gsap.to(unicornRef.current, {
         x: '-70vw',
         opacity: 0.3,
         scrollTrigger: {
           trigger: section,
-          start: '+=240vh',
-          end: '+=640vh',
+          start: '+=290vh',
+          end: '+=690vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 水平轨道：向左平移 200vw (0 → 640vh) ───
+      // ─── 水平轨道：向左平移 200vw (0 → 690vh) ───
       gsap.to(trackRef.current, {
         x: '-200vw',
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=640vh',
+          end: '+=690vh',
           scrub: 0.5,
         },
       })
