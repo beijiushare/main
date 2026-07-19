@@ -365,27 +365,25 @@ export const PixelatedCanvas: React.FC<PixelatedCanvasProps> = ({
 
       const onPointerMove = (e: PointerEvent) => {
         const rect = canvasEl.getBoundingClientRect();
-        targetMouseRef.current.x = e.clientX - rect.left;
-        targetMouseRef.current.y = e.clientY - rect.top;
-        pointerInsideRef.current = true;
-        activityTargetRef.current = 1;
-      };
-      const onPointerEnter = () => {
-        pointerInsideRef.current = true;
-        activityTargetRef.current = 1;
-      };
-      const onPointerLeave = () => {
-        pointerInsideRef.current = false;
-        if (fadeOnLeave) {
-          activityTargetRef.current = 0;
-        } else {
-          targetMouseRef.current.x = -9999;
-          targetMouseRef.current.y = -9999;
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const inside = x >= 0 && x <= rect.width && y >= 0 && y <= rect.height;
+        targetMouseRef.current.x = x;
+        targetMouseRef.current.y = y;
+        if (inside) {
+          pointerInsideRef.current = true;
+          activityTargetRef.current = 1;
+        } else if (pointerInsideRef.current) {
+          pointerInsideRef.current = false;
+          if (fadeOnLeave) {
+            activityTargetRef.current = 0;
+          } else {
+            targetMouseRef.current.x = -9999;
+            targetMouseRef.current.y = -9999;
+          }
         }
       };
-      canvasEl.addEventListener("pointermove", onPointerMove);
-      canvasEl.addEventListener("pointerenter", onPointerEnter);
-      canvasEl.addEventListener("pointerleave", onPointerLeave);
+      document.addEventListener("pointermove", onPointerMove);
 
       const animate = () => {
         const now = performance.now();
@@ -493,9 +491,7 @@ export const PixelatedCanvas: React.FC<PixelatedCanvasProps> = ({
       rafRef.current = requestAnimationFrame(animate);
 
       const cleanup = () => {
-        canvasEl.removeEventListener("pointermove", onPointerMove);
-        canvasEl.removeEventListener("pointerenter", onPointerEnter);
-        canvasEl.removeEventListener("pointerleave", onPointerLeave);
+        document.removeEventListener("pointermove", onPointerMove);
         if (rafRef.current) cancelAnimationFrame(rafRef.current);
       };
       (img as any)._cleanup = cleanup;
