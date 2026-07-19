@@ -370,7 +370,14 @@ export const PixelatedCanvas: React.FC<PixelatedCanvasProps> = ({
         pointerInsideRef.current = true;
         activityTargetRef.current = 1;
       };
-      document.addEventListener("pointermove", onPointerMove);
+      const onPointerLeave = () => {
+        pointerInsideRef.current = false;
+        if (fadeOnLeave) {
+          activityTargetRef.current = 0;
+        }
+      };
+      canvasEl.addEventListener("pointermove", onPointerMove);
+      canvasEl.addEventListener("pointerleave", onPointerLeave);
 
       const animate = () => {
         const now = performance.now();
@@ -478,7 +485,8 @@ export const PixelatedCanvas: React.FC<PixelatedCanvasProps> = ({
       rafRef.current = requestAnimationFrame(animate);
 
       const cleanup = () => {
-        document.removeEventListener("pointermove", onPointerMove);
+        canvasEl.removeEventListener("pointermove", onPointerMove);
+        canvasEl.removeEventListener("pointerleave", onPointerLeave);
         if (rafRef.current) cancelAnimationFrame(rafRef.current);
       };
       (img as any)._cleanup = cleanup;
