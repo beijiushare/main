@@ -217,7 +217,7 @@ export default function HomePage() {
           {/* ---- 第 4 层：标题 ---- */}
           <div
             ref={titleRef}
-            className="absolute z-20 top-1/2 left-1/2"
+            className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           >
             <h1 className="hero-title">
               <ShinyText
