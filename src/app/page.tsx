@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useLayoutEffect } from 'react'
+import { useRef, useLayoutEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CursorGrid from '@/components/CursorGrid'
@@ -32,6 +32,7 @@ export default function HomePage() {
   const codeWrapRef = useRef<HTMLDivElement>(null)
   const indicatorRef = useRef<HTMLDivElement>(null)
   const unicornRef = useRef<HTMLDivElement>(null)
+  const [showCode, setShowCode] = useState(false)
 
   useLayoutEffect(() => {
     const section = sectionRef.current
@@ -90,6 +91,14 @@ export default function HomePage() {
           end: '+=50vh',
           scrub: 0.5,
         },
+      })
+
+      // ─── 懒挂载 AnimatedCodeBlock（接近 200vh 时才挂载，消除 Framer Motion 合成伪影） ───
+      ScrollTrigger.create({
+        trigger: section,
+        start: '+=190vh',
+        onEnter: () => setShowCode(true),
+        once: true,
       })
     }, section)
 
@@ -164,25 +173,27 @@ export default function HomePage() {
           >
             <div className="w-screen h-full" />
             <div className="w-screen h-full relative overflow-hidden">
-              {/* <div
+              <div
                 ref={codeWrapRef}
                 className="absolute inset-0 flex items-center justify-center pointer-events-auto opacity-0"
               >
                 <div className="w-full max-w-[580px] px-8">
-                  <AnimatedCodeBlock
-                    code={bresenhamCode}
-                    theme="dark"
-                    title="bresenham.c"
-                    typingSpeed={40}
-                    showLineNumbers
-                    autoPlay
-                    loop
-                    language="c"
-                    highlightLines={[2, 4, 9, 10]}
-                    className="code-block-scroll"
-                  />
+                  {showCode && (
+                    <AnimatedCodeBlock
+                      code={bresenhamCode}
+                      theme="dark"
+                      title="bresenham.c"
+                      typingSpeed={40}
+                      showLineNumbers
+                      autoPlay
+                      loop
+                      language="c"
+                      highlightLines={[2, 4, 9, 10]}
+                      className="code-block-scroll"
+                    />
+                  )}
                 </div>
-              </div> */}
+              </div>
             </div>
             <div className="w-screen h-full" />
           </div>
