@@ -194,6 +194,7 @@ export default function HomePage() {
               <div
                 ref={codeWrapRef}
                 className="absolute inset-0 flex items-center justify-center pointer-events-auto opacity-0"
+                style={{ background: 'rgba(255,0,0,0.1)', border: '2px solid red' }}
               >
                 <div className="w-full max-w-[580px] px-8">
                   {showCode && (

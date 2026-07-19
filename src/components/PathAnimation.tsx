@@ -143,7 +143,7 @@ export default function PathAnimation({
 
           // 拖尾线条：画到 (p - gap) 位置
           const trailEnd = Math.max(0, p - gap)
-          trail.style.strokeDashoffset = pathLength * (1 - trailEnd)
+          trail.style.strokeDashoffset = String(pathLength * (1 - trailEnd))
 
           // 纸飞机位置
           const safeP = Math.min(1, Math.max(0, p))
