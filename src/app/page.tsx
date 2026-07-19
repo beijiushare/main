@@ -45,28 +45,28 @@ export default function HomePage() {
       gsap.set(indicatorRef.current, { xPercent: -50 })
       gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
 
-      // ─── 标题：居中 → 左上角 (0 → 60vh) ───
+      // ─── 标题：居中 → 左上角 (0 → 80vh) ───
       gsap.to(titleRef.current, {
-        top: 24,
-        left: 24,
+        top: 8,
+        left: 8,
         xPercent: 0,
         yPercent: 0,
         scale: 0.28,
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=60vh',
+          end: '+=80vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 独角兽：缩小 (0 → 80vh) ───
+      // ─── 独角兽：缩小 (0 → 120vh) ───
       gsap.to(unicornRef.current, {
         scale: 0.7,
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=80vh',
+          end: '+=120vh',
           scrub: 0.5,
         },
       })
