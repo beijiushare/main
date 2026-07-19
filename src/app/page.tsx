@@ -33,31 +33,17 @@ export default function HomePage() {
   const indicatorRef = useRef<HTMLDivElement>(null)
   const unicornRef = useRef<HTMLDivElement>(null)
 
-  // ── 用 useLayoutEffect 避免首帧闪烁 ──
   useLayoutEffect(() => {
     const section = sectionRef.current
     if (!section) return
 
     const ctx = gsap.context(() => {
-      // ─── GSAP 接管所有 transform，初始化居中状态 ───
-      // 标题：GSAP 内控 transform（CSS 只负责 top/left 50%）
+      // 初始化 GSAP 内控状态
       gsap.set(titleRef.current, { xPercent: -50, yPercent: -50, scale: 1 })
-      // 指示器：修正 left:50% 无偏移的问题
       gsap.set(indicatorRef.current, { xPercent: -50 })
-      // 代码块：预置在视口下方，初始隐藏
       gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
 
-      // ─── 钉住 section，提供 400vh 滚动空间 ───
-      ScrollTrigger.create({
-        trigger: section,
-        start: 'top top',
-        end: '+=400vh',
-        pin: true,
-        invalidateOnRefresh: true,
-      })
-
-      // ─── ① 标题：居中 → 左上角 (0 → 60vh) ───
-      //    用 top/left 替代 x/y 解决方向问题
+      // ─── 标题：居中 → 左上角 (0 → 60vh) ───
       gsap.to(titleRef.current, {
         top: 24,
         left: 24,
@@ -72,7 +58,7 @@ export default function HomePage() {
         },
       })
 
-      // ─── ② 独角兽：略微缩小 (0 → 80vh) ───
+      // ─── 独角兽：略微缩小 (0 → 80vh) ───
       gsap.to(unicornRef.current, {
         scale: 0.7,
         scrollTrigger: {
@@ -83,7 +69,7 @@ export default function HomePage() {
         },
       })
 
-      // ─── ③ 水平轨道：向左平移 200vw (0 → 300vh) ───
+      // ─── 水平轨道：向左平移 200vw (0 → 300vh) ───
       gsap.to(trackRef.current, {
         x: '-200vw',
         scrollTrigger: {
@@ -94,7 +80,7 @@ export default function HomePage() {
         },
       })
 
-      // ─── ④ 代码块：从下方升起 (200 → 250vh) ───
+      // ─── 代码块：从下方升起 (200 → 250vh) ───
       gsap.to(codeWrapRef.current, {
         y: 0,
         opacity: 1,
@@ -113,7 +99,12 @@ export default function HomePage() {
   return (
     <>
       {/* ========== 桌面端 ========== */}
-      <section ref={sectionRef} className="desktop-section relative bg-[#0a0a14]">
+      {/*
+        h-[400vh] 提供 4 屏滚动空间
+        子元素 position:sticky 让内容始终钉在视口内
+        GSAP 跟踪 section 的滚动位置驱动动画（不用 GSAP pin）
+      */}
+      <section ref={sectionRef} className="desktop-section relative h-[400vh] bg-[#0a0a14]">
         <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
 
           {/* ---- 第 0 层：CursorGrid 交互网格 ---- */}
@@ -136,10 +127,6 @@ export default function HomePage() {
           </div>
 
           {/* ---- 第 1 层：独角兽 ---- */}
-          {/*
-            pointer-events:none → 鼠标穿透到 CursorGrid
-            canvas 自有 pointer-events-auto 确保鼠标悬浮画布时有漩涡
-           */}
           <div
             ref={unicornRef}
             className="absolute inset-0 flex items-center justify-center pointer-events-none"
@@ -169,20 +156,13 @@ export default function HomePage() {
             />
           </div>
 
-          {/* ---- 第 2 层：水平轨道（内容面板） ---- */}
-          {/*
-            pointer-events:none → 鼠标穿透到 CursorGrid 和独角兽
-            仅代码块 wrapper 恢复 pointer-events:auto
-          */}
+          {/* ---- 第 2 层：水平轨道 ---- */}
           <div
             ref={trackRef}
             className="absolute inset-0 flex pointer-events-none"
             style={{ zIndex: 10, width: '300vw' }}
           >
-            {/* 面板 0：留空，靠 CursorGrid + 独角兽填充 */}
             <div className="w-screen h-full" />
-
-            {/* 面板 1：代码块 */}
             <div className="w-screen h-full relative overflow-hidden">
               <div
                 ref={codeWrapRef}
@@ -204,17 +184,10 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
-            {/* 面板 2：预留 */}
             <div className="w-screen h-full" />
           </div>
 
           {/* ---- 第 3 层：标题 ---- */}
-          {/*
-            CSS top/left:50% 提供初始位置
-            useLayoutEffect 内 GSAP set xPercent/yPercent:-50 实现居中
-            动画后 top/left → 24px，xPercent/yPercent → 0，scale → 0.28
-          */}
           <div
             ref={titleRef}
             className="absolute z-20 top-1/2 left-1/2"
@@ -231,7 +204,7 @@ export default function HomePage() {
             </h1>
           </div>
 
-          {/* ---- 向下滚动指示器（永久可见） ---- */}
+          {/* ---- 向下滚动指示器 ---- */}
           <div
             ref={indicatorRef}
             className="absolute z-30 bottom-8 left-1/2"
@@ -262,9 +235,7 @@ export default function HomePage() {
           line-height: 1;
           white-space: nowrap;
         }
-
         .code-block-scroll { width: 100%; }
-
         .mobile-page { display: none; }
         .mobile-overlay {
           display: flex;
@@ -292,7 +263,6 @@ export default function HomePage() {
           font-size: 14px;
           z-index: 100;
         }
-
         @media (max-width: 768px) {
           .desktop-section { display: none; }
           .mobile-page {
