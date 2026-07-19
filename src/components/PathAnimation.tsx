@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useLayoutEffect, type ReactNode } from 'react'
+import { useRef, useEffect, type ReactNode } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -101,7 +101,7 @@ export default function PathAnimation({
   const planeRef = useRef<SVGGElement>(null)
   const linksCardRef = useRef<HTMLDivElement>(null)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const section = sectionRef.current
     const trail = trailRef.current
     const pathEl = pathRef.current
@@ -119,6 +119,7 @@ export default function PathAnimation({
       // ─── 容器渐显（独角兽移走后出现） ───
       gsap.to(containerRef.current, {
         opacity: 1,
+        visibility: 'visible',
         scrollTrigger: {
           trigger: section,
           start: '+=240vh',
