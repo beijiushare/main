@@ -121,14 +121,14 @@ export default function PathAnimation({
     const vh = (n: number) => (n / 100) * window.innerHeight
     const sts: ScrollTrigger[] = []
 
-    // ─── 容器渐显 420→480vh ───
+    // ─── 容器渐显 260→350vh（与独角兽左移同步开始） ───
     const containerAnim = gsap.to(containerRef.current, {
       opacity: 1, visibility: 'visible', ease: 'none', paused: true,
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(420),
-      end: () => section.offsetTop + vh(480),
+      start: () => section.offsetTop + vh(260),
+      end: () => section.offsetTop + vh(350),
       scrub: 0.6,
       animation: containerAnim,
     }))
