@@ -141,18 +141,19 @@ export default function PathAnimation({
       p: 1, ease: 'none', paused: true,
       onUpdate: () => {
         const p = planeObj.p
-        const gap = 0
+        const gap = 0.03
 
-        // 拖尾线条（纸飞机拉出的轨迹，紧跟在飞机后方）
+        // 拖尾线条（纸飞机后方 3% 间距处开始绘制轨迹）
         const trailEnd = Math.max(0, p - gap)
         trail.style.strokeDashoffset = String(pathLength * (1 - trailEnd))
 
-        // 纸飞机位置
+        // 纸飞机位置与朝向（指向路径延伸方向 = 纸飞机拉线效果）
         const safeP = Math.min(1, Math.max(0, p))
         const point = pathEl.getPointAtLength(pathLength * safeP)
-        const nextP = Math.min(1, safeP + 0.003)
-        const next = pathEl.getPointAtLength(pathLength * nextP)
-        const angle = Math.atan2(next.y - point.y, next.x - point.x) * (180 / Math.PI)
+        const lookAhead = Math.min(1, safeP + 0.01) // 取前方 1% 处求切线方向，更稳定
+        const next = pathEl.getPointAtLength(pathLength * lookAhead)
+        // atan2 返回逆时针角，SVG rotate 是顺时针，加顺时针修正角匹配路径朝向
+        const angle = Math.atan2(next.y - point.y, next.x - point.x) * (180 / Math.PI) + 10
 
         plane.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle})`)
       },
