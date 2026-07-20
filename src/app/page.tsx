@@ -87,18 +87,6 @@ export default function HomePage() {
       animation: unicornLeft,
     }))
 
-    // ─── 滚动指示器淡出 120→220vh ───
-    const indicatorAnim = gsap.to(indicatorRef.current, {
-      opacity: 0, ease: 'none', paused: true,
-    })
-    sts.push(ScrollTrigger.create({
-      trigger: section,
-      start: () => section.offsetTop + vh(120),
-      end: () => section.offsetTop + vh(220),
-      scrub: 0.6,
-      animation: indicatorAnim,
-    }))
-
     // ─── 轨道平移（全程）0→1100vh ───
     const trackAnim = gsap.to(trackRef.current, {
       x: '-200vw', ease: 'none', paused: true,
@@ -109,6 +97,18 @@ export default function HomePage() {
       end: () => section.offsetTop + vh(1100),
       scrub: 0.6,
       animation: trackAnim,
+    }))
+
+    // ─── 滚动指示器淡出（仅在末尾消失）1050→1100vh ───
+    const indicatorAnim = gsap.to(indicatorRef.current, {
+      opacity: 0, ease: 'none', paused: true,
+    })
+    sts.push(ScrollTrigger.create({
+      trigger: section,
+      start: () => section.offsetTop + vh(1050),
+      end: () => section.offsetTop + vh(1100),
+      scrub: 0.6,
+      animation: indicatorAnim,
     }))
 
     // ─── 代码块升起 870→1050vh ───
