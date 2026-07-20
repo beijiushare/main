@@ -72,37 +72,37 @@ export default function HomePage() {
         },
       })
 
-      // ─── 独角兽：左移淡出 (780 → 1000vh) 慢速 ───
+      // ─── 独角兽：左移淡出 (780 → 900vh) ───
       gsap.to(unicornRef.current, {
         x: '-70vw',
         opacity: 0.3,
         scrollTrigger: {
           trigger: section,
           start: '+=780vh',
-          end: '+=1000vh',
+          end: '+=900vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 水平轨道：向左平移 200vw (0 → 1000vh) ───
+      // ─── 水平轨道：向左平移 200vw (0 → 1100vh) ───
       gsap.to(trackRef.current, {
         x: '-200vw',
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=1000vh',
+          end: '+=1100vh',
           scrub: 0.5,
         },
       })
 
-      // ─── 代码块：从下方升起 (580 → 640vh) ───
+      // ─── 代码块：从下方升起 (1040 → 1100vh) ───
       gsap.to(codeWrapRef.current, {
         y: 0,
         opacity: 1,
         scrollTrigger: {
           trigger: section,
-          start: '+=580vh',
-          end: '+=640vh',
+          start: '+=1040vh',
+          end: '+=1100vh',
           scrub: 0.5,
         },
       })
@@ -110,7 +110,7 @@ export default function HomePage() {
       // ─── 懒挂载 AnimatedCodeBlock ───
       ScrollTrigger.create({
         trigger: section,
-        start: '+=560vh',
+        start: '+=1030vh',
         onEnter: () => setShowCode(true),
         once: true,
       })
@@ -123,11 +123,11 @@ export default function HomePage() {
     <>
       {/* ========== 桌面端 ========== */}
       {/*
-        h-[1000vh] 提供 10 屏滚动空间
+        h-[1100vh] 提供 11 屏滚动空间
         子元素 position:sticky 让内容始终钉在视口内
         GSAP 跟踪 section 的滚动位置驱动动画（不用 GSAP pin）
       */}
-      <section ref={sectionRef} className="desktop-section relative h-[1000vh] bg-[#0a0a14]">
+      <section ref={sectionRef} className="desktop-section relative h-[1100vh] bg-[#0a0a14]">
         <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
           <div className="relative w-full h-full">
 

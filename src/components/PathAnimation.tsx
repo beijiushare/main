@@ -6,9 +6,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// 纸飞机飞行路径（蜿蜒的 S 形，从左到右）
+// 纸飞机飞行路径（镜像：从右到左）
 const FLIGHT_PATH =
-  'M 30 340 C 120 160, 180 500, 290 340 C 370 240, 410 440, 510 320 C 570 260, 610 370, 730 280'
+  'M 770 340 C 680 160, 620 500, 510 340 C 430 240, 390 440, 290 320 C 230 260, 190 370, 70 280'
 
 /* ============ 纯 SVG 图标组件（从 main 分支搬运） ============ */
 
@@ -96,6 +96,7 @@ export default function PathAnimation({
   sectionRef: React.RefObject<HTMLDivElement | null>
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
+  const groupRef = useRef<HTMLDivElement>(null)
   const pathRef = useRef<SVGPathElement>(null)
   const trailRef = useRef<SVGPathElement>(null)
   const planeRef = useRef<SVGGElement>(null)
@@ -107,7 +108,8 @@ export default function PathAnimation({
     const pathEl = pathRef.current
     const plane = planeRef.current
     const card = linksCardRef.current
-    if (!section || !trail || !pathEl || !plane || !card) return
+    const group = groupRef.current
+    if (!section || !trail || !pathEl || !plane || !card || !group) return
 
     const pathLength = pathEl.getTotalLength()
 
@@ -116,25 +118,25 @@ export default function PathAnimation({
     trail.style.strokeDashoffset = String(pathLength)
 
     const ctx = gsap.context(() => {
-      // ─── 容器渐显（独角兽移走后出现） ───
+      // ─── 容器渐显（独角兽左移一段后出现） ───
       gsap.to(containerRef.current, {
         opacity: 1,
         visibility: 'visible',
         scrollTrigger: {
           trigger: section,
-          start: '+=240vh',
-          end: '+=270vh',
+          start: '+=820vh',
+          end: '+=840vh',
           scrub: 1,
         },
       })
 
-      // ─── 纸飞机沿路径飞行（由滚动驱动，scrub: 1.5 产生后延性） ───
+      // ─── 纸飞机沿路径飞行（从右到左） ───
       gsap.to({ p: 0 }, {
         p: 1,
         scrollTrigger: {
           trigger: section,
-          start: '+=270vh',
-          end: '+=400vh',
+          start: '+=830vh',
+          end: '+=950vh',
           scrub: 1.5,
         },
         onUpdate: function () {
@@ -159,7 +161,7 @@ export default function PathAnimation({
         },
       })
 
-      // ─── 链接卡片渐显（路径快结束时） ───
+      // ─── 链接卡片渐显（路径快结束、独角兽已完全移出后） ───
       gsap.fromTo(
         card,
         { opacity: 0, y: 30, scale: 0.92 },
@@ -169,12 +171,24 @@ export default function PathAnimation({
           scale: 1,
           scrollTrigger: {
             trigger: section,
-            start: '+=370vh',
-            end: '+=400vh',
+            start: '+=910vh',
+            end: '+=950vh',
             scrub: 1,
           },
         },
       )
+
+      // ─── 线条 + 卡片向左移动 + 变浅（停顿后） ───
+      gsap.to(group, {
+        x: '-70vw',
+        opacity: 0.3,
+        scrollTrigger: {
+          trigger: section,
+          start: '+=990vh',
+          end: '+=1100vh',
+          scrub: 0.8,
+        },
+      })
     })
 
     return () => ctx.revert()
@@ -186,43 +200,44 @@ export default function PathAnimation({
       className="absolute inset-0 pointer-events-none opacity-0 invisible"
       style={{ zIndex: 5 }}
     >
-      {/* SVG 层：飞行路径 + 拖尾 + 纸飞机 */}
-      <svg
-        className="absolute inset-0 w-full h-full"
-        viewBox="0 0 800 600"
-        preserveAspectRatio="xMidYMid meet"
-      >
-        {/* 拖尾线条（白色半透明） */}
-        <path
-          ref={trailRef}
-          d={FLIGHT_PATH}
-          stroke="rgba(255,255,255,0.35)"
-          strokeWidth="2.5"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <div ref={groupRef} className="absolute inset-0">
+        {/* SVG 层：飞行路径 + 拖尾 + 纸飞机 */}
+        <svg
+          className="absolute inset-0 w-full h-full"
+          viewBox="0 0 800 600"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          {/* 拖尾线条（白色半透明） */}
+          <path
+            ref={trailRef}
+            d={FLIGHT_PATH}
+            stroke="rgba(255,255,255,0.35)"
+            strokeWidth="2.5"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
 
-        {/* 参考路径（不可见，用于 getPointAtLength） */}
-        <path ref={pathRef} d={FLIGHT_PATH} fill="none" opacity="0" />
+          {/* 参考路径（不可见，用于 getPointAtLength） */}
+          <path ref={pathRef} d={FLIGHT_PATH} fill="none" opacity="0" />
 
-        {/* 纸飞机 */}
-        <g ref={planeRef}>
-          <g transform="scale(0.035) translate(-512, -512)">
-            <path
-              d="M974.966667 91.46a21.333333 21.333333 0 0 0-21.713334-5.033333l-896 298.666666a21.333333 21.333333 0 0 0-4.226666 38.533334L256 545.413333V832a21.333333 21.333333 0 0 0 36.42 15.086667L448 691.506667l240.913333 240.913333a21.333333 21.333333 0 0 0 35.426667-8.666667l256-810.666666a21.333333 21.333333 0 0 0-5.373333-21.626667zM796.666667 183.606667L277.106667 508.32 114.746667 410.906667zM298.666667 545.16l537.82-336.14-403.873334 437.533333L298.666667 780.5z m395.573333 332.24l-216.666667-216.666667 433.333334-469.426667z"
-              fill="#ffffff"
-            />
+          {/* 纸飞机 */}
+          <g ref={planeRef}>
+            <g transform="scale(0.035) translate(-512, -512)">
+              <path
+                d="M974.966667 91.46a21.333333 21.333333 0 0 0-21.713334-5.033333l-896 298.666666a21.333333 21.333333 0 0 0-4.226666 38.533334L256 545.413333V832a21.333333 21.333333 0 0 0 36.42 15.086667L448 691.506667l240.913333 240.913333a21.333333 21.333333 0 0 0 35.426667-8.666667l256-810.666666a21.333333 21.333333 0 0 0-5.373333-21.626667zM796.666667 183.606667L277.106667 508.32 114.746667 410.906667zM298.666667 545.16l537.82-336.14-403.873334 437.533333L298.666667 780.5z m395.573333 332.24l-216.666667-216.666667 433.333334-469.426667z"
+                fill="#ffffff"
+              />
+            </g>
           </g>
-        </g>
-      </svg>
+        </svg>
 
-      {/* HTML 层：链接卡片 */}
-      <div
-        ref={linksCardRef}
-        className="absolute right-[6%] top-1/2 -translate-y-1/2 pointer-events-auto opacity-0"
-        style={{ zIndex: 6 }}
-      >
+        {/* HTML 层：链接卡片（左侧） */}
+        <div
+          ref={linksCardRef}
+          className="absolute left-[6%] top-1/2 -translate-y-1/2 pointer-events-auto opacity-0"
+          style={{ zIndex: 6 }}
+        >
         <div className="bg-[#0a0a14]/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-2xl">
           <div className="grid grid-cols-3 gap-3">
             {LINK_ITEMS.map(({ label, href, Icon }) => {
@@ -246,6 +261,7 @@ export default function PathAnimation({
             })}
           </div>
         </div>
+      </div>
       </div>
     </div>
   )
