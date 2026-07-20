@@ -40,7 +40,7 @@ export default function HomePage() {
     if (!section) return
 
     // ─── 初始状态 ───
-    gsap.set(titleRef.current, { xPercent: -50, yPercent: -50, scale: 1, transformOrigin: 'top left' })
+    gsap.set(titleRef.current, { top: '50%', left: '50%', xPercent: -50, yPercent: -50, scale: 1, transformOrigin: 'top left' })
     gsap.set(indicatorRef.current, { xPercent: -50 })
     gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
 
@@ -94,6 +94,8 @@ export default function HomePage() {
 
     // ─── 容器暴露给 PathAnimation 子组件 ───
     // PathAnimation 通过 sectionRef 自己监听 progress
+
+    ScrollTrigger.refresh()
 
     return () => {
       st.kill()

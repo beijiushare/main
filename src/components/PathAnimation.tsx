@@ -183,6 +183,8 @@ export default function PathAnimation({
       },
     })
 
+    ScrollTrigger.refresh()
+
     return () => {
       st.kill()
       containerAnim.kill()
