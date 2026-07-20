@@ -100,22 +100,14 @@ export default function HomePage() {
       animation: trackAnim,
     }))
 
-    // ─── 滚动到头时文字切换 ───
-    ScrollTrigger.create({
-      trigger: section,
-      start: () => section.offsetTop + vh(940),
-      onEnter: () => setScrollComplete(true),
-      onLeaveBack: () => setScrollComplete(false),
-    })
-
-    // ─── 代码块升起 760→940vh（组左移结束于 750vh 后立即升起） ───
+    // ─── 代码块升起 810→990vh（组左移结束后立即升起） ───
     const codeAnim = gsap.to(codeWrapRef.current, {
       y: 0, opacity: 1, ease: 'none', paused: true,
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(760),
-      end: () => section.offsetTop + vh(940),
+      start: () => section.offsetTop + vh(810),
+      end: () => section.offsetTop + vh(990),
       scrub: 0.6,
       animation: codeAnim,
     }))
@@ -123,12 +115,18 @@ export default function HomePage() {
     // ─── 代码块懒挂载 ───
     ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(760),
+      start: () => section.offsetTop + vh(810),
       onEnter: () => setShowCode(true),
       once: true,
     })
 
-    ScrollTrigger.refresh()
+    // ─── 滚动到头时文字切换 ───
+    ScrollTrigger.create({
+      trigger: section,
+      start: () => section.offsetTop + vh(990),
+      onEnter: () => setScrollComplete(true),
+      onLeaveBack: () => setScrollComplete(false),
+    })
 
     return () => {
       sts.forEach(st => {
