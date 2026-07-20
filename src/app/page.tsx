@@ -123,11 +123,12 @@ export default function HomePage() {
     <>
       {/* ========== 桌面端 ========== */}
       {/*
-        h-[1100vh] 提供 11 屏滚动空间
+        h-[1200vh] 提供 12 屏滚动空间（实际滚动 1100vh）
+        所有 +=Nvh 值需 ≤ 1100vh 以保证落在有效范围内
         子元素 position:sticky 让内容始终钉在视口内
         GSAP 跟踪 section 的滚动位置驱动动画（不用 GSAP pin）
       */}
-      <section ref={sectionRef} className="desktop-section relative h-[1100vh] bg-[#0a0a14]">
+      <section ref={sectionRef} className="desktop-section relative h-[1200vh] bg-[#0a0a14]">
         <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
           <div className="relative w-full h-full">
 
