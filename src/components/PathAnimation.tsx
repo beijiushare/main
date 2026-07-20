@@ -117,21 +117,23 @@ export default function PathAnimation({
     trail.style.strokeDasharray = String(pathLength)
     trail.style.strokeDashoffset = String(pathLength)
 
-    // ─── 创建暂停动画 ───
+    // vh → 像素工具
+    const vh = (n: number) => (n / 100) * window.innerHeight
+    const sts: ScrollTrigger[] = []
+
+    // ─── 容器渐显 420→480vh ───
     const containerAnim = gsap.to(containerRef.current, {
       opacity: 1, visibility: 'visible', ease: 'none', paused: true,
     })
+    sts.push(ScrollTrigger.create({
+      trigger: section,
+      start: () => section.offsetTop + vh(420),
+      end: () => section.offsetTop + vh(480),
+      scrub: 0.6,
+      animation: containerAnim,
+    }))
 
-    const cardAnim = gsap.fromTo(card,
-      { opacity: 0, y: 30, scale: 0.92 },
-      { opacity: 1, y: 0, scale: 1, ease: 'none', paused: true },
-    )
-
-    const groupAnim = gsap.to(group, {
-      x: '-70vw', opacity: 0.3, ease: 'none', paused: true,
-    })
-
-    // 纸飞机飞行：用一个对象驱动 onUpdate
+    // ─── 纸飞机飞行 440→780vh（独立 ScrollTrigger，原生 scrub 驱动） ───
     const planeObj = { p: 0 }
     const planeAnim = gsap.to(planeObj, {
       p: 1, ease: 'none', paused: true,
@@ -153,44 +155,46 @@ export default function PathAnimation({
         plane.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle})`)
       },
     })
-
-    // ─── 主 ScrollTrigger 读取 sectionRef 父组件的进度 ───
-    const st = ScrollTrigger.create({
+    sts.push(ScrollTrigger.create({
       trigger: section,
-      start: 'top top',
-      end: 'bottom bottom',
-      scrub: 1,
-      onUpdate: (self) => {
-        const p = self.progress // 0~1 全程
+      start: () => section.offsetTop + vh(440),
+      end: () => section.offsetTop + vh(780),
+      scrub: 0.8,
+      animation: planeAnim,
+    }))
 
-        // 工具：映射 p 到子范围
-        const mapP = (start: number, end: number) =>
-          p < start ? 0 : p > end ? 1 : (p - start) / (end - start)
+    // ─── 卡片渐显 540→780vh ───
+    const cardAnim = gsap.fromTo(card,
+      { opacity: 0, y: 30, scale: 0.92 },
+      { opacity: 1, y: 0, scale: 1, ease: 'none', paused: true },
+    )
+    sts.push(ScrollTrigger.create({
+      trigger: section,
+      start: () => section.offsetTop + vh(540),
+      end: () => section.offsetTop + vh(780),
+      scrub: 0.6,
+      animation: cardAnim,
+    }))
 
-        const T = 1100 // 总 vh
-
-        // 容器渐显 820→840vh
-        containerAnim.progress(mapP(820 / T, 840 / T))
-
-        // 纸飞机飞行 830→950vh
-        planeAnim.progress(mapP(830 / T, 950 / T))
-
-        // 卡片渐显 910→950vh
-        cardAnim.progress(mapP(910 / T, 950 / T))
-
-        // 线条+卡片左移变浅 990→1100vh
-        groupAnim.progress(mapP(990 / T, 1100 / T))
-      },
+    // ─── 线条+卡片左移变浅 840→1050vh ───
+    const groupAnim = gsap.to(group, {
+      x: '-70vw', opacity: 0.3, ease: 'none', paused: true,
     })
+    sts.push(ScrollTrigger.create({
+      trigger: section,
+      start: () => section.offsetTop + vh(840),
+      end: () => section.offsetTop + vh(1050),
+      scrub: 0.6,
+      animation: groupAnim,
+    }))
 
     ScrollTrigger.refresh()
 
     return () => {
-      st.kill()
-      containerAnim.kill()
-      planeAnim.kill()
-      cardAnim.kill()
-      groupAnim.kill()
+      sts.forEach(st => {
+        st.animation?.kill()
+        st.kill()
+      })
     }
   }, [sectionRef])
 
