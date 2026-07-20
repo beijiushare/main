@@ -141,9 +141,9 @@ export default function PathAnimation({
       p: 1, ease: 'none', paused: true,
       onUpdate: () => {
         const p = planeObj.p
-        const gap = 0.05
+        const gap = 0
 
-        // 拖尾线条
+        // 拖尾线条（纸飞机拉出的轨迹，紧跟在飞机后方）
         const trailEnd = Math.max(0, p - gap)
         trail.style.strokeDashoffset = String(pathLength * (1 - trailEnd))
 
