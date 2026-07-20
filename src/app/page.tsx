@@ -34,6 +34,7 @@ export default function HomePage() {
   const indicatorRef = useRef<HTMLDivElement>(null)
   const unicornRef = useRef<HTMLDivElement>(null)
   const [showCode, setShowCode] = useState(false)
+  const [scrollComplete, setScrollComplete] = useState(false)
 
   useLayoutEffect(() => {
     const section = sectionRef.current
@@ -99,17 +100,13 @@ export default function HomePage() {
       animation: trackAnim,
     }))
 
-    // ─── 滚动指示器淡出（仅在末尾消失）1050→1100vh ───
-    const indicatorAnim = gsap.to(indicatorRef.current, {
-      opacity: 0, ease: 'none', paused: true,
-    })
-    sts.push(ScrollTrigger.create({
+    // ─── 滚动到头时文字切换 ───
+    ScrollTrigger.create({
       trigger: section,
       start: () => section.offsetTop + vh(1050),
-      end: () => section.offsetTop + vh(1100),
-      scrub: 0.6,
-      animation: indicatorAnim,
-    }))
+      onEnter: () => setScrollComplete(true),
+      onLeaveBack: () => setScrollComplete(false),
+    })
 
     // ─── 代码块升起 870→1050vh ───
     const codeAnim = gsap.to(codeWrapRef.current, {
@@ -265,7 +262,7 @@ export default function HomePage() {
             ref={indicatorRef}
             className="absolute z-30 bottom-8 left-1/2"
           >
-            <ScrollIndicator />
+            <ScrollIndicator isComplete={scrollComplete} />
           </div>
 
           </div>
