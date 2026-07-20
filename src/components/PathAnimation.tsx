@@ -201,6 +201,11 @@ export default function PathAnimation({
       end: () => section.offsetTop + vh(870),
       scrub: 0.6,
       animation: groupAnim,
+      onUpdate: (self) => {
+        if (self.progress > 0 && self.progress < 1) {
+          console.log(`🔶 组动画 progress=${self.progress.toFixed(3)}  x=${groupAnim.progress()}`)
+        }
+      },
     }))
 
     ScrollTrigger.refresh()

@@ -36,17 +36,28 @@ export default function HomePage() {
   const [showCode, setShowCode] = useState(false)
   const [scrollComplete, setScrollComplete] = useState(false)
 
+  // ─── 控制台滚动进度日志 ───
+  const logScrollRef = useRef<() => void>(() => {})
+
   useLayoutEffect(() => {
     const section = sectionRef.current
     if (!section) return
+
+    const vh = (n: number) => (n / 100) * window.innerHeight
+    logScrollRef.current = () => {
+      const scrollY = window.scrollY
+      const sectionTop = section.offsetTop
+      const sectionH = section.offsetHeight
+      const p = ((scrollY - sectionTop) / (sectionH - window.innerHeight)).toFixed(3)
+      console.log(`📜 scroll=${Math.round(scrollY)}px  p=${p}  vh≈${((scrollY - sectionTop) / (window.innerHeight / 100)).toFixed(0)}`)
+    }
+    const onScroll = () => logScrollRef.current()
+    window.addEventListener('scroll', onScroll)
 
     // ─── 初始状态 ───
     gsap.set(titleRef.current, { top: '50%', left: '50%', xPercent: -50, yPercent: -50, scale: 1, transformOrigin: 'top left' })
     gsap.set(indicatorRef.current, { xPercent: -50 })
     gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
-
-    // vh → 像素工具（由 ScrollTrigger.refresh() 自动重算）
-    const vh = (n: number) => (n / 100) * window.innerHeight
 
     const sts: ScrollTrigger[] = []
 
@@ -129,6 +140,7 @@ export default function HomePage() {
     })
 
     return () => {
+      window.removeEventListener('scroll', onScroll)
       sts.forEach(st => {
         st.animation?.kill()
         st.kill()
