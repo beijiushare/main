@@ -208,7 +208,7 @@ export default function PathAnimation({
         {/* SVG 层：飞行路径 + 拖尾 + 纸飞机 */}
         <svg
           className="absolute inset-0 w-full h-full"
-          viewBox="0 0 900 480"
+          viewBox="0 0 1800 960"
           preserveAspectRatio="xMidYMid meet"
         >
           {/* 拖尾线条（纸飞机带出的纯白轨迹） */}
@@ -216,7 +216,7 @@ export default function PathAnimation({
             ref={trailRef}
             d={FLIGHT_PATH}
             stroke="#ffffff"
-            strokeWidth="2.5"
+            strokeWidth="5"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
