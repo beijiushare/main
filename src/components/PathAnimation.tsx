@@ -121,19 +121,19 @@ export default function PathAnimation({
     const vh = (n: number) => (n / 100) * window.innerHeight
     const sts: ScrollTrigger[] = []
 
-    // ─── 容器渐显 260→350vh（与独角兽左移同步开始） ───
+    // ─── 容器渐显 220→260vh（纸飞机起跑前准备好） ───
     const containerAnim = gsap.to(containerRef.current, {
       opacity: 1, visibility: 'visible', ease: 'none', paused: true,
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(260),
-      end: () => section.offsetTop + vh(350),
+      start: () => section.offsetTop + vh(220),
+      end: () => section.offsetTop + vh(260),
       scrub: 0.6,
       animation: containerAnim,
     }))
 
-    // ─── 纸飞机飞行 440→780vh（独立 ScrollTrigger，原生 scrub 驱动） ───
+    // ─── 纸飞机飞行 260→600vh ───
     const planeObj = { p: 0 }
     const planeAnim = gsap.to(planeObj, {
       p: 1, ease: 'none', paused: true,
@@ -157,33 +157,33 @@ export default function PathAnimation({
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(440),
-      end: () => section.offsetTop + vh(780),
+      start: () => section.offsetTop + vh(260),
+      end: () => section.offsetTop + vh(600),
       scrub: 0.8,
       animation: planeAnim,
     }))
 
-    // ─── 卡片渐显 540→780vh ───
+    // ─── 卡片渐显 360→600vh ───
     const cardAnim = gsap.fromTo(card,
       { opacity: 0, y: 30, scale: 0.92 },
       { opacity: 1, y: 0, scale: 1, ease: 'none', paused: true },
     )
     sts.push(ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(540),
-      end: () => section.offsetTop + vh(780),
+      start: () => section.offsetTop + vh(360),
+      end: () => section.offsetTop + vh(600),
       scrub: 0.6,
       animation: cardAnim,
     }))
 
-    // ─── 线条+卡片左移变浅 840→1050vh ───
+    // ─── 线条+卡片左移变浅 660→870vh ───
     const groupAnim = gsap.to(group, {
       x: '-70vw', opacity: 0.3, ease: 'none', paused: true,
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(840),
-      end: () => section.offsetTop + vh(1050),
+      start: () => section.offsetTop + vh(660),
+      end: () => section.offsetTop + vh(870),
       scrub: 0.6,
       animation: groupAnim,
     }))
@@ -211,11 +211,11 @@ export default function PathAnimation({
           viewBox="0 0 800 600"
           preserveAspectRatio="xMidYMid meet"
         >
-          {/* 拖尾线条（白色半透明） */}
+          {/* 拖尾线条（纸飞机带出的纯白轨迹） */}
           <path
             ref={trailRef}
             d={FLIGHT_PATH}
-            stroke="rgba(255,255,255,0.35)"
+            stroke="#ffffff"
             strokeWidth="2.5"
             fill="none"
             strokeLinecap="round"
