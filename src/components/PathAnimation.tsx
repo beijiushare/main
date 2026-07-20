@@ -191,14 +191,14 @@ export default function PathAnimation({
       animation: cardAnim,
     }))
 
-    // ─── 线条+卡片左移变浅 660→810vh（渐隐更快，但仍留足跨度给 scrub 追上） ───
+    // ─── 线条+卡片左移变浅 660→830vh（跨度略缩但重叠运行，不破坏 scroll 衔接） ───
     const groupAnim = gsap.to(group, {
       x: '-70vw', opacity: 0.3, ease: 'none', paused: true,
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
       start: () => section.offsetTop + vh(660),
-      end: () => section.offsetTop + vh(810),
+      end: () => section.offsetTop + vh(830),
       scrub: 0.6,
       animation: groupAnim,
     }))
