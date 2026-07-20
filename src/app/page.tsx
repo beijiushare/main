@@ -100,14 +100,14 @@ export default function HomePage() {
       animation: trackAnim,
     }))
 
-    // ─── 代码块升起 790→970vh（与组左移重叠运行，同独角兽+纸飞机模式） ───
+    // ─── 代码块升起 660→840vh（与组左移同时开始，同独角兽+纸飞机模式） ───
     const codeAnim = gsap.to(codeWrapRef.current, {
       y: 0, opacity: 1, ease: 'none', paused: true,
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(790),
-      end: () => section.offsetTop + vh(970),
+      start: () => section.offsetTop + vh(660),
+      end: () => section.offsetTop + vh(840),
       scrub: 0.6,
       animation: codeAnim,
     }))
@@ -115,7 +115,7 @@ export default function HomePage() {
     // ─── 代码块懒挂载 ───
     ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(790),
+      start: () => section.offsetTop + vh(660),
       onEnter: () => setShowCode(true),
       once: true,
     })
@@ -123,7 +123,7 @@ export default function HomePage() {
     // ─── 滚动到头时文字切换 ───
     ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(970),
+      start: () => section.offsetTop + vh(840),
       onEnter: () => setScrollComplete(true),
       onLeaveBack: () => setScrollComplete(false),
     })
