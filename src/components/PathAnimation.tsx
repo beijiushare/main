@@ -141,9 +141,9 @@ export default function PathAnimation({
       p: 1, ease: 'none', paused: true,
       onUpdate: () => {
         const p = planeObj.p
-        const gap = 0.01
+        const gap = 0.015
 
-        // 拖尾线条（纸飞机后方 3% 间距处开始绘制轨迹）
+        // 拖尾线条（纸飞机后方 gap 间距处开始绘制轨迹）
         const trailEnd = Math.max(0, p - gap)
         trail.style.strokeDashoffset = String(pathLength * (1 - trailEnd))
 
@@ -152,10 +152,18 @@ export default function PathAnimation({
         const point = pathEl.getPointAtLength(pathLength * safeP)
         const lookAhead = Math.min(1, safeP + 0.01) // 取前方 1% 处求切线方向，更稳定
         const next = pathEl.getPointAtLength(pathLength * lookAhead)
+        const dx = next.x - point.x
+        const dy = next.y - point.y
+        const len = Math.hypot(dx, dy)
         // atan2 返回逆时针角，SVG rotate 是顺时针，加顺时针修正角匹配路径朝向
-        const angle = Math.atan2(next.y - point.y, next.x - point.x) * (180 / Math.PI) + 10
+        const angle = Math.atan2(dy, dx) * (180 / Math.PI) + 10
 
-        plane.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle})`)
+        // 沿切线反方向微调飞机位置，使拖尾对准尾部中心而非偏左
+        const tailOffset = 4 // 像素（viewBox 空间）
+        const tx = point.x - (dx / len) * tailOffset
+        const ty = point.y - (dy / len) * tailOffset
+
+        plane.setAttribute('transform', `translate(${tx}, ${ty}) rotate(${angle})`)
       },
     })
     sts.push(ScrollTrigger.create({
