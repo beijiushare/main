@@ -191,9 +191,9 @@ export default function PathAnimation({
       animation: cardAnim,
     }))
 
-    // ─── 线条+卡片左移变浅 660→870vh ───
+    // ─── 线条+卡片左移出屏 660→870vh ───
     const groupAnim = gsap.to(group, {
-      x: '-70vw', opacity: 0.3, ease: 'none', paused: true,
+      x: '-120vw', opacity: 0.3, ease: 'none', paused: true,
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
