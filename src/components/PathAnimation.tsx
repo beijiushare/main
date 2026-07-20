@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger)
 // 纸飞机飞行路径（双圈轨迹）
 const FLIGHT_PATH =
   'M 837.2 287.1 C 830.7 239.9, 797.2 177.1, 739.2 175.3 C 694.2 173.8, 619.1 225.2, 663.4 288.9 C 742.0 363.8, 786.3 253.4, 760.5 225.2 C 710.4 170.3, 641.3 162.3, 584.0 147.5 C 530.4 146.6, 458.3 137.3, 400.1 239.0 C 348.4 341.6, 452.8 422.9, 542.4 363.8 C 603.4 328.6, 592.3 255.6, 564.6 221.5 C 508.2 154.9, 235.6 170.6, 188.5 239.0'
+// 路径起点（缩放锚点，保持该点不动）
+const PATH_START = { x: 837.2, y: 287.1 }
 
 /* ============ 纯 SVG 图标组件 ============ */
 
@@ -208,15 +210,17 @@ export default function PathAnimation({
         {/* SVG 层：飞行路径 + 拖尾 + 纸飞机 */}
         <svg
           className="absolute inset-0 w-full h-full"
-          viewBox="0 0 1800 960"
+          viewBox="0 0 900 480"
           preserveAspectRatio="xMidYMid meet"
         >
+          {/* 以起点为原点缩放至 75%，起点位置不变 */}
+          <g transform={`translate(${PATH_START.x}, ${PATH_START.y}) scale(0.75) translate(${-PATH_START.x}, ${-PATH_START.y})`}>
           {/* 拖尾线条（纸飞机带出的纯白轨迹） */}
           <path
             ref={trailRef}
             d={FLIGHT_PATH}
             stroke="#ffffff"
-            strokeWidth="5"
+            strokeWidth="3.5"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -234,9 +238,8 @@ export default function PathAnimation({
               />
             </g>
           </g>
+          </g>
         </svg>
-
-        {/* HTML 层：链接卡片（左侧） */}
         <div
           ref={linksCardRef}
           className="absolute left-[6%] top-1/2 -translate-y-1/2 pointer-events-auto opacity-0"
