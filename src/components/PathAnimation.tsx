@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 const FLIGHT_PATH =
   'M 770 340 C 680 160, 620 500, 510 340 C 430 240, 390 440, 290 320 C 230 260, 190 370, 70 280'
 
-/* ============ 纯 SVG 图标组件（从 main 分支搬运） ============ */
+/* ============ 纯 SVG 图标组件 ============ */
 
 function SvgIcon({ children, className }: { children: ReactNode; className?: string }) {
   return (
@@ -111,91 +111,85 @@ export default function PathAnimation({
     const group = groupRef.current
     if (!section || !trail || !pathEl || !plane || !card || !group) return
 
-    // 用数字（像素）替代字符串 '+=Nvh'，确保 ScrollTrigger 精确解析
-    const vh = window.innerHeight
-    const S = (n: number) => Math.round(n * vh)
-
     const pathLength = pathEl.getTotalLength()
 
     // 初始：隐藏拖尾和卡片
     trail.style.strokeDasharray = String(pathLength)
     trail.style.strokeDashoffset = String(pathLength)
 
-    const ctx = gsap.context(() => {
-      // ─── 容器渐显（独角兽左移一段后出现） ───
-      gsap.to(containerRef.current, {
-        opacity: 1,
-        visibility: 'visible',
-        scrollTrigger: {
-          trigger: section,
-          start: S(820),
-          end: S(840),
-          scrub: 1,
-        },
-      })
-
-      // ─── 纸飞机沿路径飞行（从右到左） ───
-      gsap.to({ p: 0 }, {
-        p: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: S(830),
-          end: S(950),
-          scrub: 1.5,
-        },
-        onUpdate: function () {
-          const p = this.targets()[0].p as number
-          const gap = 0.05 // 线条比箭头短 5% 的路径长度
-
-          // 拖尾线条：画到 (p - gap) 位置
-          const trailEnd = Math.max(0, p - gap)
-          trail.style.strokeDashoffset = String(pathLength * (1 - trailEnd))
-
-          // 纸飞机位置
-          const safeP = Math.min(1, Math.max(0, p))
-          const point = pathEl.getPointAtLength(pathLength * safeP)
-          const nextP = Math.min(1, safeP + 0.003)
-          const next = pathEl.getPointAtLength(pathLength * nextP)
-          const angle = Math.atan2(next.y - point.y, next.x - point.x) * (180 / Math.PI)
-
-          plane.setAttribute(
-            'transform',
-            `translate(${point.x}, ${point.y}) rotate(${angle})`,
-          )
-        },
-      })
-
-      // ─── 链接卡片渐显（路径快结束、独角兽已完全移出后） ───
-      gsap.fromTo(
-        card,
-        { opacity: 0, y: 30, scale: 0.92 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          scrollTrigger: {
-            trigger: section,
-            start: S(910),
-            end: S(950),
-            scrub: 1,
-          },
-        },
-      )
-
-      // ─── 线条 + 卡片向左移动 + 变浅（停顿后） ───
-      gsap.to(group, {
-        x: '-70vw',
-        opacity: 0.3,
-        scrollTrigger: {
-          trigger: section,
-          start: S(990),
-          end: S(1100),
-          scrub: 0.8,
-        },
-      })
+    // ─── 创建暂停动画 ───
+    const containerAnim = gsap.to(containerRef.current, {
+      opacity: 1, visibility: 'visible', ease: 'none', paused: true,
     })
 
-    return () => ctx.revert()
+    const cardAnim = gsap.fromTo(card,
+      { opacity: 0, y: 30, scale: 0.92 },
+      { opacity: 1, y: 0, scale: 1, ease: 'none', paused: true },
+    )
+
+    const groupAnim = gsap.to(group, {
+      x: '-70vw', opacity: 0.3, ease: 'none', paused: true,
+    })
+
+    // 纸飞机飞行：用一个对象驱动 onUpdate
+    const planeObj = { p: 0 }
+    const planeAnim = gsap.to(planeObj, {
+      p: 1, ease: 'none', paused: true,
+      onUpdate: () => {
+        const p = planeObj.p
+        const gap = 0.05
+
+        // 拖尾线条
+        const trailEnd = Math.max(0, p - gap)
+        trail.style.strokeDashoffset = String(pathLength * (1 - trailEnd))
+
+        // 纸飞机位置
+        const safeP = Math.min(1, Math.max(0, p))
+        const point = pathEl.getPointAtLength(pathLength * safeP)
+        const nextP = Math.min(1, safeP + 0.003)
+        const next = pathEl.getPointAtLength(pathLength * nextP)
+        const angle = Math.atan2(next.y - point.y, next.x - point.x) * (180 / Math.PI)
+
+        plane.setAttribute('transform', `translate(${point.x}, ${point.y}) rotate(${angle})`)
+      },
+    })
+
+    // ─── 主 ScrollTrigger 读取 sectionRef 父组件的进度 ───
+    const st = ScrollTrigger.create({
+      trigger: section,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1,
+      onUpdate: (self) => {
+        const p = self.progress // 0~1 全程
+
+        // 工具：映射 p 到子范围
+        const mapP = (start: number, end: number) =>
+          p < start ? 0 : p > end ? 1 : (p - start) / (end - start)
+
+        const T = 1100 // 总 vh
+
+        // 容器渐显 820→840vh
+        containerAnim.progress(mapP(820 / T, 840 / T))
+
+        // 纸飞机飞行 830→950vh
+        planeAnim.progress(mapP(830 / T, 950 / T))
+
+        // 卡片渐显 910→950vh
+        cardAnim.progress(mapP(910 / T, 950 / T))
+
+        // 线条+卡片左移变浅 990→1100vh
+        groupAnim.progress(mapP(990 / T, 1100 / T))
+      },
+    })
+
+    return () => {
+      st.kill()
+      containerAnim.kill()
+      planeAnim.kill()
+      cardAnim.kill()
+      groupAnim.kill()
+    }
   }, [sectionRef])
 
   return (

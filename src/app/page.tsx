@@ -39,98 +39,79 @@ export default function HomePage() {
     const section = sectionRef.current
     if (!section) return
 
-    // 用数字（像素）替代字符串 '+=Nvh'，确保 ScrollTrigger 精确解析
-    const vh = window.innerHeight
-    const S = (n: number) => Math.round(n * vh)
+    // ─── 初始状态 ───
+    gsap.set(titleRef.current, { xPercent: -50, yPercent: -50, scale: 1, transformOrigin: 'top left' })
+    gsap.set(indicatorRef.current, { xPercent: -50 })
+    gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
 
-    const ctx = gsap.context(() => {
-      // 初始化 GSAP 内控状态
-      gsap.set(titleRef.current, { xPercent: -50, yPercent: -50, scale: 1, transformOrigin: 'top left' })
-      gsap.set(indicatorRef.current, { xPercent: -50 })
-      gsap.set(codeWrapRef.current, { y: '100vh', opacity: 0 })
+    // ─── 创建暂停的动画（由 ScrollTrigger progress 驱动） ───
+    const titleAnim = gsap.to(titleRef.current, {
+      top: 20, left: 16, xPercent: 0, yPercent: 0, scale: 0.28,
+      transformOrigin: 'top left', ease: 'none', paused: true,
+    })
+    const unicornScale = gsap.to(unicornRef.current, {
+      scale: 0.7, ease: 'none', paused: true,
+    })
+    const unicornLeft = gsap.to(unicornRef.current, {
+      x: '-70vw', opacity: 0.3, ease: 'none', paused: true,
+    })
+    const trackAnim = gsap.to(trackRef.current, {
+      x: '-200vw', ease: 'none', paused: true,
+    })
+    const codeAnim = gsap.to(codeWrapRef.current, {
+      y: 0, opacity: 1, ease: 'none', paused: true,
+    })
 
-      // ─── 标题：居中 → 左上角 (0 → 320vh) ───
-      gsap.to(titleRef.current, {
-        top: 20,
-        left: 16,
-        xPercent: 0,
-        yPercent: 0,
-        scale: 0.28,
-        transformOrigin: 'top left',
-        scrollTrigger: {
-          trigger: section,
-          start: 0,
-          end: S(320),
-          scrub: 0.5,
-        },
-      })
+    // ─── 单个主 ScrollTrigger 驱动全部动画 ───
+    const st = ScrollTrigger.create({
+      trigger: section,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 0.5,
+      onUpdate: (self) => {
+        const p = self.progress // 0~1 表示 section 全程滚动进度
 
-      // ─── 独角兽：缩小 (0 → 480vh) ───
-      gsap.to(unicornRef.current, {
-        scale: 0.7,
-        scrollTrigger: {
-          trigger: section,
-          start: 0,
-          end: S(480),
-          scrub: 0.5,
-        },
-      })
+        // 工具：将 p 映射到 [startP, endP] 范围 → 0~1
+        const mapP = (start: number, end: number) =>
+          p < start ? 0 : p > end ? 1 : (p - start) / (end - start)
 
-      // ─── 独角兽：左移淡出 (780 → 900vh) ───
-      gsap.to(unicornRef.current, {
-        x: '-70vw',
-        opacity: 0.3,
-        scrollTrigger: {
-          trigger: section,
-          start: S(780),
-          end: S(900),
-          scrub: 0.5,
-        },
-      })
+        // 各动画节点（相对于总滚动 1100vh 的进度比例）
+        titleAnim.progress(mapP(0 / 1100, 320 / 1100))
+        unicornScale.progress(mapP(0 / 1100, 480 / 1100))
+        unicornLeft.progress(mapP(780 / 1100, 900 / 1100))
+        trackAnim.progress(p) // 全程
+        codeAnim.progress(mapP(1040 / 1100, 1100 / 1100))
+      },
+    })
 
-      // ─── 水平轨道：向左平移 200vw (0 → 1100vh) ───
-      gsap.to(trackRef.current, {
-        x: '-200vw',
-        scrollTrigger: {
-          trigger: section,
-          start: 0,
-          end: S(1100),
-          scrub: 0.5,
-        },
-      })
+    // ─── 代码块懒挂载（单独触发一次） ───
+    ScrollTrigger.create({
+      trigger: section,
+      start: () => section.offsetTop + (1030 / 1100) * (section.offsetHeight - window.innerHeight),
+      onEnter: () => setShowCode(true),
+      once: true,
+    })
 
-      // ─── 代码块：从下方升起 (1040 → 1100vh) ───
-      gsap.to(codeWrapRef.current, {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: S(1040),
-          end: S(1100),
-          scrub: 0.5,
-        },
-      })
+    // ─── 容器暴露给 PathAnimation 子组件 ───
+    // PathAnimation 通过 sectionRef 自己监听 progress
 
-      // ─── 懒挂载 AnimatedCodeBlock ───
-      ScrollTrigger.create({
-        trigger: section,
-        start: S(1030),
-        onEnter: () => setShowCode(true),
-        once: true,
-      })
-    }, section)
-
-    return () => ctx.revert()
+    return () => {
+      st.kill()
+      titleAnim.kill()
+      unicornScale.kill()
+      unicornLeft.kill()
+      trackAnim.kill()
+      codeAnim.kill()
+    }
   }, [])
 
   return (
     <>
       {/* ========== 桌面端 ========== */}
       {/*
-        h-[1200vh] 提供 12 屏滚动空间（实际滚动 1100vh）
-        所有 ScrollTrigger start/end 用数字（像素值），vh * window.innerHeight
+        h-[1200vh] 提供 12 屏滚动空间
         子元素 position:sticky 让内容始终钉在视口内
-        GSAP 跟踪 section 的滚动位置驱动动画（不用 GSAP pin）
+        动画由单个 ScrollTrigger 的 progress 驱动
       */}
       <section ref={sectionRef} className="desktop-section relative h-[1200vh] bg-[#0a0a14]">
         <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
