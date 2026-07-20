@@ -147,23 +147,27 @@ export default function PathAnimation({
         const trailEnd = Math.max(0, p - gap)
         trail.style.strokeDashoffset = String(pathLength * (1 - trailEnd))
 
-        // 纸飞机位置与朝向（指向路径延伸方向 = 纸飞机拉线效果）
+        // 纸飞机位置与朝向
         const safeP = Math.min(1, Math.max(0, p))
         const point = pathEl.getPointAtLength(pathLength * safeP)
-        const lookAhead = Math.min(1, safeP + 0.01) // 取前方 1% 处求切线方向，更稳定
-        const next = pathEl.getPointAtLength(pathLength * lookAhead)
-        const dx = next.x - point.x
-        const dy = next.y - point.y
+        // 取前方 1% 求切线方向；终点处（safeP ≥ 0.99）改向后取，避免 dx=dy=0
+        const isEnd = safeP >= 0.99
+        const nextP = isEnd ? safeP - 0.01 : Math.min(1, safeP + 0.01)
+        const next = pathEl.getPointAtLength(pathLength * nextP)
+        const dx = isEnd ? point.x - next.x : next.x - point.x
+        const dy = isEnd ? point.y - next.y : next.y - point.y
         const len = Math.hypot(dx, dy)
-        // atan2 返回逆时针角，SVG rotate 是顺时针，加顺时针修正角匹配路径朝向
-        const angle = Math.atan2(dy, dx) * (180 / Math.PI) + 10
+        // 纸飞机自然朝向修正：头→尾部中心连线在 rotate(0) 时指向右上 -57.6°
+        // 需补偿此角度使头→尾中心线对齐路径切线方向
+        const angleDeg = Math.atan2(dy, dx) * (180 / Math.PI) + 57.6
+        const angleRad = angleDeg * Math.PI / 180
 
-        // 沿切线反方向微调飞机位置，使拖尾对准尾部中心而非偏左
-        const tailOffset = 4 // 像素（viewBox 空间）
-        const tx = point.x - (dx / len) * tailOffset
-        const ty = point.y - (dy / len) * tailOffset
+        // 纸飞机直接定位在路径点，旋转对齐路径方向
+        // "早走一点点"由拖尾 gap（1.5%）实现，不对尾部做额外偏移
+        const tx = point.x
+        const ty = point.y
 
-        plane.setAttribute('transform', `translate(${tx}, ${ty}) rotate(${angle})`)
+        plane.setAttribute('transform', `translate(${tx}, ${ty}) rotate(${angleDeg})`)
       },
     })
     sts.push(ScrollTrigger.create({
@@ -174,27 +178,27 @@ export default function PathAnimation({
       animation: planeAnim,
     }))
 
-    // ─── 卡片渐显 360→600vh ───
+    // ─── 卡片渐显 450→600vh（出现更晚，速度更快，完全显现时间与左移动画不变） ───
     const cardAnim = gsap.fromTo(card,
       { opacity: 0, y: 30, scale: 0.92 },
       { opacity: 1, y: 0, scale: 1, ease: 'none', paused: true },
     )
     sts.push(ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(360),
+      start: () => section.offsetTop + vh(450),
       end: () => section.offsetTop + vh(600),
       scrub: 0.6,
       animation: cardAnim,
     }))
 
-    // ─── 线条+卡片左移变浅 660→870vh ───
+    // ─── 线条+卡片左移变浅 660→760vh（渐隐更快） ───
     const groupAnim = gsap.to(group, {
       x: '-70vw', opacity: 0.3, ease: 'none', paused: true,
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
       start: () => section.offsetTop + vh(660),
-      end: () => section.offsetTop + vh(870),
+      end: () => section.offsetTop + vh(760),
       scrub: 0.6,
       animation: groupAnim,
     }))

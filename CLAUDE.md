@@ -57,11 +57,11 @@ Key: **do not** use `+=Nvh` strings in ScrollTrigger start/end (they're parsed a
 0→180vh   Title: center→top-left, scale 1→0.28
 0→260vh   Unicorn: scale 1→0.7
 260→440vh Unicorn: x 0→-70vw, opacity 1→0.3
-420→480vh Path container: opacity 0→1
-440→780vh Paper plane: fly along path (right→left)
-540→780vh Link cards: opacity 0→1, y 30→0
-840→1050vh Group (plane+cards): x 0→-70vw, opacity 1→0.3
-870→1050vh Code block: y 100vh→0, opacity 0→1
+220→260vh Path container: opacity 0→1
+260→600vh Paper plane: fly along path (right→left)
+450→600vh Link cards: opacity 0→1, y 30→0
+660→760vh Group (plane+cards): x 0→-70vw, opacity 1→0.3
+760→940vh Code block: y 100vh→0, opacity 0→1
 ```
 
 ## Content & Assets

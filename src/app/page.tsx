@@ -103,19 +103,19 @@ export default function HomePage() {
     // ─── 滚动到头时文字切换 ───
     ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(1050),
+      start: () => section.offsetTop + vh(940),
       onEnter: () => setScrollComplete(true),
       onLeaveBack: () => setScrollComplete(false),
     })
 
-    // ─── 代码块升起 870→1050vh ───
+    // ─── 代码块升起 800→980vh（配合组左移提前） ───
     const codeAnim = gsap.to(codeWrapRef.current, {
       y: 0, opacity: 1, ease: 'none', paused: true,
     })
     sts.push(ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(870),
-      end: () => section.offsetTop + vh(1050),
+      start: () => section.offsetTop + vh(760),
+      end: () => section.offsetTop + vh(940),
       scrub: 0.6,
       animation: codeAnim,
     }))
@@ -123,7 +123,7 @@ export default function HomePage() {
     // ─── 代码块懒挂载 ───
     ScrollTrigger.create({
       trigger: section,
-      start: () => section.offsetTop + vh(870),
+      start: () => section.offsetTop + vh(760),
       onEnter: () => setShowCode(true),
       once: true,
     })
