@@ -39,6 +39,10 @@ export default function HomePage() {
     const section = sectionRef.current
     if (!section) return
 
+    // 用数字（像素）替代字符串 '+=Nvh'，确保 ScrollTrigger 精确解析
+    const vh = window.innerHeight
+    const S = (n: number) => Math.round(n * vh)
+
     const ctx = gsap.context(() => {
       // 初始化 GSAP 内控状态
       gsap.set(titleRef.current, { xPercent: -50, yPercent: -50, scale: 1, transformOrigin: 'top left' })
@@ -55,8 +59,8 @@ export default function HomePage() {
         transformOrigin: 'top left',
         scrollTrigger: {
           trigger: section,
-          start: 'top top',
-          end: '+=320vh',
+          start: 0,
+          end: S(320),
           scrub: 0.5,
         },
       })
@@ -66,8 +70,8 @@ export default function HomePage() {
         scale: 0.7,
         scrollTrigger: {
           trigger: section,
-          start: 'top top',
-          end: '+=480vh',
+          start: 0,
+          end: S(480),
           scrub: 0.5,
         },
       })
@@ -78,8 +82,8 @@ export default function HomePage() {
         opacity: 0.3,
         scrollTrigger: {
           trigger: section,
-          start: '+=780vh',
-          end: '+=900vh',
+          start: S(780),
+          end: S(900),
           scrub: 0.5,
         },
       })
@@ -89,8 +93,8 @@ export default function HomePage() {
         x: '-200vw',
         scrollTrigger: {
           trigger: section,
-          start: 'top top',
-          end: '+=1100vh',
+          start: 0,
+          end: S(1100),
           scrub: 0.5,
         },
       })
@@ -101,8 +105,8 @@ export default function HomePage() {
         opacity: 1,
         scrollTrigger: {
           trigger: section,
-          start: '+=1040vh',
-          end: '+=1100vh',
+          start: S(1040),
+          end: S(1100),
           scrub: 0.5,
         },
       })
@@ -110,7 +114,7 @@ export default function HomePage() {
       // ─── 懒挂载 AnimatedCodeBlock ───
       ScrollTrigger.create({
         trigger: section,
-        start: '+=1030vh',
+        start: S(1030),
         onEnter: () => setShowCode(true),
         once: true,
       })
@@ -124,7 +128,7 @@ export default function HomePage() {
       {/* ========== 桌面端 ========== */}
       {/*
         h-[1200vh] 提供 12 屏滚动空间（实际滚动 1100vh）
-        所有 +=Nvh 值需 ≤ 1100vh 以保证落在有效范围内
+        所有 ScrollTrigger start/end 用数字（像素值），vh * window.innerHeight
         子元素 position:sticky 让内容始终钉在视口内
         GSAP 跟踪 section 的滚动位置驱动动画（不用 GSAP pin）
       */}

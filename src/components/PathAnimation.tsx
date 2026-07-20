@@ -111,6 +111,10 @@ export default function PathAnimation({
     const group = groupRef.current
     if (!section || !trail || !pathEl || !plane || !card || !group) return
 
+    // 用数字（像素）替代字符串 '+=Nvh'，确保 ScrollTrigger 精确解析
+    const vh = window.innerHeight
+    const S = (n: number) => Math.round(n * vh)
+
     const pathLength = pathEl.getTotalLength()
 
     // 初始：隐藏拖尾和卡片
@@ -124,8 +128,8 @@ export default function PathAnimation({
         visibility: 'visible',
         scrollTrigger: {
           trigger: section,
-          start: '+=820vh',
-          end: '+=840vh',
+          start: S(820),
+          end: S(840),
           scrub: 1,
         },
       })
@@ -135,8 +139,8 @@ export default function PathAnimation({
         p: 1,
         scrollTrigger: {
           trigger: section,
-          start: '+=830vh',
-          end: '+=950vh',
+          start: S(830),
+          end: S(950),
           scrub: 1.5,
         },
         onUpdate: function () {
@@ -171,8 +175,8 @@ export default function PathAnimation({
           scale: 1,
           scrollTrigger: {
             trigger: section,
-            start: '+=910vh',
-            end: '+=950vh',
+            start: S(910),
+            end: S(950),
             scrub: 1,
           },
         },
@@ -184,8 +188,8 @@ export default function PathAnimation({
         opacity: 0.3,
         scrollTrigger: {
           trigger: section,
-          start: '+=990vh',
-          end: '+=1100vh',
+          start: S(990),
+          end: S(1100),
           scrub: 0.8,
         },
       })
