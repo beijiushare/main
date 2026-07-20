@@ -60,8 +60,8 @@ Key: **do not** use `+=Nvh` strings in ScrollTrigger start/end (they're parsed a
 220→260vh Path container: opacity 0→1
 260→600vh Paper plane: fly along path (right→left)
 450→600vh Link cards: opacity 0→1, y 30→0
-660→760vh Group (plane+cards): x 0→-70vw, opacity 1→0.3
-760→940vh Code block: y 100vh→0, opacity 0→1
+660→750vh Group (plane+cards): x 0→-70vw, opacity 1→0.3
+760→940vh Code block: y 100vh→0, opacity 0→1 (组结束后 10vh 开始)
 ```
 
 ## Content & Assets

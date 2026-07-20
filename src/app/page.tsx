@@ -108,7 +108,7 @@ export default function HomePage() {
       onLeaveBack: () => setScrollComplete(false),
     })
 
-    // ─── 代码块升起 800→980vh（配合组左移提前） ───
+    // ─── 代码块升起 760→940vh（组左移结束于 750vh 后立即升起） ───
     const codeAnim = gsap.to(codeWrapRef.current, {
       y: 0, opacity: 1, ease: 'none', paused: true,
     })
