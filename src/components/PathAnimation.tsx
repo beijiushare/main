@@ -141,7 +141,7 @@ export default function PathAnimation({
       p: 1, ease: 'none', paused: true,
       onUpdate: () => {
         const p = planeObj.p
-        const gap = 0.03
+        const gap = 0.01
 
         // 拖尾线条（纸飞机后方 3% 间距处开始绘制轨迹）
         const trailEnd = Math.max(0, p - gap)
