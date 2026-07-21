@@ -106,7 +106,7 @@ export default function HomePage() {
     sts.push(ScrollTrigger.create({
       trigger: section,
       start: () => section.offsetTop,
-      end: () => section.offsetTop + vh(1100),
+      end: () => section.offsetTop + vh(900),
       scrub: 0.6,
       animation: trackAnim,
     }))
@@ -156,7 +156,7 @@ export default function HomePage() {
         子元素 position:sticky 让内容始终钉在视口内
         动画由单个 ScrollTrigger 的 progress 驱动
       */}
-      <section ref={sectionRef} className="desktop-section relative h-[1200vh] bg-[#0a0a14]">
+      <section ref={sectionRef} className="desktop-section relative h-[900vh] bg-[#0a0a14]">
         <div className="sticky top-0 h-screen overflow-hidden bg-[#0a0a14]">
           <div className="relative w-full h-full">
 
