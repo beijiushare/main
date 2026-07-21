@@ -346,6 +346,7 @@ export default function HomePage() {
         @media (max-width: 768px) {
           .desktop-section { display: none; }
           .mobile-content { display: flex; }
+          html, body { height: auto; overflow-y: auto; }
         }
       `}</style>
     </>
