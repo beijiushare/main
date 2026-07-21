@@ -46,7 +46,7 @@ export default function HomePage() {
 
     // ─── Lenis 惯性滚动 ───
     const lenis = new Lenis({
-      lerp: 0.08,
+      lerp: 0.12,
       wheelMultiplier: 1,
     })
     lenis.on('scroll', ScrollTrigger.update)
