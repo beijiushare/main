@@ -34,7 +34,7 @@ TypeScript checking: `npx tsc --noEmit` (no dedicated lint command)
 
 ### Component layers (`src/components/`)
 
-- **`pages/`** — Page-level content: `DesktopContent.tsx`, `MobileContent.tsx`, `VCardContent.tsx`, `CvContent.tsx`, `CvToolbar.tsx`, `WechatPublicCard.tsx`
+- **`pages/`** — Page-level content: `DesktopContent.tsx`, `MobileContent.tsx`, `VCardContent.tsx`, `CvContent.tsx`, `CvToolbar.tsx`, `WechatPublicContent.tsx`
 - **`features/`** — Feature-specific components used by pages: `CursorGrid.tsx`, `PathAnimation.tsx`, `ScrollIndicator.tsx`
 - **`ui/`** — Reusable primitives: `pixelated-canvas.tsx` (WebGL pixel-art renderer), `animated-code-block.tsx` (code typing animation)
 - **`icons/`** — Standalone SVG icon components used by `MobileContent.tsx` and `VCardContent.tsx`

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import QRCode from 'qrcode'
 
-export default function WechatPublicCard() {
+export default function WechatPublicContent() {
   const [qrDataUrl, setQrDataUrl] = useState('')
 
   useEffect(() => {

@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import Link from 'next/link'
 import html2canvas from 'html2canvas'
-import WechatPublicCard from '@/components/pages/WechatPublicCard'
+import WechatPublicContent from '@/components/pages/WechatPublicContent'
 
 export default function WechatPublicPage() {
   const cardWrapperRef = useRef<HTMLDivElement>(null)
@@ -38,7 +38,7 @@ export default function WechatPublicPage() {
             <button className="save-btn" onClick={saveAsImage}>保存</button>
           </div>
           <div className="card-wrapper" ref={cardWrapperRef}>
-            <WechatPublicCard />
+            <WechatPublicContent />
           </div>
         </div>
       </div>
