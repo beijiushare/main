@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+Current version: `v1.2.0` (`reactrefactor` branch, merged to `main`)
+
 ## Commands
 
 ```bash
@@ -40,7 +42,10 @@ TypeScript checking: `npx tsc --noEmit` (no dedicated lint command)
 - **`icons/`** — Standalone SVG icon components used by `MobileContent.tsx` and `VCardContent.tsx`
 - **Root** — Shared UI widgets: `ShinyText.tsx`, `OptionWheel.tsx`, `BorderGlow.tsx`
 - **Utilities** — `src/lib/utils.ts` exports `cn()` (clsx + tailwind-merge)
-- **Hooks** — `src/hooks/useInertialScroll.ts` (physical inertia scroll engine replacing native wheel)
+
+### Hooks (`src/hooks/`)
+
+- **`useInertialScroll`** — Physical inertia scroll engine (velocity accumulation + friction decay + boundary clamping, replaces Lenis). Self-contained side-effect hook, called once per page.
 
 ### CSS Styling Convention
 
