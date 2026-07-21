@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CursorGrid from '@/components/CursorGrid'
 import ShinyText from '@/components/ShinyText'
-import MobileLinks from '@/components/MobileLinks'
+import MobileContent from '@/components/MobileContent'
 import ScrollIndicator from '@/components/ScrollIndicator'
 import { AnimatedCodeBlock } from '@/components/ui/animated-code-block'
 import { PixelatedCanvas } from '@/components/ui/pixelated-canvas'
@@ -328,13 +328,7 @@ export default function HomePage() {
       </section>
 
       {/* ========== 移动端 ========== */}
-      <div className="mobile-page">
-        <div className="mobile-hint">请转至桌面端获取更佳体验</div>
-        <div className="mobile-overlay">
-          <h1 className="mobile-title">Beijiu</h1>
-          <MobileLinks />
-        </div>
-      </div>
+      <MobileContent />
 
       <style>{`
         .hero-title {
@@ -377,16 +371,6 @@ export default function HomePage() {
         }
         @media (max-width: 768px) {
           .desktop-section { display: none; }
-          .mobile-page {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            background: #0a0a14;
-          }
-          .mobile-title { font-size: 40px; }
         }
       `}</style>
     </>
