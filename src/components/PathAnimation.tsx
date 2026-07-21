@@ -283,8 +283,8 @@ export default function PathAnimation({
             activeColor="#ffffff"
             fontSize={2}
             spacing={1.6}
-            curve={0.8}
-            tilt={5}
+            curve={0}
+            tilt={0}
             blur={1}
             fade={0.2}
             inset={80}
