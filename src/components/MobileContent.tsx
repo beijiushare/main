@@ -2,7 +2,7 @@
 
 import ShinyText from './ShinyText'
 import { PixelatedCanvas } from './ui/pixelated-canvas'
-import BorderGlow from './BorderGlow'
+
 import IconVcard from './icons/IconVcard'
 import IconCv from './icons/IconCv'
 import IconGithub from './icons/IconGithub'
@@ -60,20 +60,10 @@ export default function MobileContent() {
         />
       </div>
 
-      {/* ---- 光效卡片（6 个链接） ---- */}
+      {/* ---- 链接卡片 ---- */}
       <div className="mobile-card-wrapper">
-        <BorderGlow
-          backgroundColor="#0f0d1a"
-          borderRadius={20}
-          glowRadius={24}
-          glowIntensity={0.9}
-          glowColor="280 60 70"
-          colors={['#c084fc', '#a78bfa', '#818cf8']}
-          edgeSensitivity={25}
-          coneSpread={20}
-        >
-          <div className="mobile-link-card">
-            {LINK_ROWS.map(({ label, href, Icon }, i) => (
+        <div className="mobile-link-card">
+          {LINK_ROWS.map(({ label, href, Icon }) => (
               <a
                 key={label}
                 href={href}
@@ -86,13 +76,15 @@ export default function MobileContent() {
               </a>
             ))}
           </div>
-        </BorderGlow>
       </div>
 
       {/* ---- The end. ---- */}
       <div className="mobile-end">
         <span>The end.</span>
       </div>
+
+      {/* ---- 自适应垫片：大屏多出溢出，小屏不占空间 ---- */}
+      <div className="mobile-spacer" />
 
       <style>{`
         .mobile-content {
@@ -101,7 +93,8 @@ export default function MobileContent() {
           align-items: center;
           padding: 48px 20px 64px;
           gap: 32px;
-          min-height: 100vh;
+          height: 100vh;
+          overflow-y: auto;
           background: #0a0a14;
         }
 
@@ -130,8 +123,8 @@ export default function MobileContent() {
 
         /* ---- 光效卡片 ---- */
         .mobile-card-wrapper {
-          width: 100%;
-          max-width: 380px;
+          width: 60%;
+          max-width: 228px;
         }
         .mobile-link-card {
           display: flex;
@@ -153,7 +146,7 @@ export default function MobileContent() {
           -webkit-tap-highlight-color: transparent;
         }
         .mobile-link-row:not(:last-child) {
-          border-bottom: 1px solid rgba(255,255,255,0.06);
+          border-bottom: 1px solid rgba(255,255,255,0.15);
         }
         .mobile-link-row:active {
           color: #fff;
@@ -165,7 +158,6 @@ export default function MobileContent() {
           color: rgba(255,255,255,0.5);
         }
 
-        /* ---- 代码块 ---- */
         /* ---- The end. ---- */
         .mobile-end {
           padding: 20px 0 40px;
@@ -173,6 +165,10 @@ export default function MobileContent() {
           font-size: 14px;
           letter-spacing: 2px;
           font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        .mobile-spacer {
+          flex-shrink: 0;
+          height: max(0px, calc(100vh - 780px));
         }
       `}</style>
     </div>
