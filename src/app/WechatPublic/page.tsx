@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import Link from 'next/link'
 import html2canvas from 'html2canvas'
-import WechatPublicCard from '@/components/WechatPublicCard'
+import WechatPublicCard from '@/components/pages/WechatPublicCard'
 
 export default function WechatPublicPage() {
   const cardWrapperRef = useRef<HTMLDivElement>(null)

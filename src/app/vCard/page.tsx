@@ -3,7 +3,7 @@
 import { useRef, useState } from 'react'
 import Link from 'next/link'
 import html2canvas from 'html2canvas'
-import VCardContent, { type VCardContentHandle } from '@/components/VCardContent'
+import VCardContent, { type VCardContentHandle } from '@/components/pages/VCardContent'
 
 export default function VCardPage() {
   const [isZh, setIsZh] = useState(true)

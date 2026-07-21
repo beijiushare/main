@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import DesktopContent from '@/components/DesktopContent'
-import MobileContent from '@/components/MobileContent'
+import DesktopContent from '@/components/pages/DesktopContent'
+import MobileContent from '@/components/pages/MobileContent'
 
 export default function HomePage() {
   const [isDesktop, setIsDesktop] = useState(true)

@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import CvToolbar from '@/components/CvToolbar'
-import CvContent from '@/components/CvContent'
+import CvToolbar from '@/components/pages/CvToolbar'
+import CvContent from '@/components/pages/CvContent'
 
 export default function CvPage() {
   const [isMobile, setIsMobile] = useState(false)

@@ -1,14 +1,14 @@
 'use client'
 
-import ShinyText from './ShinyText'
-import { PixelatedCanvas } from './ui/pixelated-canvas'
+import ShinyText from '../ShinyText'
+import { PixelatedCanvas } from '../ui/pixelated-canvas'
 
-import IconVcard from './icons/IconVcard'
-import IconCv from './icons/IconCv'
-import IconGithub from './icons/IconGithub'
-import IconWechatPublic from './icons/IconWechatPublic'
-import IconBlog from './icons/IconBlog'
-import IconBilibili from './icons/IconBilibili'
+import IconVcard from '../icons/IconVcard'
+import IconCv from '../icons/IconCv'
+import IconGithub from '../icons/IconGithub'
+import IconWechatPublic from '../icons/IconWechatPublic'
+import IconBlog from '../icons/IconBlog'
+import IconBilibili from '../icons/IconBilibili'
 
 const LINK_ROWS = [
   { label: 'vCard', href: '/vCard', Icon: IconVcard },

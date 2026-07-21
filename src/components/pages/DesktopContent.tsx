@@ -3,12 +3,12 @@
 import { useRef, useLayoutEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import CursorGrid from '@/components/CursorGrid'
+import CursorGrid from '@/components/features/CursorGrid'
 import ShinyText from '@/components/ShinyText'
-import ScrollIndicator from '@/components/ScrollIndicator'
+import ScrollIndicator from '@/components/features/ScrollIndicator'
 import { AnimatedCodeBlock } from '@/components/ui/animated-code-block'
 import { PixelatedCanvas } from '@/components/ui/pixelated-canvas'
-import PathAnimation from '@/components/PathAnimation'
+import PathAnimation from '@/components/features/PathAnimation'
 
 gsap.registerPlugin(ScrollTrigger)
 

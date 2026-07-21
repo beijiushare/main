@@ -3,7 +3,7 @@
 import { useRef, useEffect, useMemo, useCallback, type ReactNode } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import OptionWheel from './OptionWheel'
+import OptionWheel from '../OptionWheel'
 
 gsap.registerPlugin(ScrollTrigger)
 
