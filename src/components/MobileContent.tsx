@@ -102,10 +102,7 @@ export default function MobileContent() {
           padding: 48px 20px 64px;
           gap: 32px;
           min-height: 100vh;
-          height: 100%;
-          overflow-y: auto;
           background: #0a0a14;
-          -webkit-overflow-scrolling: touch;
         }
 
         /* ---- 标题区 ---- */
