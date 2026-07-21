@@ -45,7 +45,7 @@ GSAP scroll-driven animation on the homepage uses **individual ScrollTrigger + s
 
 - Each animated element has its own `gsap.to(..., { paused: true })` tween linked to a `ScrollTrigger.create({ animation, scrub: 0.6 })`
 - All tweens use function-based `start/end` in pixels (`vh(n) = n/100 * window.innerHeight`) for responsive recalculation
-- The `<section>` is `h-[900vh]` providing 870vh of scrolling space; sticky container `h-screen` pins the viewport
+- The `<section>` is `h-[1000vh]` providing 900vh of scrolling space; sticky container `h-screen` pins the viewport
 - `PathAnimation.tsx` (paper plane + link cards) is a child component that also reads `sectionRef` and creates its own ScrollTriggers on the same trigger element
 - Paper plane uses a proxy object `{ p: 0 }` driven by `gsap.to()` with `onUpdate` for SVG path position interpolation
 
