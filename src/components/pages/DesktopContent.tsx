@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useLayoutEffect, useState } from 'react'
+import './DesktopContent.css'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useInertialScroll } from '@/hooks/useInertialScroll'
@@ -275,20 +276,6 @@ export default function DesktopContent() {
 
         </div>
       </section>
-
-      <style>{`
-        .hero-title {
-          margin: 0;
-          font-size: clamp(80px, 12vw, 160px);
-          font-weight: 800;
-          letter-spacing: 4px;
-          font-family: 'ZSFT-342', 'Segoe UI', system-ui, -apple-system, sans-serif;
-          user-select: none;
-          line-height: 1;
-          white-space: nowrap;
-        }
-        .code-block-scroll { width: 100%; }
-      `}</style>
     </>
   )
 }

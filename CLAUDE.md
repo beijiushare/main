@@ -42,6 +42,12 @@ TypeScript checking: `npx tsc --noEmit` (no dedicated lint command)
 - **Utilities** — `src/lib/utils.ts` exports `cn()` (clsx + tailwind-merge)
 - **Hooks** — `src/hooks/useInertialScroll.ts` (physical inertia scroll engine replacing native wheel)
 
+### CSS Styling Convention
+
+- **Component styles** (`components/`): each component with custom CSS gets a co-located `.css` file imported via `import './ComponentName.css'`
+- **Page styles** (`app/`): inline `<style>` is acceptable for page-specific, non-reusable CSS
+- Prefer Tailwind utility classes for simple styling; use `.css` files only for complex rules that Tailwind can't express cleanly
+
 ### Animation Architecture (Homepage)
 
 GSAP scroll-driven animation on the homepage uses **individual ScrollTrigger + scrub** pattern:
