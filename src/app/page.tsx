@@ -242,7 +242,7 @@ export default function HomePage() {
               backgroundColor=""
               dropoutStrength={0.4}
               interactive
-              distortionStrength={7}
+              distortionStrength={14}
               distortionRadius={80}
               distortionMode="swirl"
               followSpeed={0.2}
