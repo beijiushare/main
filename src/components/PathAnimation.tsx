@@ -91,45 +91,6 @@ const LINK_ITEMS: { label: string; href: string; Icon: React.FC<{ className?: st
   { label: 'Bilibili', href: 'https://space.bilibili.com/3494379710842912', Icon: IconBilibili },
 ]
 
-/* ============ 点击音效生成（纯前端，无需额外资源） ============ */
-
-function generateTickSound(): string {
-  const sampleRate = 44100
-  const duration = 0.025 // 25ms
-  const numSamples = Math.floor(sampleRate * duration)
-  const dataSize = numSamples * 2 // 16-bit mono
-  const buffer = new ArrayBuffer(44 + dataSize)
-  const view = new DataView(buffer)
-
-  const write = (offset: number, str: string) => {
-    for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i))
-  }
-
-  write(0, 'RIFF')
-  view.setUint32(4, 36 + dataSize, true)
-  write(8, 'WAVE')
-  write(12, 'fmt ')
-  view.setUint32(16, 16, true)
-  view.setUint16(20, 1, true) // PCM
-  view.setUint16(22, 1, true) // mono
-  view.setUint32(24, sampleRate, true)
-  view.setUint32(28, sampleRate * 2, true)
-  view.setUint16(32, 2, true)
-  view.setUint16(34, 16, true)
-  write(36, 'data')
-  view.setUint32(40, dataSize, true)
-
-  // 短促的"咔"声：800Hz + 1600Hz 混合，快速衰减
-  for (let i = 0; i < numSamples; i++) {
-    const t = i / sampleRate
-    const env = Math.exp(-t * 160) // 快速衰减
-    const sample = (Math.sin(2 * Math.PI * 800 * t) * 0.5 + Math.sin(2 * Math.PI * 1800 * t) * 0.3) * env * 0.35
-    view.setInt16(44 + i * 2, Math.round(sample * 32767), true)
-  }
-
-  return URL.createObjectURL(new Blob([buffer], { type: 'audio/wav' }))
-}
-
 /* ============ 主组件 ============ */
 
 export default function PathAnimation({
@@ -143,12 +104,6 @@ export default function PathAnimation({
   const trailRef = useRef<SVGPathElement>(null)
   const planeRef = useRef<SVGGElement>(null)
   const linksCardRef = useRef<HTMLDivElement>(null)
-
-  // 点击音效：生成一次，组件卸载时回收
-  const tickSoundRef = useRef<string | null>(null)
-  if (!tickSoundRef.current) {
-    tickSoundRef.current = generateTickSound()
-  }
 
   useEffect(() => {
     const section = sectionRef.current
@@ -261,11 +216,6 @@ export default function PathAnimation({
         st.animation?.kill()
         st.kill()
       })
-      // 回收音效 Blob URL
-      if (tickSoundRef.current) {
-        URL.revokeObjectURL(tickSoundRef.current)
-        tickSoundRef.current = null
-      }
     }
   }, [sectionRef])
 
@@ -335,8 +285,6 @@ export default function PathAnimation({
             inset={80}
             loop={false}
             draggable={true}
-            soundUrl={tickSoundRef.current ?? ''}
-            soundVolume={0.4}
           />
       </div>
       </div>

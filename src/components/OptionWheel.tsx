@@ -1,7 +1,45 @@
 'use client'
 
-import { useRef, useState, useCallback, useEffect, type ReactNode } from 'react'
+import { useRef, useState, useCallback, useEffect } from 'react'
 import './OptionWheel.css'
+
+/* ============ 共享 AudioContext（点击音效用 Web Audio API 原生合成） ============ */
+
+let sharedAudioCtx: AudioContext | null = null
+
+function getAudioContext(): AudioContext {
+  if (!sharedAudioCtx) {
+    sharedAudioCtx = new AudioContext()
+  }
+  return sharedAudioCtx
+}
+
+function playNativeTick(volume: number) {
+  try {
+    const ctx = getAudioContext()
+    if (ctx.state === 'suspended') {
+      ctx.resume().catch(() => {})
+      // 如果 resume 失败（无用户手势），振荡器排入队列但暂不发声
+    }
+    const duration = 0.025
+    const osc1 = ctx.createOscillator()
+    const osc2 = ctx.createOscillator()
+    const gain = ctx.createGain()
+    osc1.type = 'sine'
+    osc1.frequency.value = 800
+    osc2.type = 'sine'
+    osc2.frequency.value = 1800
+    gain.gain.setValueAtTime(volume * 0.35, ctx.currentTime)
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration)
+    osc1.connect(gain)
+    osc2.connect(gain)
+    gain.connect(ctx.destination)
+    osc1.start(ctx.currentTime)
+    osc2.start(ctx.currentTime)
+    osc1.stop(ctx.currentTime + duration)
+    osc2.stop(ctx.currentTime + duration)
+  } catch { /* AudioContext 不可用 */ }
+}
 
 export interface WheelItemData {
   label: string
@@ -183,22 +221,30 @@ const OptionWheel = ({
   }, [runFrame])
 
   // Optional tick on selection change, throttled so fast scrolling can't spam
-  // it, and with playback failures (e.g. autoplay policies) silently ignored.
+  // it. 无 soundUrl 时用 Web Audio API 原生合成，不受 autoplay policy 影响。
   const playTick = useCallback(() => {
-    const cfg = cfgRef.current
-    if (!cfg.soundUrl) return
     const now = performance.now()
     if (now - lastTickRef.current < 70) return
     lastTickRef.current = now
-    if (!audioRef.current || audioUrlRef.current !== cfg.soundUrl) {
-      audioRef.current = new Audio(cfg.soundUrl)
-      audioRef.current.preload = 'auto'
-      audioUrlRef.current = cfg.soundUrl
+
+    const cfg = cfgRef.current
+    const volume = Math.min(Math.max(cfg.soundVolume, 0), 1)
+
+    if (cfg.soundUrl) {
+      // 外部音源 → 传统 Audio 元素方式
+      if (!audioRef.current || audioUrlRef.current !== cfg.soundUrl) {
+        audioRef.current = new Audio(cfg.soundUrl)
+        audioRef.current.preload = 'auto'
+        audioUrlRef.current = cfg.soundUrl
+      }
+      const audio = audioRef.current
+      audio.volume = volume
+      audio.currentTime = 0
+      audio.play()?.catch(() => {})
+    } else {
+      // 原生合成 → OscillatorNode，不受 autoplay policy 拦截
+      playNativeTick(volume)
     }
-    const audio = audioRef.current
-    audio.volume = Math.min(Math.max(cfg.soundVolume, 0), 1)
-    audio.currentTime = 0
-    audio.play()?.catch(() => {})
   }, [])
 
   const applyTarget = useCallback(
@@ -303,6 +349,18 @@ const OptionWheel = ({
     applyTarget(targetRef.current, false)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items, fontSize, spacing, curve, tilt, blur, fade, minOpacity, side, loop, smoothing])
+
+  // 用户点击页面任意位置时预热 AudioContext，后续 wheel 即可发声
+  useEffect(() => {
+    const warmup = () => {
+      try {
+        const ctx = getAudioContext()
+        if (ctx.state === 'suspended') ctx.resume()
+      } catch { /* 忽略 */ }
+    }
+    window.addEventListener('pointerdown', warmup, { once: true })
+    return () => window.removeEventListener('pointerdown', warmup)
+  }, [])
 
   useEffect(
     () => () => {
