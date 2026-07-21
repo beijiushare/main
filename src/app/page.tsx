@@ -46,8 +46,8 @@ export default function HomePage() {
 
     // ─── Lenis 惯性滚动 ───
     const lenis = new Lenis({
-      lerp: 0.12,
-      wheelMultiplier: 1,
+      lerp: 0.08,
+      wheelMultiplier: 1.3,
     })
     lenis.on('scroll', ScrollTrigger.update)
     gsap.ticker.add((time) => { lenis.raf(time * 1000) })
