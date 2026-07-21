@@ -1,8 +1,9 @@
 'use client'
 
-import { useRef, useEffect, type ReactNode } from 'react'
+import { useRef, useEffect, useMemo, type ReactNode } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import OptionWheel from './OptionWheel'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -218,6 +219,12 @@ export default function PathAnimation({
     }
   }, [sectionRef])
 
+  // 稳定引用：wheel items 避免每次 render 重新创建（OptionWheel deps 依赖此引用）
+  const wheelItems = useMemo(
+    () => LINK_ITEMS.map(({ label, Icon }) => ({ label, Icon })),
+    []
+  )
+
   return (
     <div
       ref={containerRef}
@@ -260,32 +267,25 @@ export default function PathAnimation({
         </svg>
         <div
           ref={linksCardRef}
-          className="absolute left-[6%] top-1/2 -translate-y-1/2 pointer-events-auto opacity-0"
+          className="absolute left-[7%] top-1/2 -translate-y-1/2 w-[340px] h-[55vh] pointer-events-auto opacity-0"
           style={{ zIndex: 6 }}
         >
-        <div className="bg-[#0a0a14]/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-2xl">
-          <div className="grid grid-cols-3 gap-3">
-            {LINK_ITEMS.map(({ label, href, Icon }) => {
-              const isExternal = href.startsWith('http')
-              const extraProps = isExternal
-                ? { target: '_blank' as const, rel: 'noopener noreferrer' as const }
-                : {}
-              return (
-                <a
-                  key={label}
-                  href={href}
-                  {...extraProps}
-                  className="group flex flex-col items-center gap-2 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
-                >
-                  <Icon className="text-white/60 group-hover:text-white transition-colors" />
-                  <span className="text-xs font-medium text-white/60 group-hover:text-white transition-colors">
-                    {label}
-                  </span>
-                </a>
-              )
-            })}
-          </div>
-        </div>
+          <OptionWheel
+            items={wheelItems}
+            side="left"
+            defaultSelected={0}
+            textColor="#a6a6a6"
+            activeColor="#ffffff"
+            fontSize={2}
+            spacing={1.6}
+            curve={0.8}
+            tilt={5}
+            blur={1}
+            fade={0.2}
+            inset={80}
+            loop={false}
+            draggable={true}
+          />
       </div>
       </div>
     </div>
