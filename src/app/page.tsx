@@ -342,35 +342,10 @@ export default function HomePage() {
           white-space: nowrap;
         }
         .code-block-scroll { width: 100%; }
-        .mobile-page { display: none; }
-        .mobile-overlay {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 40px;
-        }
-        .mobile-title {
-          font-size: 80px;
-          font-weight: 1000;
-          font-family: serif;
-          color: #2D3A4A;
-          text-shadow: 0 1px 3px rgba(255,255,255,0.6);
-          margin: 0;
-          letter-spacing: 8px;
-          user-select: none;
-        }
-        .mobile-hint {
-          position: fixed;
-          top: 0; left: 0; right: 0;
-          background: #333333c5;
-          color: #fff;
-          text-align: center;
-          padding: 12px;
-          font-size: 14px;
-          z-index: 100;
-        }
+        .mobile-content { display: none; }
         @media (max-width: 768px) {
           .desktop-section { display: none; }
+          .mobile-content { display: flex; }
         }
       `}</style>
     </>
