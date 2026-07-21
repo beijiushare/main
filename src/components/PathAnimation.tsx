@@ -288,7 +288,7 @@ export default function PathAnimation({
             blur={1}
             fade={0.2}
             inset={80}
-            loop={false}
+            loop={true}
             draggable={true}
             onConfirm={handleWheelConfirm}
           />
