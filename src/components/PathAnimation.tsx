@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect, useMemo, type ReactNode } from 'react'
+import { useRef, useEffect, useMemo, useCallback, type ReactNode } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import OptionWheel from './OptionWheel'
@@ -219,6 +219,11 @@ export default function PathAnimation({
     }
   }, [sectionRef])
 
+  const handleWheelConfirm = useCallback((index: number) => {
+    const { href } = LINK_ITEMS[index]
+    window.open(href, '_blank', 'noopener')
+  }, [])
+
   // 稳定引用：wheel items 避免每次 render 重新创建（OptionWheel deps 依赖此引用）
   const wheelItems = useMemo(
     () => LINK_ITEMS.map(({ label, Icon }) => ({ label, Icon })),
@@ -274,7 +279,7 @@ export default function PathAnimation({
             items={wheelItems}
             side="left"
             defaultSelected={0}
-            textColor="#a6a6a6"
+            textColor="#d4d4d4"
             activeColor="#ffffff"
             fontSize={2}
             spacing={1.6}
@@ -285,6 +290,7 @@ export default function PathAnimation({
             inset={80}
             loop={false}
             draggable={true}
+            onConfirm={handleWheelConfirm}
           />
       </div>
       </div>

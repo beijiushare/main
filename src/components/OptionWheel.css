@@ -1,5 +1,5 @@
 .option-wheel {
-  --ow-text-color: #a6a6a6;
+  --ow-text-color: #d4d4d4;
   --ow-active-color: #ffffff;
   --ow-font-size: 3rem;
   --ow-inset: 80px;
@@ -47,6 +47,7 @@
 
 .option-wheel__item--selected {
   font-weight: 500;
+  font-size: calc(var(--ow-font-size) * 1.06);
   /* ZSFT-342 只有单一字重（400），用 text-shadow 确保选中项看起来更粗 */
   text-shadow: 0 0 0.03em currentColor;
 }

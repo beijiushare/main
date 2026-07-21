@@ -69,6 +69,8 @@ interface OptionWheelProps {
   items?: WheelItem[]
   defaultSelected?: number
   onChange?: (index: number, item: WheelItem) => void
+  /** 点击已选中项时触发（确认/跳转） */
+  onConfirm?: (index: number, item: WheelItem) => void
   textColor?: string
   activeColor?: string
   side?: 'left' | 'right'
@@ -107,7 +109,8 @@ const OptionWheel = ({
   items = DEFAULT_ITEMS,
   defaultSelected = 3,
   onChange,
-  textColor = '#a6a6a6',
+  onConfirm,
+  textColor = '#d4d4d4',
   activeColor = '#ffffff',
   side = 'left',
   fontSize = 3,
@@ -133,6 +136,7 @@ const OptionWheel = ({
   const lastRef = useRef(0)
   const cfgRef = useRef<WheelConfig>({} as WheelConfig)
   const onChangeRef = useRef(onChange)
+  const onConfirmRef = useRef(onConfirm)
   const selectedRef = useRef(defaultSelected)
   const wheelTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const dragRef = useRef<{ y: number; start: number; id: number } | null>(null)
@@ -146,6 +150,7 @@ const OptionWheel = ({
   const remPx = typeof window !== 'undefined' ? parseFloat(getComputedStyle(document.documentElement).fontSize) || 16 : 16
 
   onChangeRef.current = onChange
+  onConfirmRef.current = onConfirm
   cfgRef.current = {
     count: items.length,
     items,
@@ -323,7 +328,15 @@ const OptionWheel = ({
       if (dragMovedRef.current) return
       const cfg = cfgRef.current
       const cur = targetRef.current
-      let d = index - (((cur % cfg.count) + cfg.count) % cfg.count)
+      const currentIdx = ((Math.round(cur) % cfg.count) + cfg.count) % cfg.count
+
+      if (index === currentIdx) {
+        // 点击已选中项 → 确认/跳转
+        onConfirmRef.current?.(index, cfg.items[index])
+        return
+      }
+
+      let d = index - currentIdx
       if (cfg.loop && cfg.count > 1) {
         if (d > cfg.count / 2) d -= cfg.count
         else if (d < -cfg.count / 2) d += cfg.count
