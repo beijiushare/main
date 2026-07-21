@@ -35,7 +35,6 @@ export default function HomePage() {
   const unicornRef = useRef<HTMLDivElement>(null)
   const [showCode, setShowCode] = useState(false)
   const [scrollComplete, setScrollComplete] = useState(false)
-  const [revealProgress, setRevealProgress] = useState(0)
 
   // ─── 控制台滚动进度日志 ───
   const logScrollRef = useRef<() => void>(() => {})
@@ -131,20 +130,6 @@ export default function HomePage() {
       onEnter: () => setShowCode(true),
       once: true,
     })
-
-    // ─── 代码揭示进度 660→840vh（与代码块升起同步） ───
-    const revealObj = { p: 0 }
-    const revealAnim = gsap.to(revealObj, {
-      p: 1, ease: 'none', paused: true,
-      onUpdate: () => { setRevealProgress(revealObj.p) },
-    })
-    sts.push(ScrollTrigger.create({
-      trigger: section,
-      start: () => section.offsetTop + vh(660),
-      end: () => section.offsetTop + vh(840),
-      scrub: 0.6,
-      animation: revealAnim,
-    }))
 
     // ─── 滚动到头时文字切换 ───
     ScrollTrigger.create({
@@ -253,11 +238,13 @@ export default function HomePage() {
                   code={bresenhamCode}
                   theme="dark"
                   title="bresenham.c"
+                  typingSpeed={40}
                   showLineNumbers
+                  autoPlay
+                  loop
                   language="c"
                   highlightLines={[2, 4, 9, 10]}
                   className="code-block-scroll"
-                  revealProgress={revealProgress}
                 />
               )}
             </div>

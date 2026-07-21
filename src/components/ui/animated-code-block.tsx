@@ -284,8 +284,6 @@ export interface AnimatedCodeBlockProps {
   blurEffect?: boolean;
   showControls?: boolean;
   onCopy?: () => void;
-  /** 外部滚动进度 0→1，传入后代替内部定时器驱动代码揭示 */
-  revealProgress?: number;
 }
 
 type ThemeStyles = {
@@ -315,9 +313,7 @@ export function AnimatedCodeBlock({
   blurEffect = false,
   showControls = true,
   onCopy,
-  revealProgress,
 }: AnimatedCodeBlockProps) {
-  const isExternal = revealProgress !== undefined;
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const [currentPosition, setCurrentPosition] = useState(0);
   const [copied, setCopied] = useState(false);
@@ -441,21 +437,7 @@ export function AnimatedCodeBlock({
     }
   }, [isFullscreen, code]);
 
-  // 外部滚动进度同步（覆盖定时器驱动）
   useEffect(() => {
-    if (!isExternal) return;
-    const pos = Math.floor(revealProgress! * code.length);
-    setCurrentPosition(pos);
-    if (pos >= code.length) {
-      setCompleted(true);
-      setIsPlaying(false);
-    } else {
-      setCompleted(false);
-    }
-  }, [revealProgress, code, isExternal]);
-
-  useEffect(() => {
-    if (isExternal) return;
     if (isPlaying && currentPosition < code.length) {
       timerRef.current = setTimeout(() => {
         setCurrentPosition(currentPosition + 1);
@@ -474,7 +456,7 @@ export function AnimatedCodeBlock({
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, [isPlaying, currentPosition, code, typingSpeed, loop, isExternal]);
+  }, [isPlaying, currentPosition, code, typingSpeed, loop]);
 
   useEffect(() => {
     const handleFullscreenChange = () => {
@@ -815,7 +797,7 @@ export function AnimatedCodeBlock({
                               }}
                             />
                           )}
-                          {i === cursorLineIndex && !isExternal && (
+                          {i === cursorLineIndex && (
                             <motion.span
                               className={cn(
                                 "inline-block w-2 h-5 -mb-0.5",
@@ -852,16 +834,14 @@ export function AnimatedCodeBlock({
         )}
       >
         <div className="flex items-center gap-2">
-          {!isExternal && (
-            <div
-              className={cn(
-                "w-2 h-2 rounded-full",
-                isPlaying ? "bg-green-500" : "bg-gray-500",
-              )}
-            ></div>
-          )}
+          <div
+            className={cn(
+              "w-2 h-2 rounded-full",
+              isPlaying ? "bg-green-500" : "bg-gray-500",
+            )}
+          ></div>
           <span>
-            {isExternal ? "Scrolling..." : isPlaying ? "Typing..." : completed ? "Completed" : "Paused"}
+            {isPlaying ? "Typing..." : completed ? "Completed" : "Paused"}
           </span>
         </div>
         <div>{Math.round(progressPercentage)}% complete</div>
