@@ -1,7 +1,6 @@
 'use client'
 
 import { useRef, useLayoutEffect, useState } from 'react'
-import Lenis from 'lenis'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CursorGrid from '@/components/CursorGrid'
@@ -43,15 +42,6 @@ export default function HomePage() {
   useLayoutEffect(() => {
     const section = sectionRef.current
     if (!section) return
-
-    // ─── Lenis 惯性滚动 ───
-    const lenis = new Lenis({
-      lerp: 0.08,
-      wheelMultiplier: 1.3,
-    })
-    lenis.on('scroll', ScrollTrigger.update)
-    gsap.ticker.add((time) => { lenis.raf(time * 1000) })
-    gsap.ticker.lagSmoothing(0)
 
     const vh = (n: number) => (n / 100) * window.innerHeight
     logScrollRef.current = () => {
@@ -150,8 +140,6 @@ export default function HomePage() {
     })
 
     return () => {
-      lenis.destroy()
-      gsap.ticker.lagSmoothing(1)
       window.removeEventListener('scroll', onScroll)
       sts.forEach(st => {
         st.animation?.kill()
