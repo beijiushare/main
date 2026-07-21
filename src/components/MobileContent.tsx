@@ -2,7 +2,6 @@
 
 import ShinyText from './ShinyText'
 import { PixelatedCanvas } from './ui/pixelated-canvas'
-import { AnimatedCodeBlock } from './ui/animated-code-block'
 import BorderGlow from './BorderGlow'
 import IconVcard from './icons/IconVcard'
 import IconCv from './icons/IconCv'
@@ -20,31 +19,12 @@ const LINK_ROWS = [
   { label: 'Bilibili', href: 'https://space.bilibili.com/3494379710842912', Icon: IconBilibili },
 ]
 
-const bresenhamCode = `void line(int x0, int y0, int x1, int y1) {
-    int dx = abs(x1-x0), dy = -abs(y1-y0);
-    int sx = x0<x1 ? 1 : -1, sy = y0<y1 ? 1 : -1;
-    int err = dx + dy;
-    while (1) {
-        plot(x0, y0);
-        if (x0 == x1 && y0 == y1) break;
-        int e2 = 2 * err;
-        if (e2 >= dy) { err += dy; x0 += sx; }
-        if (e2 <= dx) { err += dx; y0 += sy; }
-    }
-}`
 
 export default function MobileContent() {
   return (
     <div className="mobile-content">
-      {/* ---- 顶部装饰 + 标题 ---- */}
+      {/* ---- 标题 ---- */}
       <div className="mobile-header">
-        <div className="mobile-mask-icon">
-          <svg viewBox="0 0 48 48" width="32" height="32" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5">
-            <path d="M24 4L44 16v16L24 44 4 32V16L24 4z" />
-            <circle cx="24" cy="20" r="8" stroke="rgba(255,255,255,0.2)" />
-            <path d="M18 32 Q24 36 30 32" stroke="rgba(255,255,255,0.2)" />
-          </svg>
-        </div>
         <ShinyText
           text="BEIJIU.TOP"
           speed={3}
@@ -109,20 +89,6 @@ export default function MobileContent() {
         </BorderGlow>
       </div>
 
-      {/* ---- 代码块 ---- */}
-      <div className="mobile-code-wrapper">
-        <AnimatedCodeBlock
-          code={bresenhamCode}
-          theme="dark"
-          title="bresenham.c"
-          showLineNumbers
-          autoPlay
-          loop
-          language="c"
-          highlightLines={[2, 4, 9, 10]}
-        />
-      </div>
-
       {/* ---- The end. ---- */}
       <div className="mobile-end">
         <span>The end.</span>
@@ -153,10 +119,6 @@ export default function MobileContent() {
           letter-spacing: 4px;
           font-family: 'ZSFT-342', 'Segoe UI', system-ui, sans-serif;
         }
-        .mobile-mask-icon {
-          opacity: 0.5;
-          margin-bottom: 4px;
-        }
 
         /* ---- 独角兽 ---- */
         .mobile-unicorn {
@@ -179,6 +141,7 @@ export default function MobileContent() {
         .mobile-link-row {
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 12px;
           padding: 14px 20px;
           color: rgba(255,255,255,0.75);
@@ -203,11 +166,6 @@ export default function MobileContent() {
         }
 
         /* ---- 代码块 ---- */
-        .mobile-code-wrapper {
-          width: 100%;
-          max-width: 520px;
-        }
-
         /* ---- The end. ---- */
         .mobile-end {
           padding: 20px 0 40px;
