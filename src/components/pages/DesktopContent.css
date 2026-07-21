@@ -1,0 +1,14 @@
+.hero-title {
+  margin: 0;
+  font-size: clamp(80px, 12vw, 160px);
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-family: 'ZSFT-342', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  user-select: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.code-block-scroll {
+  width: 100%;
+}

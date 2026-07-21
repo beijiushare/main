@@ -1,0 +1,24 @@
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.4);
+  will-change: transform, opacity;
+}
+
+.scroll-indicator__text {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* 弹跳动画吸引注意 */
+.scroll-indicator svg {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}

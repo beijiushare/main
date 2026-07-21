@@ -1,0 +1,83 @@
+.mobile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 20px 64px;
+  gap: 32px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #0a0a14;
+}
+
+/* ---- 标题区 ---- */
+.mobile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.mobile-header .shiny-text {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-family: 'ZSFT-342', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ---- 独角兽 ---- */
+.mobile-unicorn {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---- 光效卡片 ---- */
+.mobile-card-wrapper {
+  width: 60%;
+  max-width: 228px;
+}
+.mobile-link-card {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+}
+.mobile-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 20px;
+  color: rgba(255,255,255,0.75);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  text-decoration: none;
+  transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-link-row:not(:last-child) {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.mobile-link-row:active {
+  color: #fff;
+}
+.mobile-link-row svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ---- The end. ---- */
+.mobile-end {
+  padding: 20px 0 40px;
+  color: rgba(255,255,255,0.25);
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+.mobile-spacer {
+  flex-shrink: 0;
+  height: max(0px, calc(100vh - 780px));
+}

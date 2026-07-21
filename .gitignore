@@ -1,6 +1,5 @@
-.nuxt/
+.next/
 node_modules/
-.output/
-.vercel/
 dist/
 *.local
+tsconfig.tsbuildinfo
