@@ -10,8 +10,8 @@ export const LINK_MAP_GROUPS = [
       },
       {
         label: '书与影',
-        href: 'https://library.beijiu.top/',
-        display: '书与影：https://library.beijiu.top/',
+        href: 'https://www.beijiu.top/library',
+        display: '书与影：https://www.beijiu.top/library',
       },
     ],
   },
