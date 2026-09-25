@@ -3,3 +3,6 @@ node_modules/
 dist/
 *.local
 tsconfig.tsbuildinfo
+
+/.claude_temp
+/.claude_dist

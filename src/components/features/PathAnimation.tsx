@@ -88,7 +88,7 @@ const LINK_ITEMS: { label: string; href: string; Icon: React.FC<{ className?: st
   { label: 'GitHub', href: 'https://github.com/beijiushare', Icon: IconGithub },
   { label: '公众号', href: '/WechatPublic', Icon: IconWechat },
   { label: 'Blog', href: 'https://blog.beijiu.top/', Icon: IconBlog },
-  { label: 'Bilibili', href: 'https://space.bilibili.com/3494379710842912', Icon: IconBilibili },
+  { label: 'Bilibili', href: 'https://space.bilibili.com/3745019517210321', Icon: IconBilibili },
 ]
 
 /* ============ 主组件 ============ */
