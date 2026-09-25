@@ -1,14 +1,50 @@
+.link-map-card {
+  flex: none;
+}
+
+.link-map-grid a {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  display: block;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link-map-grid a:hover,
+.link-map-grid a:focus-visible {
+  color: #ffffff;
+}
+
+.link-map-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  justify-items: start;
+}
+
+.desktop-link-card .mobile-link-row {
+  font-size: 18px;
+  padding: 16px 22px;
+  gap: 14px;
+}
+
+.desktop-link-card .mobile-link-row svg {
+  width: 27px;
+  height: 27px;
+}
+
 .hero-title {
   margin: 0;
-  font-size: clamp(80px, 12vw, 160px);
+  font-size: clamp(72px, 8vw, 144px);
   font-weight: 800;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   font-family: 'ZSFT-342', 'Segoe UI', system-ui, -apple-system, sans-serif;
   user-select: none;
   line-height: 1;
   white-space: nowrap;
-}
-
-.code-block-scroll {
-  width: 100%;
 }

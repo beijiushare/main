@@ -69,6 +69,27 @@
   color: rgba(255,255,255,0.5);
 }
 
+/* ---- 链接地图 ---- */
+.mobile-link-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.mobile-link-map a {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.mobile-link-map a:hover,
+.mobile-link-map a:focus-visible,
+.mobile-link-map a:active {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* ---- The end. ---- */
 .mobile-end {
   padding: 20px 0 40px;

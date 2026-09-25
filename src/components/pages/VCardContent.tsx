@@ -19,7 +19,7 @@ const platformListData: Omit<PlatformItem, 'qrDataUrl'>[] = [
   { name: '个人主页', nameEn: 'Homepage', url: 'https://www.beijiu.top/' },
   { name: 'GitHub', nameEn: 'GitHub', url: 'https://github.com/beijiushare' },
   { name: '邮箱', nameEn: 'Email', url: 'beijiushare@foxmail.com 或 beijiushare@outlook.com' },
-  { name: 'B站', nameEn: 'Bilibili', url: 'https://space.bilibili.com/3494379710842912' },
+  { name: 'B站', nameEn: 'Bilibili', url: 'https://space.bilibili.com/3745019517210321' },
   { name: '微信公众号', nameEn: 'WeChatPublic', url: 'http://weixin.qq.com/r/mp/XBcLE5PE8s6Nrddw90JO' },
 ]
 

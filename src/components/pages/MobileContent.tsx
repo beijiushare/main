@@ -10,6 +10,7 @@ import IconGithub from '../icons/IconGithub'
 import IconWechatPublic from '../icons/IconWechatPublic'
 import IconBlog from '../icons/IconBlog'
 import IconBilibili from '../icons/IconBilibili'
+import { MOBILE_LINK_MAP_LINKS } from '@/data/links'
 
 const LINK_ROWS = [
   { label: 'vCard', href: '/vCard', Icon: IconVcard },
@@ -17,7 +18,7 @@ const LINK_ROWS = [
   { label: 'GitHub', href: 'https://github.com/beijiushare', Icon: IconGithub },
   { label: '公众号', href: '/WechatPublic', Icon: IconWechatPublic },
   { label: 'Blog', href: 'https://blog.beijiu.top/', Icon: IconBlog },
-  { label: 'Bilibili', href: 'https://space.bilibili.com/3494379710842912', Icon: IconBilibili },
+  { label: 'Bilibili', href: 'https://space.bilibili.com/3745019517210321', Icon: IconBilibili },
 ]
 
 
@@ -77,6 +78,14 @@ export default function MobileContent() {
               </a>
             ))}
           </div>
+      </div>
+
+      <div className="mobile-link-map">
+        {MOBILE_LINK_MAP_LINKS.map(({ label, href }) => (
+          <a key={href} href={href} target="_blank" rel="noopener noreferrer">
+            {label}
+          </a>
+        ))}
       </div>
 
       {/* ---- The end. ---- */}
