@@ -1,14 +1,23 @@
 .library-page {
   min-height: 100dvh;
+  min-width: 320px;
   background: #0a0a14;
   color: rgba(255, 255, 255, 0.92);
-  padding: 48px 20px 80px;
+  padding: 48px 0 80px;
   font-family: 'ZSFT-342', 'Segoe UI', system-ui, sans-serif;
 }
 
 .library-container {
-  width: min(1100px, 100%);
+  width: 100%;
+  max-width: 48rem;
   margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .library-container {
+    padding: 0 24px;
+  }
 }
 
 .library-header {
@@ -48,24 +57,50 @@
 }
 
 .library-refresh {
-  padding: 6px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 0;
   border-radius: 6px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.55);
   cursor: pointer;
   font: inherit;
   font-size: 12px;
+  transition: color 200ms ease, background-color 200ms ease, opacity 200ms ease;
 }
 
 .library-refresh:hover {
   background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.library-refresh:active {
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 
 .library-refresh:disabled {
-  cursor: wait;
+  cursor: not-allowed;
   opacity: 0.5;
+}
+
+.library-refresh-icon {
+  width: 14px;
+  height: 14px;
+  transition: transform 200ms ease;
+}
+
+.library-refresh-icon.is-refreshing {
+  animation: library-refresh-spin 800ms linear infinite;
+}
+
+@keyframes library-refresh-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .library-profile {

@@ -1,23 +1,48 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
+function RefreshIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+      />
+    </svg>
+  )
+}
+
 export default function RefreshButton() {
+  const router = useRouter()
   const [refreshing, setRefreshing] = useState(false)
 
   async function refresh() {
     if (refreshing) return
     setRefreshing(true)
     try {
-      window.location.reload()
+      router.refresh()
+      await new Promise((resolve) => setTimeout(resolve, 1000))
     } finally {
-      window.setTimeout(() => setRefreshing(false), 1000)
+      setRefreshing(false)
     }
   }
 
   return (
-    <button type="button" className="library-refresh" onClick={refresh} disabled={refreshing}>
-      {refreshing ? '刷新中…' : '刷新数据'}
+    <button type="button" className="library-refresh" onClick={refresh} disabled={refreshing} aria-label="刷新数据">
+      <span className="inline-flex items-center gap-1.5">
+        <RefreshIcon className={`library-refresh-icon${refreshing ? ' is-refreshing' : ''}`} />
+        {refreshing ? '刷新中…' : '刷新数据'}
+      </span>
     </button>
   )
 }
