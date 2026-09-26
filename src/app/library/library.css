@@ -3,7 +3,7 @@
   min-width: 320px;
   background: #0a0a14;
   color: rgba(255, 255, 255, 0.92);
-  padding: 48px 0 80px;
+  padding: 32px 0 56px;
   font-family: 'ZSFT-342', 'Segoe UI', system-ui, sans-serif;
 }
 
@@ -12,11 +12,51 @@
   max-width: 48rem;
   margin: 0 auto;
   padding: 0 16px;
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
   .library-container {
     padding: 0 24px;
+  }
+}
+
+@media (max-width: 639px) {
+  .library-container {
+    max-width: 380px;
+  }
+
+  .library-title {
+    font-size: 30px;
+  }
+
+  .library-description {
+    margin-bottom: 36px;
+    font-size: 14px;
+  }
+
+  .library-header {
+    gap: 12px;
+  }
+
+  .library-header-actions {
+    gap: 10px;
+  }
+
+  .library-section {
+    margin-top: 40px;
+  }
+
+  .library-section + .library-section {
+    margin-top: 40px;
+  }
+
+  .library-media-section + .library-media-section {
+    margin-top: 20px;
+  }
+
+  .library-footer {
+    margin-top: 40px;
   }
 }
 
