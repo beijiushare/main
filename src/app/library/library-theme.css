@@ -1,0 +1,94 @@
+.library-theme-toggle {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.library-theme-toggle:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.library-theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.library-theme-icon {
+  width: 16px;
+  height: 16px;
+}
+
+::view-transition-image-pair(root) {
+  isolation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  display: block;
+}
+
+[data-library-theme='dark']::view-transition-old(root) {
+  z-index: 100;
+}
+
+[data-library-theme='light'] .library-page {
+  background: #f5f5f7;
+  color: #18181b;
+}
+
+[data-library-theme='light'] .library-title,
+[data-library-theme='light'] .library-section > h2 {
+  color: #18181b;
+}
+
+[data-library-theme='light'] .library-description,
+[data-library-theme='light'] .library-section-heading h3,
+[data-library-theme='light'] .library-section-heading span,
+[data-library-theme='light'] .library-footer,
+[data-library-theme='light'] .library-empty {
+  color: #71717a;
+}
+
+[data-library-theme='light'] .library-back,
+[data-library-theme='light'] .library-theme-toggle {
+  color: #52525b;
+}
+
+[data-library-theme='light'] .library-theme-toggle {
+  border-color: rgba(24, 24, 27, 0.14);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+[data-library-theme='light'] .library-more {
+  color: #52525b;
+}
+
+[data-library-theme='light'] .library-more:hover {
+  background: rgba(24, 24, 27, 0.06);
+  color: #18181b;
+}
+
+[data-library-theme='light'] .library-theme-toggle:hover {
+  background: rgba(24, 24, 27, 0.06);
+  color: #18181b;
+}
+
+[data-library-theme='light'] .library-card {
+  background: #e4e4e7;
+}
+
+[data-library-theme='light'] .library-back:hover {
+  color: #18181b;
+}

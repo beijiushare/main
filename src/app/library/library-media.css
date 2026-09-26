@@ -1,0 +1,136 @@
+.library-media-section {
+  margin: 0;
+}
+
+.library-media-section + .library-media-section {
+  margin-top: 24px;
+}
+
+.library-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.library-section-heading h3,
+.library-section-heading span {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.library-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #151521;
+  color: #fff;
+  text-decoration: none;
+}
+
+.library-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.library-card:hover .library-cover {
+  transform: scale(1.1);
+}
+
+.library-card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 2px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.48);
+  font-size: 10px;
+}
+
+.library-card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), transparent);
+  pointer-events: none;
+}
+
+.library-card-info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+}
+
+.library-card-info h4 {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.library-card-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+}
+
+.library-more-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.library-more {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+
+.library-more:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.library-empty {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+@media (min-width: 640px) {
+  .library-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 639px) {
+  .library-media-section + .library-media-section {
+    margin-top: 20px;
+  }
+}
