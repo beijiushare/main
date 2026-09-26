@@ -71,16 +71,16 @@
 
 /* ---- 链接地图 ---- */
 .mobile-link-map {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
   width: 100%;
 }
 .mobile-link-map a {
   color: rgba(255, 255, 255, 0.45);
   font-size: 14px;
   line-height: 1.6;
+  text-align: center;
   text-decoration: none;
   transition: color 0.2s;
 }
