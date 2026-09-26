@@ -1,19 +1,32 @@
-export const LINK_MAP_GROUPS = [
+import { LINK_MAP_EXTRA_LINKS, NAV_LINKS, type NavLinkItem } from '@/data/navLinks'
+
+type LinkMapItem = {
+  label: string
+  href: string
+  display: string
+  absoluteUrl: string
+}
+
+type LinkMapGroup = {
+  id: string
+  name: string
+  links: readonly LinkMapItem[]
+}
+
+function toLinkMapItem({ label, href, display }: NavLinkItem): LinkMapItem {
+  return {
+    label,
+    href,
+    display: label,
+    absoluteUrl: display || href,
+  }
+}
+
+export const LINK_MAP_GROUPS: readonly LinkMapGroup[] = [
   {
     id: 'personal',
     name: '个人',
-    links: [
-      {
-        label: '碎语',
-        href: 'https://channel.beijiu.top/',
-        display: '碎语：https://channel.beijiu.top/',
-      },
-      {
-        label: '书与影',
-        href: 'https://www.beijiu.top/library',
-        display: '书与影：https://www.beijiu.top/library',
-      },
-    ],
+    links: [...NAV_LINKS, ...LINK_MAP_EXTRA_LINKS].map(toLinkMapItem),
   },
   {
     id: 'tools',
@@ -25,6 +38,6 @@ export const LINK_MAP_GROUPS = [
     name: '娱乐',
     links: [],
   },
-] as const
+]
 
 export const MOBILE_LINK_MAP_LINKS = LINK_MAP_GROUPS.flatMap((group) => group.links)
