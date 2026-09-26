@@ -418,8 +418,16 @@
   background: rgba(255, 255, 255, 0.7);
 }
 
-[data-library-theme='light'] .library-theme-toggle:hover,
+[data-library-theme='light'] .library-more {
+  color: #52525b;
+}
+
 [data-library-theme='light'] .library-more:hover {
+  background: rgba(24, 24, 27, 0.06);
+  color: #18181b;
+}
+
+[data-library-theme='light'] .library-theme-toggle:hover {
   background: rgba(24, 24, 27, 0.06);
   color: #18181b;
 }
