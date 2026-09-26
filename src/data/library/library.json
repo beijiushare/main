@@ -1,0 +1,2856 @@
+{
+  "movies": {
+    "collect": [
+      {
+        "id": "1485260",
+        "title": "本杰明·巴顿奇事 / The Curious Case of Benjamin Button / 奇幻逆缘(港) / 班杰明的奇幻旅程(台)",
+        "url": "https://movie.douban.com/subject/1485260/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2192535722.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1428577",
+        "title": "九色鹿 / The Nine-Colored Deer / 鹿王本生",
+        "url": "https://movie.douban.com/subject/1428577/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2331868079.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26794435",
+        "title": "哪吒之魔童降世 / 哪吒降世 / Ne Zha",
+        "url": "https://movie.douban.com/subject/26794435/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2563780504.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "34780991",
+        "title": "哪吒之魔童闹海 / 哪吒2 / 哪吒2之魔童闹海",
+        "url": "https://movie.douban.com/subject/34780991/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2916323291.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "5045678",
+        "title": "大鱼海棠 / 大海 / 大·海",
+        "url": "https://movie.douban.com/subject/5045678/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2932950007.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26277313",
+        "title": "西游记之大圣归来 / 大圣归来 / 猴王",
+        "url": "https://movie.douban.com/subject/26277313/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2255028780.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "23748525",
+        "title": "进击的巨人 / 進撃の巨人 / Shingeki no Kyojin / Attack on Titan",
+        "url": "https://movie.douban.com/subject/23748525/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1981730273.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1427318",
+        "title": "火影忍者 / NARUTO -ナルト- / 狐忍 / Naruto",
+        "url": "https://movie.douban.com/subject/1427318/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2264901843.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36464284",
+        "title": "命运/奇异赝品 / Fate/strange Fake",
+        "url": "https://movie.douban.com/subject/36464284/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2926891106.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "5349275",
+        "title": "魔法少女小圆 / 魔法少女まどか☆マギカ / Madoka☆Magica / 魔法少女魔户香",
+        "url": "https://movie.douban.com/subject/5349275/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2088343031.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1453238",
+        "title": "海贼王 / ワンピース / 航海王 / One Piece",
+        "url": "https://movie.douban.com/subject/1453238/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2928287870.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36317418",
+        "title": "憧憬成为魔法少女 / 魔法少女にあこがれて / 梦想成为魔法少女 / Gushing over Magical Girls",
+        "url": "https://movie.douban.com/subject/36317418/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2899942457.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "30210221",
+        "title": "鬼灭之刃 / 鬼滅の刃 / 灭鬼之刃 / 鬼灭之刃 灶门炭治郎 立志篇",
+        "url": "https://movie.douban.com/subject/30210221/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2551222097.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36524559",
+        "title": "鬼灭之刃：无限城篇 第一章 猗窝座再袭 / 劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来 / 鬼灭之刃 剧场版 无限城篇 第一章 猗窝座再来 / Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+        "url": "https://movie.douban.com/subject/36524559/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2926775179.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1433342",
+        "title": "钢之炼金术师 / 鋼の錬金術師 / 钢之炼金术师 2003",
+        "url": "https://movie.douban.com/subject/1433342/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2260616108.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1295749",
+        "title": "王牌特派员 / The Cable Guy / 衰鬼线人 / 有线电视修理工",
+        "url": "https://movie.douban.com/subject/1295749/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2177762576.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1297018",
+        "title": "冒牌天神 / Bruce Almighty / 衰鬼上帝(港) / 王牌天神(台)",
+        "url": "https://movie.douban.com/subject/1297018/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2165714151.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1297570",
+        "title": "变相怪杰 / The Mask / 面具 / 摩登大圣",
+        "url": "https://movie.douban.com/subject/1297570/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2043441362.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1292064",
+        "title": "楚门的世界 / The Truman Show / 真人Show(港) / 真人戏",
+        "url": "https://movie.douban.com/subject/1292064/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p479682972.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1292052",
+        "title": "肖申克的救赎 / The Shawshank Redemption / 月黑高飞(港) / 刺激1995(台)",
+        "url": "https://movie.douban.com/subject/1292052/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2934829882.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "24773958",
+        "title": "复仇者联盟3：无限战争 / Avengers: Infinity War / 复仇者联盟3：无限之战(港) / 复仇者联盟：无限之战(台)",
+        "url": "https://movie.douban.com/subject/24773958/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2516481762.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26636712",
+        "title": "蚁人2：黄蜂女现身 / Ant-Man and the Wasp / 蚁侠2：黄蜂女现身(港) / 蚁人2",
+        "url": "https://movie.douban.com/subject/26636712/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2529389608.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1866473",
+        "title": "蚁人 / Ant-Man / 蚁侠(港) / Antman",
+        "url": "https://movie.douban.com/subject/1866473/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2242302551.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36240199",
+        "title": "暗影蜘蛛侠 / Spider-Noir / “暗影蜘蛛侠” / “暗影蜘蛛”",
+        "url": "https://movie.douban.com/subject/36240199/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2930448532.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1308570",
+        "title": "蜘蛛侠2 / Spider-Man 2 / 蜘蛛人2(台)",
+        "url": "https://movie.douban.com/subject/1308570/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1617867110.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1306612",
+        "title": "蜘蛛侠 / Spider-Man / 蜘蛛人(台)",
+        "url": "https://movie.douban.com/subject/1306612/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p457050361.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3066739",
+        "title": "钢铁侠2 / Iron Man 2 / 铁甲奇侠2(港) / 钢铁人2(台)",
+        "url": "https://movie.douban.com/subject/3066739/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1441141314.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1432146",
+        "title": "钢铁侠 / Iron Man / 铁甲奇侠(港) / 钢铁人(台)",
+        "url": "https://movie.douban.com/subject/1432146/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2196695849.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3718424",
+        "title": "金刚狼2 / The Wolverine / 狼人：武士激战(港) / 金钢狼：武士之战(台)",
+        "url": "https://movie.douban.com/subject/3718424/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2151837507.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25765735",
+        "title": "金刚狼3：殊死一战 / Logan / 卢根(港) / 罗根(台)",
+        "url": "https://movie.douban.com/subject/25765735/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2445529009.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1792928",
+        "title": "金刚狼 / X-Men Origins: Wolverine / X战警前传：金刚狼 / 变种特攻：狼人外传(港)",
+        "url": "https://movie.douban.com/subject/1792928/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2063167557.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "6560058",
+        "title": "雷神2：黑暗世界 / Thor: The Dark World / 雷神奇侠2：黑暗世界(港) / 雷神索尔2：黑暗世界(台)",
+        "url": "https://movie.douban.com/subject/6560058/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2109235216.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1866471",
+        "title": "雷神 / Thor / 雷神奇侠(港) / 雷神索尔(台)",
+        "url": "https://movie.douban.com/subject/1866471/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2159068249.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4135763",
+        "title": "天上掉下个猪八戒",
+        "url": "https://movie.douban.com/subject/4135763/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2665402938.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "27097683",
+        "title": "阿凡提的故事 / 阿凡提 / 阿凡提和孩子们",
+        "url": "https://movie.douban.com/subject/27097683/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2626959455.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3032552",
+        "title": "魔幻手机",
+        "url": "https://movie.douban.com/subject/3032552/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2352324050.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4328475",
+        "title": "电击小子 / 电击小子 第一季",
+        "url": "https://movie.douban.com/subject/4328475/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2355529586.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "24284209",
+        "title": "开心超人 / 开心宝贝大电影 / Happy Heroes",
+        "url": "https://movie.douban.com/subject/24284209/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2014813703.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2148394",
+        "title": "大头儿子和小头爸爸",
+        "url": "https://movie.douban.com/subject/2148394/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2375026803.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3111378",
+        "title": "大耳朵图图 / 大耳朵图图第一季",
+        "url": "https://movie.douban.com/subject/3111378/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2674283905.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26831711",
+        "title": "熊出没·奇幻空间 / 熊出没之奇幻空间 / 熊出没大电影4",
+        "url": "https://movie.douban.com/subject/26831711/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2414358483.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26220731",
+        "title": "熊出没之雪岭熊风 / 熊出没大电影2 / Boonie Bears: Mystical Winter",
+        "url": "https://movie.douban.com/subject/26220731/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2222373886.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "24753811",
+        "title": "熊出没之夺宝熊兵 / 熊出没大电影 / 熊出没电影版",
+        "url": "https://movie.douban.com/subject/24753811/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2165005086.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "27176717",
+        "title": "熊出没·变形记 / 熊出没5 / 熊出没大电影5",
+        "url": "https://movie.douban.com/subject/27176717/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2506889386.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "21359690",
+        "title": "熊出没之过年 / Boonie Bears: Homeward Journey",
+        "url": "https://movie.douban.com/subject/21359690/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2236922385.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2156663",
+        "title": "西游记 / 老版西游记 / 央视版西游记",
+        "url": "https://movie.douban.com/subject/2156663/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2265959269.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3904560",
+        "title": "水浒传 / 央视版水浒传",
+        "url": "https://movie.douban.com/subject/3904560/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2554040764.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1830528",
+        "title": "三国演义 / The Romance of Three Kingdoms",
+        "url": "https://movie.douban.com/subject/1830528/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2926801914.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "24857849",
+        "title": "熊出没之丛林总动员 / 熊出没之重返丛林 / 熊出没第三部",
+        "url": "https://movie.douban.com/subject/24857849/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2500310673.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "11527600",
+        "title": "熊出没之环球大冒险 / 熊出没第二部 / 熊出没2",
+        "url": "https://movie.douban.com/subject/11527600/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2500309888.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26696590",
+        "title": "百变马丁 / 马丁的早晨 第二部 / Magic Matin",
+        "url": "https://movie.douban.com/subject/26696590/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2301678775.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "10467770",
+        "title": "熊出没 / 熊出没第一部 / Boonie Bears",
+        "url": "https://movie.douban.com/subject/10467770/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2500310439.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "7056398",
+        "title": "喜羊羊与灰太狼之开心闯龙年 / 喜羊羊与灰太狼4 / Mission Incredible: Adventures On The Dragon's Trail",
+        "url": "https://movie.douban.com/subject/7056398/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1358037025.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3696540",
+        "title": "喜羊羊与灰太狼 / 喜羊羊与灰太狼(第1-530集) / Pleasant Goat and Big Big Wolf",
+        "url": "https://movie.douban.com/subject/3696540/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2629726262.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4082101",
+        "title": "喜羊羊与灰太狼之虎虎生威 / 喜羊羊与灰太狼2之虎胆羊威(港) / 喜羊羊与灰太狼2：虎虎生威",
+        "url": "https://movie.douban.com/subject/4082101/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2231067759.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1463371",
+        "title": "名侦探柯南 / 名探偵コナン / Detective Conan / Meitantei Conan",
+        "url": "https://movie.douban.com/subject/1463371/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2257391444.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4321270",
+        "title": "猫和老鼠 / Tom and Jerry / 妙妙妙 / 汤姆猫与杰米鼠",
+        "url": "https://movie.douban.com/subject/4321270/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2554009820.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "10573506",
+        "title": "赛尔号 / 赛尔号 第一季",
+        "url": "https://movie.douban.com/subject/10573506/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2650975780.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3240884",
+        "title": "巴啦啦小魔仙 / 巴啦啦小魔仙 第一季 / Balala the Fairies",
+        "url": "https://movie.douban.com/subject/3240884/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2868305296.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3098725",
+        "title": "小鲤鱼历险记 / The Adventures of Little Carp",
+        "url": "https://movie.douban.com/subject/3098725/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2355099687.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1299643",
+        "title": "宝莲灯 / Lotus Lantern",
+        "url": "https://movie.douban.com/subject/1299643/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2195312435.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1428576",
+        "title": "葫芦兄弟 / 葫芦娃 / The Gourd Brother",
+        "url": "https://movie.douban.com/subject/1428576/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2561717360.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1860377",
+        "title": "黑猫警长 / Inspector Black Cat",
+        "url": "https://movie.douban.com/subject/1860377/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2528877467.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4840353",
+        "title": "果宝特攻 / Fruity Robo",
+        "url": "https://movie.douban.com/subject/4840353/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2302438861.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2156771",
+        "title": "哪吒传奇 / The Legend of Nezha",
+        "url": "https://movie.douban.com/subject/2156771/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913958760.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "22735528",
+        "title": "神兵小将1 上部 / 神兵小英雄 / 神兵小将 第一部",
+        "url": "https://movie.douban.com/subject/22735528/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2603922030.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3036478",
+        "title": "赛车总动员2 / Cars 2 / 3D反斗车王2(港) / Cars2：世界大赛(台)",
+        "url": "https://movie.douban.com/subject/3036478/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p960984759.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1428878",
+        "title": "赛车总动员 / Cars / 反斗车王(港) / 汽车总动员",
+        "url": "https://movie.douban.com/subject/1428878/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p593931509.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1291575",
+        "title": "玩具总动员 / Toy Story / 反斗奇兵(港) / 玩具的故事",
+        "url": "https://movie.douban.com/subject/1291575/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2565956404.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1301198",
+        "title": "少林寺 / The Shaolin Temple / Shao Lin tzu",
+        "url": "https://movie.douban.com/subject/1301198/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2458741650.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1298443",
+        "title": "黄飞鸿 / 黃飛鴻 / 黄飞鸿之壮志凌云 / 武状元黄飞鸿",
+        "url": "https://movie.douban.com/subject/1298443/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2204476216.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1305201",
+        "title": "黄飞鸿之铁鸡斗蜈蚣 / 黃飛鴻之鐵雞鬥蜈蚣 / Last Hero in China / Deadly China Hero",
+        "url": "https://movie.douban.com/subject/1305201/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2351999788.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1292704",
+        "title": "黄飞鸿之三：狮王争霸 / 黃飛鴻之三獅王爭霸 / 黄飞鸿3 / 黄飞鸿之狮王争霸",
+        "url": "https://movie.douban.com/subject/1292704/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2047653768.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1297763",
+        "title": "方世玉 / 功夫皇帝方世玉 / Fong Sai Yuk",
+        "url": "https://movie.douban.com/subject/1297763/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2608498684.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1294561",
+        "title": "太极张三丰 / 太極張三豐 / The Tai-chi Master / Twin Warriors",
+        "url": "https://movie.douban.com/subject/1294561/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p722764652.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1299059",
+        "title": "倚天屠龙记之魔教教主 / 倚天屠龍記之魔教教主 / Kung Fu Cult Master",
+        "url": "https://movie.douban.com/subject/1299059/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2594065208.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1296837",
+        "title": "洪熙官 / 洪熙官之新少林五祖 / 洪熙官之少林五祖",
+        "url": "https://movie.douban.com/subject/1296837/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2677766485.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1292843",
+        "title": "黄飞鸿之西域雄狮 / 黃飛鴻之西域雄獅 / 黄飞鸿6 / Once Upon a Time in China and America",
+        "url": "https://movie.douban.com/subject/1292843/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2221508135.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1441602",
+        "title": "霍元甲 / Fearless / Legend of a Fighter",
+        "url": "https://movie.douban.com/subject/1441602/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2171661378.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1947089",
+        "title": "投名状 / The Warlords / 刺马",
+        "url": "https://movie.douban.com/subject/1947089/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2167464205.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4896304",
+        "title": "龙门飞甲 / Flying Swords of Dragon Gate",
+        "url": "https://movie.douban.com/subject/4896304/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1311653469.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25850122",
+        "title": "封神传奇 / 封神榜 / 3D封神榜",
+        "url": "https://movie.douban.com/subject/25850122/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2366372816.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4007146",
+        "title": "新少林寺",
+        "url": "https://movie.douban.com/subject/4007146/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2927097246.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3990500",
+        "title": "机器侠 / Metallic Attraction: Kungfu Cyborg",
+        "url": "https://movie.douban.com/subject/3990500/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1507616164.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "23788440",
+        "title": "杀破狼2 / 殺破狼2 / 杀破狼2之杀无赦 / SPL 2: A Time For Consequences",
+        "url": "https://movie.douban.com/subject/23788440/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2246885606.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "24753810",
+        "title": "战狼 / 特种兵之战狼 / 兵锋",
+        "url": "https://movie.douban.com/subject/24753810/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2225660666.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26125779",
+        "title": "危城 / 危城歼霸 / 夕阳武士",
+        "url": "https://movie.douban.com/subject/26125779/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2372098911.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26266893",
+        "title": "流浪地球 / 流浪地球：飞跃2020特别版 / The Wandering Earth",
+        "url": "https://movie.douban.com/subject/26266893/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2545472803.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "32659890",
+        "title": "我和我的祖国 / My People, My Country",
+        "url": "https://movie.douban.com/subject/32659890/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2567998580.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25845392",
+        "title": "长津湖 / 冰雪长津湖 / 抗美援朝",
+        "url": "https://movie.douban.com/subject/25845392/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2681329386.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "35613853",
+        "title": "长津湖之水门桥 / 水门桥 / 长津湖2",
+        "url": "https://movie.douban.com/subject/35613853/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2846021991.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "35267208",
+        "title": "流浪地球2 / 流浪地球2(3D版) / The Wandering Earth Ⅱ",
+        "url": "https://movie.douban.com/subject/35267208/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2916835424.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36233343",
+        "title": "流浪地球2：再次冒险 / 推向星辰：流浪地球2背后的另一场冒险 / 《流浪地球2》纪录片",
+        "url": "https://movie.douban.com/subject/36233343/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2911730278.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1291577",
+        "title": "超人总动员 / The Incredibles / 超人特工队(港) / 超人特攻队(台)",
+        "url": "https://movie.douban.com/subject/1291577/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2167017148.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2377277",
+        "title": "神探狄仁杰2 / 神探狄仁杰 第二部",
+        "url": "https://movie.douban.com/subject/2377277/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2242225308.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3012331",
+        "title": "神探狄仁杰3 / 神探狄仁杰 第三部",
+        "url": "https://movie.douban.com/subject/3012331/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2183530824.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3292775",
+        "title": "猎鹰1949 / 英雄2",
+        "url": "https://movie.douban.com/subject/3292775/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2242619687.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4921343",
+        "title": "神断狄仁杰 / 大唐神探狄仁杰 / 武周神探狄仁杰",
+        "url": "https://movie.douban.com/subject/4921343/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2492990812.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "6801428",
+        "title": "飞虎神鹰 / 英雄3",
+        "url": "https://movie.douban.com/subject/6801428/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2589795375.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "6799183",
+        "title": "孤岛飞鹰 / 孤岛猎鹰",
+        "url": "https://movie.douban.com/subject/6799183/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2509670781.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25880954",
+        "title": "石敢当之雄峙天东 / 降魔英雄传",
+        "url": "https://movie.douban.com/subject/25880954/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2227385574.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26670689",
+        "title": "津门飞鹰",
+        "url": "https://movie.douban.com/subject/26670689/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2909145680.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1303173",
+        "title": "甲方乙方 / 比火还热的心 / 你不是一个俗人",
+        "url": "https://movie.douban.com/subject/1303173/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2901505312.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3742360",
+        "title": "让子弹飞 / 让子弹飞一会儿 / 火烧云",
+        "url": "https://movie.douban.com/subject/3742360/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1512562287.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1862151",
+        "title": "疯狂的石头 / Crazy Stone",
+        "url": "https://movie.douban.com/subject/1862151/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p712241453.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3541415",
+        "title": "盗梦空间 / Inception / 潜行凶间(港) / 全面启动(台)",
+        "url": "https://movie.douban.com/subject/3541415/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p513344864.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25662337",
+        "title": "惊天魔盗团2 / Now You See Me 2 / 非常盗2(港) / 出神入化2(台)",
+        "url": "https://movie.douban.com/subject/25662337/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2355440566.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26404869",
+        "title": "惊天魔盗团3 / Now You See Me: Now You Don't / 非常盗3(港) / 出神入化3(台)",
+        "url": "https://movie.douban.com/subject/26404869/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2926399098.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "6517421",
+        "title": "惊天魔盗团 / Now You See Me / 非常盗(港) / 出神入化(台)",
+        "url": "https://movie.douban.com/subject/6517421/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2151336415.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3011235",
+        "title": "哈利·波特与死亡圣器(下) / Harry Potter and the Deathly Hallows: Part 2 / 哈利波特7：死神的圣物2(港/台) / 哈利·波特与死圣(下)",
+        "url": "https://movie.douban.com/subject/3011235/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913457020.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2051007",
+        "title": "哈利·波特与死亡圣器(上) / Harry Potter and the Deathly Hallows: Part 1 / 哈利波特7：死神的圣物1(港/台) / 哈利·波特与死圣(上)",
+        "url": "https://movie.douban.com/subject/2051007/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913456984.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1433330",
+        "title": "哈利·波特与混血王子 / Harry Potter and the Half-Blood Prince / 哈利波特6：混血王子的背叛(港/台) / 哈6",
+        "url": "https://movie.douban.com/subject/1433330/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913456964.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1291544",
+        "title": "哈利·波特与阿兹卡班的囚徒 / Harry Potter and the Prisoner of Azkaban / 哈利波特3：阿兹卡班的逃犯(港/台) / 哈利·波特与阿兹卡班的逃犯",
+        "url": "https://movie.douban.com/subject/1291544/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913456870.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1309055",
+        "title": "哈利·波特与火焰杯 / Harry Potter and the Goblet of Fire / 哈利波特4：火杯的考验(港/台) / 哈利波特：火杯的考验(台)",
+        "url": "https://movie.douban.com/subject/1309055/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913456904.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1296996",
+        "title": "哈利·波特与密室 / Harry Potter and the Chamber of Secrets / 哈利波特2：消失的密室(港/台) / 哈2",
+        "url": "https://movie.douban.com/subject/1296996/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913781951.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1295038",
+        "title": "哈利·波特与魔法石 / Harry Potter and the Sorcerer's Stone / 哈利波特1：神秘的魔法石(港/台) / 哈1",
+        "url": "https://movie.douban.com/subject/1295038/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913781448.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1308851",
+        "title": "地狱男爵 / Hellboy / 天魔特攻(港) / 地狱怪客(台)",
+        "url": "https://movie.douban.com/subject/1308851/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2193565611.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25787888",
+        "title": "八恶人 / The Hateful Eight / 冰天血地8恶人(港) / 可憎八人",
+        "url": "https://movie.douban.com/subject/25787888/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2306383252.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "6307447",
+        "title": "被解救的姜戈 / Django Unchained / 被解放的姜戈 / 决杀令(台)",
+        "url": "https://movie.douban.com/subject/6307447/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1800813767.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2998253",
+        "title": "兰戈 / Rango / 飙风雷哥(台) / 马拉高(港)",
+        "url": "https://movie.douban.com/subject/2998253/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1000880652.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1780330",
+        "title": "致命魔术 / The Prestige / 死亡魔法(港) / 顶尖对决(台)",
+        "url": "https://movie.douban.com/subject/1780330/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p480383375.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1889243",
+        "title": "星际穿越 / Interstellar / 星际启示录(港) / 星际效应(台)",
+        "url": "https://movie.douban.com/subject/1889243/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2614988097.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25895276",
+        "title": "煎饼侠 / 屌丝男士大电影 / Jian Bing Man",
+        "url": "https://movie.douban.com/subject/25895276/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2253038483.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "19976810",
+        "title": "屌丝男士 第一季 / 屌丝 / Diors Man",
+        "url": "https://movie.douban.com/subject/19976810/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2375074602.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "27605698",
+        "title": "西虹市首富 / Hello Mr. Billionaire / 资本接班人",
+        "url": "https://movie.douban.com/subject/27605698/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2529206747.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25986662",
+        "title": "疯狂的外星人 / Crazy Alien",
+        "url": "https://movie.douban.com/subject/25986662/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2915734567.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "35183042",
+        "title": "独行月球 / Moon Man",
+        "url": "https://movie.douban.com/subject/35183042/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2876409008.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "35228789",
+        "title": "超能一家人 / 进击的郑前 / 超能力家庭 中国版",
+        "url": "https://movie.douban.com/subject/35228789/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2890369636.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36653918",
+        "title": "抓娃娃 / Successor",
+        "url": "https://movie.douban.com/subject/36653918/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2910105262.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2373195",
+        "title": "绝命毒师 第一季 / Breaking Bad Season 1 / 制毒师 第一季 / 致命毒师 第一季",
+        "url": "https://movie.douban.com/subject/2373195/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2886443948.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36343491",
+        "title": "黑袍纠察队 第五季 / The Boys Season 5 / 英雄克星 / 黑袍纠察队 最终季",
+        "url": "https://movie.douban.com/subject/36343491/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2930448310.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "35926862",
+        "title": "黑袍纠察队 第四季 / The Boys Season 4 / 英雄克星",
+        "url": "https://movie.douban.com/subject/35926862/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2907681437.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "35154050",
+        "title": "黑袍纠察队 第三季 / The Boys Season 3 / 英雄克星",
+        "url": "https://movie.douban.com/subject/35154050/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2873152309.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "34626347",
+        "title": "黑袍纠察队 第二季 / The Boys Season 2 / 男孩帮 / 黑衣小队",
+        "url": "https://movie.douban.com/subject/34626347/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2611337609.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3703650",
+        "title": "黑袍纠察队 第一季 / The Boys Season 1 / 男孩帮 / 黑衣小队",
+        "url": "https://movie.douban.com/subject/3703650/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2558948000.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1422106",
+        "title": "尖峰时刻3 / Rush Hour 3 / 火拼时速3 / 尖峰时刻3",
+        "url": "https://movie.douban.com/subject/1422106/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p457005429.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26729868",
+        "title": "机器之血 / Bleeding Steel",
+        "url": "https://movie.douban.com/subject/26729868/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2505785547.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1304642",
+        "title": "尖峰时刻2 / Rush Hour 2 / 火拼时速2 / 巅峰时刻2",
+        "url": "https://movie.douban.com/subject/1304642/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1513464612.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4097023",
+        "title": "新少林寺 / Shaolin",
+        "url": "https://movie.douban.com/subject/4097023/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p788475809.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1296011",
+        "title": "红番区 / 紅番區 / Rumble in the Bronx / Red Bronx",
+        "url": "https://movie.douban.com/subject/1296011/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2095090668.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1292624",
+        "title": "尖峰时刻 / Rush Hour / 火拼时速 / 巅峰时刻",
+        "url": "https://movie.douban.com/subject/1292624/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2514033487.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1300303",
+        "title": "我是谁 / 我是誰 / Who Am I?",
+        "url": "https://movie.douban.com/subject/1300303/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2002166139.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "10605978",
+        "title": "私人订制 / 贵族 / Personal Tailor",
+        "url": "https://movie.douban.com/subject/10605978/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2159261731.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36600459",
+        "title": "捕风追影 / 极盗跟踪 / 跟踪(中国内地版)",
+        "url": "https://movie.douban.com/subject/36600459/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2924069675.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "30413052",
+        "title": "攀登者 / The Climbers",
+        "url": "https://movie.douban.com/subject/30413052/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2568577681.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4212172",
+        "title": "十二生肖 / 12生肖 / 生肖传说",
+        "url": "https://movie.douban.com/subject/4212172/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1826580562.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1859036",
+        "title": "宝贝计划 / 寶貝計劃 / BB计划 / Rob-B-Hood",
+        "url": "https://movie.douban.com/subject/1859036/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p946770581.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3134895",
+        "title": "食神 / 香甜苦辣",
+        "url": "https://movie.douban.com/subject/3134895/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2457315177.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1419924",
+        "title": "师兄撞鬼 / 師兄撞鬼 / Look Out, Officer!",
+        "url": "https://movie.douban.com/subject/1419924/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2281804284.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1301865",
+        "title": "咖喱辣椒 / Curry & Pepper / Curry and Pepper",
+        "url": "https://movie.douban.com/subject/1301865/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2585539234.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1302678",
+        "title": "逃学威龙3之龙过鸡年 / 逃學威龍III之龍過雞年 / 逃学威龙3之第七感抓财神 / 逃学威龙3龙过鸡年",
+        "url": "https://movie.douban.com/subject/1302678/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1277819805.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1302977",
+        "title": "赌侠2：上海滩赌圣 / 賭俠II上海灘賭聖 / 赌侠2之上海滩赌圣 / God of Gamblers Part III: Back to Shanghai",
+        "url": "https://movie.douban.com/subject/1302977/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2349573639.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1305355",
+        "title": "审死官 / 審死官 / 威龙闯天关(台) / Justice, My Foot!",
+        "url": "https://movie.douban.com/subject/1305355/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2265204834.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1299765",
+        "title": "回魂夜 / 整鬼专家 / Out of the Dark",
+        "url": "https://movie.douban.com/subject/1299765/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2167116851.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1296201",
+        "title": "逃学威龙2 / 逃學威龍2 / Fight Back to School II",
+        "url": "https://movie.douban.com/subject/1296201/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2002726481.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1299680",
+        "title": "整蛊专家 / 整蠱專家 / 求爱总动员 / 整人专家",
+        "url": "https://movie.douban.com/subject/1299680/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2164309000.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1300498",
+        "title": "百变星君 / 百變星君 / 百变金刚 / Sixty Million Dollar Man",
+        "url": "https://movie.douban.com/subject/1300498/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2908713332.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1297223",
+        "title": "鹿鼎记 / 鹿鼎記 / 新鹿鼎记(台) / Royal Tramp",
+        "url": "https://movie.douban.com/subject/1297223/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2927572266.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1302090",
+        "title": "逃学威龙 / 逃學威龍 / Fight Back to School",
+        "url": "https://movie.douban.com/subject/1302090/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2002724530.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1307739",
+        "title": "国产凌凌漆 / 國產凌凌漆 / 凌凌漆大战金枪客 / 国产零零漆",
+        "url": "https://movie.douban.com/subject/1307739/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2585823759.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1297863",
+        "title": "武状元苏乞儿 / 武狀元蘇乞兒 / King of Beggars",
+        "url": "https://movie.douban.com/subject/1297863/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1148052547.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1297747",
+        "title": "少林足球 / Shaolin Soccer",
+        "url": "https://movie.douban.com/subject/1297747/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2507107765.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1293351",
+        "title": "食神 / The God of Cookery",
+        "url": "https://movie.douban.com/subject/1293351/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2912291642.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1961963",
+        "title": "长江七号 / 长江7号 / CJ7",
+        "url": "https://movie.douban.com/subject/1961963/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2097947361.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "5308265",
+        "title": "西游降魔篇 / 西游·降魔篇 / 大话西游之除魔传奇",
+        "url": "https://movie.douban.com/subject/5308265/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1856385532.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1297518",
+        "title": "九品芝麻官 / 九品芝麻官之白面包青天 / Hail the Judge",
+        "url": "https://movie.douban.com/subject/1297518/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p648370300.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2133405",
+        "title": "甩皮鬼 / 金装鬼打鬼 / 人皮锦衣",
+        "url": "https://movie.douban.com/subject/2133405/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2880831179.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1291543",
+        "title": "功夫 / 功夫3D / Kung Fu Hustle",
+        "url": "https://movie.douban.com/subject/1291543/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2219011938.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1306249",
+        "title": "唐伯虎点秋香 / 唐伯虎點秋香 / Flirting Scholar",
+        "url": "https://movie.douban.com/subject/1306249/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2357915564.webp",
+        "date": "2026-09-16",
+        "status": "collect"
+      }
+    ],
+    "wish": [
+      {
+        "id": "3602084",
+        "title": "波普先生的企鹅 / Mr. Popper's Penguins / 黑癫鹅先生(港)",
+        "url": "https://movie.douban.com/subject/3602084/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p948036118.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "2147854",
+        "title": "好好先生 / Yes Man / 乜都得先生(港) / 没问题先生(台)",
+        "url": "https://movie.douban.com/subject/2147854/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1538914887.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1291586",
+        "title": "海底总动员 / Finding Nemo / 海底奇兵(港) / 寻找尼莫",
+        "url": "https://movie.douban.com/subject/1291586/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1755893801.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1793491",
+        "title": "美食总动员 / Ratatouille / 料理鼠王(台) / 五星级大鼠(港)",
+        "url": "https://movie.douban.com/subject/1793491/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1803013091.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "2131459",
+        "title": "机器人总动员 / WALL·E / 太空奇兵·威E(港) / 瓦力(台)",
+        "url": "https://movie.douban.com/subject/2131459/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2934742160.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1297068",
+        "title": "中南海保镖 / 中南海保鑣 / The Bodyguard from Beijing / The Defender",
+        "url": "https://movie.douban.com/subject/1297068/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913299054.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "2279825",
+        "title": "小李飞刀 / Legend of Dagger Lee",
+        "url": "https://movie.douban.com/subject/2279825/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2372424064.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1291875",
+        "title": "阳光灿烂的日子 / In the Heat of the Sun",
+        "url": "https://movie.douban.com/subject/1291875/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2582946597.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1291858",
+        "title": "鬼子来了 / Devils on the Doorstep",
+        "url": "https://movie.douban.com/subject/1291858/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2930874010.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1766086",
+        "title": "太阳照常升起 / 太阳再次升起 / The Sun Also Rises",
+        "url": "https://movie.douban.com/subject/1766086/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p453675494.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "26366496",
+        "title": "邪不压正 / 侠隐 / Hidden Man",
+        "url": "https://movie.douban.com/subject/26366496/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2526297221.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "2154390",
+        "title": "编辑部的故事 / Stories of an Editorial Board",
+        "url": "https://movie.douban.com/subject/2154390/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2255590045.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "3901388",
+        "title": "我爱我家",
+        "url": "https://movie.douban.com/subject/3901388/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1334120823.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1291550",
+        "title": "天下无贼 / A World Without Thieves",
+        "url": "https://movie.douban.com/subject/1291550/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2191934463.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "6126442",
+        "title": "一步之遥 / 随子弹去 / Gone With The Bullets",
+        "url": "https://movie.douban.com/subject/6126442/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2210853894.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1851857",
+        "title": "蝙蝠侠：黑暗骑士 / The Dark Knight / 蝙蝠侠前传2：黑暗骑士 / 黑暗骑士(台)",
+        "url": "https://movie.douban.com/subject/1851857/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p462657443.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "3395373",
+        "title": "蝙蝠侠：黑暗骑士崛起 / The Dark Knight Rises / 蝙蝠侠前传3：黑暗骑士崛起 / 黑暗骑士：黎明升起(台)",
+        "url": "https://movie.douban.com/subject/3395373/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1706428744.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "2049435",
+        "title": "超人：钢铁之躯 / Man of Steel / 超人：钢铁英雄(港/台) / Superman: Man of Steel",
+        "url": "https://movie.douban.com/subject/2049435/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1968975252.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "35593344",
+        "title": "奥本海默 / Oppenheimer",
+        "url": "https://movie.douban.com/subject/35593344/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2876555451.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "36808876",
+        "title": "奥德赛 / The Odyssey",
+        "url": "https://movie.douban.com/subject/36808876/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2933569626.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1299603",
+        "title": "落水狗 / Reservoir Dogs / 霸道横行(台) / 水库狗",
+        "url": "https://movie.douban.com/subject/1299603/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1851340431.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1291832",
+        "title": "低俗小说 / Pulp Fiction / 危险人物(港) / 黑色追缉令(台)",
+        "url": "https://movie.douban.com/subject/1291832/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1910902213.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1301409",
+        "title": "杀出个黎明 / From Dusk Till Dawn / 恶夜追杀令(台) / 从黄昏到黎明",
+        "url": "https://movie.douban.com/subject/1301409/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1776544990.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1291580",
+        "title": "杀死比尔 / Kill Bill: Vol. 1 / 标杀令(港) / 追杀比尔(台)",
+        "url": "https://movie.douban.com/subject/1291580/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2493495946.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1291584",
+        "title": "杀死比尔2 / Kill Bill: Vol. 2 / 标杀令2(港) / 追杀比尔2：爱的大逃杀(台)",
+        "url": "https://movie.douban.com/subject/1291584/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1910897532.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1438652",
+        "title": "无耻混蛋 / Inglourious Basterds / 希魔撞正杀人狂(港) / 恶棍特工(台)",
+        "url": "https://movie.douban.com/subject/1438652/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2575043939.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "25810960",
+        "title": "杀出个黎明 第一季 / From Dusk Till Dawn: The Series Season 1",
+        "url": "https://movie.douban.com/subject/25810960/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2172124099.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "26651479",
+        "title": "杀出个黎明 第三季 / From Dusk Till Dawn: The Series Season 3",
+        "url": "https://movie.douban.com/subject/26651479/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2372960420.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "25964071",
+        "title": "夏洛特烦恼 / Goodbye Mr. Loser",
+        "url": "https://movie.douban.com/subject/25964071/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2264377763.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "35811064",
+        "title": "欢迎来龙餐馆 / Once Upon a Time in the Middle East",
+        "url": "https://movie.douban.com/subject/35811064/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2935109312.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "37106774",
+        "title": "流浪地球3(下) / 流浪地球4",
+        "url": "https://movie.douban.com/subject/37106774/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2915091857.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "6952149",
+        "title": "绝命毒师 第五季 / Breaking Bad Season 5 / 超越罪恶 第五季 / 制毒师 第五季",
+        "url": "https://movie.douban.com/subject/6952149/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1579021082.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "4927382",
+        "title": "绝命毒师 第四季 / Breaking Bad Season 4 / 制毒师 第四季 / 超越罪恶 第四季",
+        "url": "https://movie.douban.com/subject/4927382/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2016506391.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1299592",
+        "title": "成龙的特技 / 成龍的特技 / Jackie Chan: My Stunts",
+        "url": "https://movie.douban.com/subject/1299592/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2041990420.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1305183",
+        "title": "神奇燕尾服 / The Tuxedo / 燕尾服(台) / 特务踢死兔(港)",
+        "url": "https://movie.douban.com/subject/1305183/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1969620072.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1306541",
+        "title": "玻璃樽 / Gorgeous / Under Control",
+        "url": "https://movie.douban.com/subject/1306541/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p629412760.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "35595615",
+        "title": "龙马精神 / Ride On",
+        "url": "https://movie.douban.com/subject/35595615/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2890004015.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1297909",
+        "title": "A计划 / A計劃 / Project A",
+        "url": "https://movie.douban.com/subject/1297909/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p945210238.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "25723583",
+        "title": "英伦对决 / The Foreigner / 龙震天下 / 普通人",
+        "url": "https://movie.douban.com/subject/25723583/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2499135561.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1307023",
+        "title": "神话 / 惊天传奇 / 钛雨",
+        "url": "https://movie.douban.com/subject/1307023/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p486725980.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "3233635",
+        "title": "功夫熊猫2 / Kung Fu Panda 2 / 熊猫阿宝2 / 阿宝正传2",
+        "url": "https://movie.douban.com/subject/3233635/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p877183898.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1783457",
+        "title": "功夫熊猫 / Kung Fu Panda / 熊猫阿宝 / 阿宝正传",
+        "url": "https://movie.douban.com/subject/1783457/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1597238857.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1299398",
+        "title": "大话西游之月光宝盒 / 西遊記第壹佰零壹回之月光寶盒 / 西游记101回月光宝盒 / 齐天大圣东游记",
+        "url": "https://movie.douban.com/subject/1299398/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2561721372.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1499149",
+        "title": "功夫2 / Kung Fu Hustle 2",
+        "url": "https://movie.douban.com/subject/1499149/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2602404598.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1293607",
+        "title": "算死草 / 整人状元(台) / Lawyer, Lawyer",
+        "url": "https://movie.douban.com/subject/1293607/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2354806772.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1299745",
+        "title": "破坏之王 / 破壞之王 / 古拳决战空手道 / Love on Delivery",
+        "url": "https://movie.douban.com/subject/1299745/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2165828468.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1300566",
+        "title": "赌侠 / 賭俠 / God of Gamblers II",
+        "url": "https://movie.douban.com/subject/1300566/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1987598517.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1298644",
+        "title": "赌圣 / 賭聖 / All for the Winner",
+        "url": "https://movie.douban.com/subject/1298644/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1148006580.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1329936",
+        "title": "大内密探零零发 / 大內密探零零發 / 鹿鼎大帝(台) / Forbidden City Cop",
+        "url": "https://movie.douban.com/subject/1329936/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2455844666.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "19944106",
+        "title": "美人鱼 / Mermaid",
+        "url": "https://movie.douban.com/subject/19944106/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2316177058.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1302425",
+        "title": "喜剧之王 / 喜劇之王 / King of Comedy",
+        "url": "https://movie.douban.com/subject/1302425/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2917778954.webp",
+        "date": "2026-09-16",
+        "status": "wish"
+      }
+    ],
+    "doings": [
+      {
+        "id": "1431683",
+        "title": "蜡笔小新 / クレヨンしんちゃん / Kureyon Shin-chan",
+        "url": "https://movie.douban.com/subject/1431683/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2510330984.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "2210001",
+        "title": "大明王朝1566 / 大明王朝1566：嘉靖与海瑞 / 嘉靖与海瑞",
+        "url": "https://movie.douban.com/subject/2210001/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2444453078.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "38540573",
+        "title": "八恶人（电视版） / The Hateful Eight: Extended Version",
+        "url": "https://movie.douban.com/subject/38540573/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2933775232.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "4256328",
+        "title": "绝命毒师 第三季 / Breaking Bad Season 3 / 超越罪恶 第三季 / 致命毒师 第三季",
+        "url": "https://movie.douban.com/subject/4256328/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1674838460.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "3586996",
+        "title": "绝命毒师 第二季 / Breaking Bad Season 2 / 致命毒师 第二季 / 制毒师 第二季",
+        "url": "https://movie.douban.com/subject/3586996/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2872295944.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "2995948",
+        "title": "神探狄仁杰 / 大唐神探狄仁杰 / 武朝迷案",
+        "url": "https://movie.douban.com/subject/2995948/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2240355699.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "25715365",
+        "title": "成龙历险记 第四季 / Jackie Chan Adventures Season 4",
+        "url": "https://movie.douban.com/subject/25715365/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2548566619.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "25715367",
+        "title": "成龙历险记 第五季 / Jackie Chan Adventures Season 5",
+        "url": "https://movie.douban.com/subject/25715367/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2550461549.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "25715364",
+        "title": "成龙历险记 第三季 / Jackie Chan Adventures Season 3",
+        "url": "https://movie.douban.com/subject/25715364/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2546212236.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "25715362",
+        "title": "成龙历险记 第二季 / Jackie Chan Adventures Season 2",
+        "url": "https://movie.douban.com/subject/25715362/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2152803944.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      },
+      {
+        "id": "1933857",
+        "title": "成龙历险记 第一季 / Jackie Chan Adventures Season 1",
+        "url": "https://movie.douban.com/subject/1933857/",
+        "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2530298328.webp",
+        "date": "2026-09-16",
+        "status": "do"
+      }
+    ]
+  },
+  "books": {
+    "collect": [
+      {
+        "id": "3389984",
+        "title": "俗世奇人 : 修订版",
+        "url": "https://book.douban.com/subject/3389984/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s3510074.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1318622",
+        "title": "青铜葵花",
+        "url": "https://book.douban.com/subject/1318622/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1331331.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1009405",
+        "title": "漂亮老师和坏小子",
+        "url": "https://book.douban.com/subject/1009405/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1340042.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "6518690",
+        "title": "长大成熊",
+        "url": "https://book.douban.com/subject/6518690/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s6640562.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "35200619",
+        "title": "柳林风声",
+        "url": "https://book.douban.com/subject/35200619/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s33898350.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1072521",
+        "title": "大个子老鼠小个子猫",
+        "url": "https://book.douban.com/subject/1072521/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1057844.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1071463",
+        "title": "笨狼的故事 : 中国幽默儿童文学创作丛书",
+        "url": "https://book.douban.com/subject/1071463/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s5909349.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1210735",
+        "title": "王子与贫儿 : (全译本)(精)/世界文学名著典藏",
+        "url": "https://book.douban.com/subject/1210735/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s24222965.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1072508",
+        "title": "哈克贝利·费恩历险记",
+        "url": "https://book.douban.com/subject/1072508/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1057830.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1092246",
+        "title": "百万英镑",
+        "url": "https://book.douban.com/subject/1092246/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1609125.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4872914",
+        "title": "汤姆·索亚历险记",
+        "url": "https://book.douban.com/subject/4872914/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34448582.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1975101",
+        "title": "芝麻开门",
+        "url": "https://book.douban.com/subject/1975101/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s10091343.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "33426466",
+        "title": "笠翁对韵",
+        "url": "https://book.douban.com/subject/33426466/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34663222.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1137028",
+        "title": "傻鸭子欧巴儿",
+        "url": "https://book.douban.com/subject/1137028/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1169639.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4860554",
+        "title": "淘气包马小跳系列",
+        "url": "https://book.douban.com/subject/4860554/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s6517170.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "27135212",
+        "title": "杨红樱笑猫日记",
+        "url": "https://book.douban.com/subject/27135212/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s29539252.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1439745",
+        "title": "寄小读者",
+        "url": "https://book.douban.com/subject/1439745/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s6972647.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1063138",
+        "title": "今天我是升旗手",
+        "url": "https://book.douban.com/subject/1063138/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s9609521.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1021193",
+        "title": "皮皮鲁传",
+        "url": "https://book.douban.com/subject/1021193/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s3021510.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1442791",
+        "title": "我和小姐姐克拉拉 : 彩乌鸦系列",
+        "url": "https://book.douban.com/subject/1442791/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1461407.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "10799166",
+        "title": "怪物大师1 : 穿越时空的怪物果实",
+        "url": "https://book.douban.com/subject/10799166/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s10339535.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "24295831",
+        "title": "装在口袋里的爸爸 : 返老还童",
+        "url": "https://book.douban.com/subject/24295831/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s26558728.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "24529023",
+        "title": "查理九世01 : 黑貝街的亡靈",
+        "url": "https://book.douban.com/subject/24529023/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27199136.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25842252",
+        "title": "少年特工 : 少年特工",
+        "url": "https://book.douban.com/subject/25842252/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s35629542.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4103922",
+        "title": "我是白痴",
+        "url": "https://book.douban.com/subject/4103922/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s4037598.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3265350",
+        "title": "最后一头战象",
+        "url": "https://book.douban.com/subject/3265350/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s4673325.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3265347",
+        "title": "斑羚飞渡",
+        "url": "https://book.douban.com/subject/3265347/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s3461856.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4923845",
+        "title": "混血豺王",
+        "url": "https://book.douban.com/subject/4923845/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s4619082.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2006699",
+        "title": "盲孩与弃狗 : 中国动物小说大王:沈石溪文集",
+        "url": "https://book.douban.com/subject/2006699/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s2337269.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "10438571",
+        "title": "兵猴传奇",
+        "url": "https://book.douban.com/subject/10438571/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s7658589.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26312484",
+        "title": "导盲犬迪克",
+        "url": "https://book.douban.com/subject/26312484/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27994274.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1489166",
+        "title": "狼王梦",
+        "url": "https://book.douban.com/subject/1489166/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s5643580.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1022060",
+        "title": "狼图腾",
+        "url": "https://book.douban.com/subject/1022060/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1466042.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1489185",
+        "title": "小英雄雨来 : 小英雄雨来",
+        "url": "https://book.douban.com/subject/1489185/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s6779973.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1034282",
+        "title": "时间简史 : 插图本",
+        "url": "https://book.douban.com/subject/1034282/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1914861.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25837845",
+        "title": "战争与和平",
+        "url": "https://book.douban.com/subject/25837845/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34394508.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1795079",
+        "title": "乡土中国",
+        "url": "https://book.douban.com/subject/1795079/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1762210.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2253413",
+        "title": "巴黎圣母院",
+        "url": "https://book.douban.com/subject/2253413/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27644348.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25897657",
+        "title": "悲惨世界",
+        "url": "https://book.douban.com/subject/25897657/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s29841680.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1865089",
+        "title": "瓦尔登湖",
+        "url": "https://book.douban.com/subject/1865089/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1999119.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26820347",
+        "title": "红星照耀中国",
+        "url": "https://book.douban.com/subject/26820347/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s29109031.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2253379",
+        "title": "简爱",
+        "url": "https://book.douban.com/subject/2253379/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s33473798.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26817324",
+        "title": "傅雷家书",
+        "url": "https://book.douban.com/subject/26817324/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s28813086.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1013502",
+        "title": "钢铁是怎样炼成的",
+        "url": "https://book.douban.com/subject/1013502/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s35629509.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1073386",
+        "title": "艾青诗选",
+        "url": "https://book.douban.com/subject/1073386/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1095449.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1090109",
+        "title": "红岩",
+        "url": "https://book.douban.com/subject/1090109/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s21406804.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1077778",
+        "title": "爱的教育",
+        "url": "https://book.douban.com/subject/1077778/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1784813.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "35370545",
+        "title": "拿破仑传",
+        "url": "https://book.douban.com/subject/35370545/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s33874923.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2161691",
+        "title": "伊索寓言",
+        "url": "https://book.douban.com/subject/2161691/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s23007179.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1046209",
+        "title": "安徒生童话故事集",
+        "url": "https://book.douban.com/subject/1046209/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1034062.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4902784",
+        "title": "大草原上的小房子",
+        "url": "https://book.douban.com/subject/4902784/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s4640283.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1035848",
+        "title": "一千零一夜",
+        "url": "https://book.douban.com/subject/1035848/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1070937.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "30167142",
+        "title": "绿野仙踪",
+        "url": "https://book.douban.com/subject/30167142/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s29827188.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1043008",
+        "title": "格林童话全集",
+        "url": "https://book.douban.com/subject/1043008/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1134341.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "6854863",
+        "title": "老人与海 : 老人与海",
+        "url": "https://book.douban.com/subject/6854863/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s29386020.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1085038",
+        "title": "水孩子",
+        "url": "https://book.douban.com/subject/1085038/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s33520206.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1962718",
+        "title": "宝葫芦的秘密",
+        "url": "https://book.douban.com/subject/1962718/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s2698740.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1886348",
+        "title": "淘气包埃米尔",
+        "url": "https://book.douban.com/subject/1886348/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1991152.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2302270",
+        "title": "神笔马良",
+        "url": "https://book.douban.com/subject/2302270/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s3774539.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1004088",
+        "title": "长袜子皮皮",
+        "url": "https://book.douban.com/subject/1004088/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1290828.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "10464301",
+        "title": "没头脑和不高兴 : 中国幽默儿童文学创作·任溶溶系列",
+        "url": "https://book.douban.com/subject/10464301/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s9071454.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25862578",
+        "title": "解忧杂货店",
+        "url": "https://book.douban.com/subject/25862578/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27264181.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1770782",
+        "title": "追风筝的人",
+        "url": "https://book.douban.com/subject/1770782/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1727290.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25747921",
+        "title": "从你的全世界路过 : 让所有人心动的故事",
+        "url": "https://book.douban.com/subject/25747921/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27102925.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2020852",
+        "title": "偷脑的贼",
+        "url": "https://book.douban.com/subject/2020852/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s8899639.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "30419261",
+        "title": "天才在左，疯子在右",
+        "url": "https://book.douban.com/subject/30419261/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s29965405.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26734228",
+        "title": "鬼吹灯全集",
+        "url": "https://book.douban.com/subject/26734228/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34000456.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "11528339",
+        "title": "藏海花",
+        "url": "https://book.douban.com/subject/11528339/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s11150396.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "6953273",
+        "title": "盗墓笔记",
+        "url": "https://book.douban.com/subject/6953273/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s10412319.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "34954108",
+        "title": "坟场之书",
+        "url": "https://book.douban.com/subject/34954108/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s33576576.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2193875",
+        "title": "尼尔斯骑鹅旅行记",
+        "url": "https://book.douban.com/subject/2193875/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s2664090.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1001136",
+        "title": "彼得·潘",
+        "url": "https://book.douban.com/subject/1001136/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1000715.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1052990",
+        "title": "草房子",
+        "url": "https://book.douban.com/subject/1052990/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s2652540.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1036274",
+        "title": "夏洛的网",
+        "url": "https://book.douban.com/subject/1036274/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1120437.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1061803",
+        "title": "西游记",
+        "url": "https://book.douban.com/subject/1061803/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s9125702.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4275017",
+        "title": "骆驼祥子",
+        "url": "https://book.douban.com/subject/4275017/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s4226891.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "5350303",
+        "title": "活着",
+        "url": "https://book.douban.com/subject/5350303/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s4547666.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3523041",
+        "title": "平凡的世界（全三册）",
+        "url": "https://book.douban.com/subject/3523041/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s3799757.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3191322",
+        "title": "边城",
+        "url": "https://book.douban.com/subject/3191322/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s3235049.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1047430",
+        "title": "装在口袋里的爸爸 : 变形单车",
+        "url": "https://book.douban.com/subject/1047430/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1081499.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1449352",
+        "title": "朝花夕拾",
+        "url": "https://book.douban.com/subject/1449352/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34099290.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2046909",
+        "title": "故事新编",
+        "url": "https://book.douban.com/subject/2046909/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34099297.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1449351",
+        "title": "呐喊",
+        "url": "https://book.douban.com/subject/1449351/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34099286.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1398395",
+        "title": "狂人日记",
+        "url": "https://book.douban.com/subject/1398395/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1426308.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3057333",
+        "title": "城南旧事",
+        "url": "https://book.douban.com/subject/3057333/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s3053559.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "10740555",
+        "title": "舒克贝塔传",
+        "url": "https://book.douban.com/subject/10740555/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s11275690.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1007914",
+        "title": "窗边的小豆豆",
+        "url": "https://book.douban.com/subject/1007914/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1067911.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "37257479",
+        "title": "我，机器人 : 银河帝国8",
+        "url": "https://book.douban.com/subject/37257479/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s33749513.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "24882289",
+        "title": "机器人短篇全集",
+        "url": "https://book.douban.com/subject/24882289/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27218675.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1085467",
+        "title": "神秘岛",
+        "url": "https://book.douban.com/subject/1085467/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s2510575.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1276032",
+        "title": "地心游记",
+        "url": "https://book.douban.com/subject/1276032/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1274165.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1275907",
+        "title": "八十天环游地球",
+        "url": "https://book.douban.com/subject/1275907/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s26368868.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26389895",
+        "title": "银河帝国：基地七部曲 : 百万册纪念版",
+        "url": "https://book.douban.com/subject/26389895/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s28284246.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26631836",
+        "title": "十亿分之一的文明",
+        "url": "https://book.douban.com/subject/26631836/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s28325744.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26647633",
+        "title": "吞噬地球 : 当人类成为无家可归的流浪者",
+        "url": "https://book.douban.com/subject/26647633/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s28390405.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36503043",
+        "title": "朝闻道",
+        "url": "https://book.douban.com/subject/36503043/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34656250.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "36053919",
+        "title": "诗云",
+        "url": "https://book.douban.com/subject/36053919/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34478748.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "34954111",
+        "title": "乡村教师 : 刘慈欣科幻漫画系列第1辑",
+        "url": "https://book.douban.com/subject/34954111/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s34097532.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "30352721",
+        "title": "IV诗云 : 100：科幻之书",
+        "url": "https://book.douban.com/subject/30352721/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s29910762.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26657597",
+        "title": "人和吞食者 : 刘慈欣最具代表中短篇小说集",
+        "url": "https://book.douban.com/subject/26657597/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s28348219.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "35169360",
+        "title": "地球大炮",
+        "url": "https://book.douban.com/subject/35169360/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s33700441.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "25729093",
+        "title": "中国太阳",
+        "url": "https://book.douban.com/subject/25729093/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27189967.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26807576",
+        "title": "赡养人类",
+        "url": "https://book.douban.com/subject/26807576/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s28793629.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "10767124",
+        "title": "乡村教师 : 刘慈欣科幻自选集",
+        "url": "https://book.douban.com/subject/10767124/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s24493339.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1085470",
+        "title": "海底两万里",
+        "url": "https://book.douban.com/subject/1085470/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1817666.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1195590",
+        "title": "带上她的眼睛 : 刘慈欣科幻小说精品集",
+        "url": "https://book.douban.com/subject/1195590/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s2190695.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "6082808",
+        "title": "百年孤独",
+        "url": "https://book.douban.com/subject/6082808/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27237850.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1258490",
+        "title": "基地",
+        "url": "https://book.douban.com/subject/1258490/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1328663.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1873231",
+        "title": "明朝那些事儿（壹） : 洪武大帝",
+        "url": "https://book.douban.com/subject/1873231/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1872653.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "26264967",
+        "title": "神们自己 : 关于平行宇宙的一切",
+        "url": "https://book.douban.com/subject/26264967/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27882508.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "5363767",
+        "title": "三体Ⅲ : 死神永生",
+        "url": "https://book.douban.com/subject/5363767/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s26012674.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "3066477",
+        "title": "三体Ⅱ : 黑暗森林",
+        "url": "https://book.douban.com/subject/3066477/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s3078482.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "2567698",
+        "title": "三体 : “地球往事”三部曲之一",
+        "url": "https://book.douban.com/subject/2567698/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s2768378.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "4220878",
+        "title": "蓝莲花-丁丁历险记",
+        "url": "https://book.douban.com/subject/4220878/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s4161761.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1540211",
+        "title": "丁丁历险记（共22本）",
+        "url": "https://book.douban.com/subject/1540211/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s7026345.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      },
+      {
+        "id": "1007305",
+        "title": "红楼梦",
+        "url": "https://book.douban.com/subject/1007305/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s1070959.jpg",
+        "date": "2026-09-16",
+        "status": "collect"
+      }
+    ],
+    "wish": [
+      {
+        "id": "25985021",
+        "title": "人类简史 : 从动物到上帝",
+        "url": "https://book.douban.com/subject/25985021/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s27814883.jpg",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "3465304",
+        "title": "创业史",
+        "url": "https://book.douban.com/subject/3465304/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s4557369.jpg",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1489184",
+        "title": "稻草人",
+        "url": "https://book.douban.com/subject/1489184/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s2163749.jpg",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "33464346",
+        "title": "赡养世界 : 刘慈欣少年科幻科学小说系列第二辑",
+        "url": "https://book.douban.com/subject/33464346/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s33660377.jpg",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "3571732",
+        "title": "全频带阻塞干扰",
+        "url": "https://book.douban.com/subject/3571732/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s3668863.jpg",
+        "date": "2026-09-16",
+        "status": "wish"
+      },
+      {
+        "id": "1192090",
+        "title": "球状闪电",
+        "url": "https://book.douban.com/subject/1192090/",
+        "cover": "https://doubanio.viki.moe/view/subject/l/public/s26040205.jpg",
+        "date": "2026-09-16",
+        "status": "wish"
+      }
+    ],
+    "doings": []
+  },
+  "stats": {
+    "movies": {
+      "collect": 169,
+      "wish": 51,
+      "doings": 11,
+      "total": 231
+    },
+    "books": {
+      "collect": 116,
+      "wish": 6,
+      "doings": 0,
+      "total": 122
+    },
+    "generatedAt": "2026-09-26T13:02:15.621Z"
+  }
+}

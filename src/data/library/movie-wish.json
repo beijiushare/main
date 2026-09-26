@@ -1,0 +1,418 @@
+{
+  "category": "movie",
+  "category_name": "电影",
+  "status": "wish",
+  "status_name": "想看",
+  "exported_at": "2026-09-26T12:51:53.001Z",
+  "total_count": 51,
+  "items": [
+    {
+      "id": "3602084",
+      "title": "波普先生的企鹅 / Mr. Popper's Penguins / 黑癫鹅先生(港)",
+      "url": "https://movie.douban.com/subject/3602084/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p948036118.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "2147854",
+      "title": "好好先生 / Yes Man / 乜都得先生(港) / 没问题先生(台)",
+      "url": "https://movie.douban.com/subject/2147854/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1538914887.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1291586",
+      "title": "海底总动员 / Finding Nemo / 海底奇兵(港) / 寻找尼莫",
+      "url": "https://movie.douban.com/subject/1291586/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1755893801.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1793491",
+      "title": "美食总动员 / Ratatouille / 料理鼠王(台) / 五星级大鼠(港)",
+      "url": "https://movie.douban.com/subject/1793491/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1803013091.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "2131459",
+      "title": "机器人总动员 / WALL·E / 太空奇兵·威E(港) / 瓦力(台)",
+      "url": "https://movie.douban.com/subject/2131459/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2934742160.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1297068",
+      "title": "中南海保镖 / 中南海保鑣 / The Bodyguard from Beijing / The Defender",
+      "url": "https://movie.douban.com/subject/1297068/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2913299054.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "2279825",
+      "title": "小李飞刀 / Legend of Dagger Lee",
+      "url": "https://movie.douban.com/subject/2279825/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2372424064.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1291875",
+      "title": "阳光灿烂的日子 / In the Heat of the Sun",
+      "url": "https://movie.douban.com/subject/1291875/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2582946597.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1291858",
+      "title": "鬼子来了 / Devils on the Doorstep",
+      "url": "https://movie.douban.com/subject/1291858/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2930874010.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1766086",
+      "title": "太阳照常升起 / 太阳再次升起 / The Sun Also Rises",
+      "url": "https://movie.douban.com/subject/1766086/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p453675494.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "26366496",
+      "title": "邪不压正 / 侠隐 / Hidden Man",
+      "url": "https://movie.douban.com/subject/26366496/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2526297221.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "2154390",
+      "title": "编辑部的故事 / Stories of an Editorial Board",
+      "url": "https://movie.douban.com/subject/2154390/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2255590045.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "3901388",
+      "title": "我爱我家",
+      "url": "https://movie.douban.com/subject/3901388/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1334120823.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1291550",
+      "title": "天下无贼 / A World Without Thieves",
+      "url": "https://movie.douban.com/subject/1291550/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2191934463.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "6126442",
+      "title": "一步之遥 / 随子弹去 / Gone With The Bullets",
+      "url": "https://movie.douban.com/subject/6126442/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2210853894.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1851857",
+      "title": "蝙蝠侠：黑暗骑士 / The Dark Knight / 蝙蝠侠前传2：黑暗骑士 / 黑暗骑士(台)",
+      "url": "https://movie.douban.com/subject/1851857/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p462657443.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "3395373",
+      "title": "蝙蝠侠：黑暗骑士崛起 / The Dark Knight Rises / 蝙蝠侠前传3：黑暗骑士崛起 / 黑暗骑士：黎明升起(台)",
+      "url": "https://movie.douban.com/subject/3395373/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1706428744.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "2049435",
+      "title": "超人：钢铁之躯 / Man of Steel / 超人：钢铁英雄(港/台) / Superman: Man of Steel",
+      "url": "https://movie.douban.com/subject/2049435/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1968975252.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "35593344",
+      "title": "奥本海默 / Oppenheimer",
+      "url": "https://movie.douban.com/subject/35593344/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2876555451.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "36808876",
+      "title": "奥德赛 / The Odyssey",
+      "url": "https://movie.douban.com/subject/36808876/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2933569626.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1299603",
+      "title": "落水狗 / Reservoir Dogs / 霸道横行(台) / 水库狗",
+      "url": "https://movie.douban.com/subject/1299603/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1851340431.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1291832",
+      "title": "低俗小说 / Pulp Fiction / 危险人物(港) / 黑色追缉令(台)",
+      "url": "https://movie.douban.com/subject/1291832/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1910902213.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1301409",
+      "title": "杀出个黎明 / From Dusk Till Dawn / 恶夜追杀令(台) / 从黄昏到黎明",
+      "url": "https://movie.douban.com/subject/1301409/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1776544990.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1291580",
+      "title": "杀死比尔 / Kill Bill: Vol. 1 / 标杀令(港) / 追杀比尔(台)",
+      "url": "https://movie.douban.com/subject/1291580/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2493495946.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1291584",
+      "title": "杀死比尔2 / Kill Bill: Vol. 2 / 标杀令2(港) / 追杀比尔2：爱的大逃杀(台)",
+      "url": "https://movie.douban.com/subject/1291584/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1910897532.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1438652",
+      "title": "无耻混蛋 / Inglourious Basterds / 希魔撞正杀人狂(港) / 恶棍特工(台)",
+      "url": "https://movie.douban.com/subject/1438652/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2575043939.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "25810960",
+      "title": "杀出个黎明 第一季 / From Dusk Till Dawn: The Series Season 1",
+      "url": "https://movie.douban.com/subject/25810960/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2172124099.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "26651479",
+      "title": "杀出个黎明 第三季 / From Dusk Till Dawn: The Series Season 3",
+      "url": "https://movie.douban.com/subject/26651479/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2372960420.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "25964071",
+      "title": "夏洛特烦恼 / Goodbye Mr. Loser",
+      "url": "https://movie.douban.com/subject/25964071/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2264377763.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "35811064",
+      "title": "欢迎来龙餐馆 / Once Upon a Time in the Middle East",
+      "url": "https://movie.douban.com/subject/35811064/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2935109312.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "37106774",
+      "title": "流浪地球3(下) / 流浪地球4",
+      "url": "https://movie.douban.com/subject/37106774/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2915091857.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "6952149",
+      "title": "绝命毒师 第五季 / Breaking Bad Season 5 / 超越罪恶 第五季 / 制毒师 第五季",
+      "url": "https://movie.douban.com/subject/6952149/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1579021082.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "4927382",
+      "title": "绝命毒师 第四季 / Breaking Bad Season 4 / 制毒师 第四季 / 超越罪恶 第四季",
+      "url": "https://movie.douban.com/subject/4927382/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2016506391.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1299592",
+      "title": "成龙的特技 / 成龍的特技 / Jackie Chan: My Stunts",
+      "url": "https://movie.douban.com/subject/1299592/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2041990420.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1305183",
+      "title": "神奇燕尾服 / The Tuxedo / 燕尾服(台) / 特务踢死兔(港)",
+      "url": "https://movie.douban.com/subject/1305183/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1969620072.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1306541",
+      "title": "玻璃樽 / Gorgeous / Under Control",
+      "url": "https://movie.douban.com/subject/1306541/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p629412760.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "35595615",
+      "title": "龙马精神 / Ride On",
+      "url": "https://movie.douban.com/subject/35595615/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2890004015.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1297909",
+      "title": "A计划 / A計劃 / Project A",
+      "url": "https://movie.douban.com/subject/1297909/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p945210238.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "25723583",
+      "title": "英伦对决 / The Foreigner / 龙震天下 / 普通人",
+      "url": "https://movie.douban.com/subject/25723583/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2499135561.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1307023",
+      "title": "神话 / 惊天传奇 / 钛雨",
+      "url": "https://movie.douban.com/subject/1307023/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p486725980.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "3233635",
+      "title": "功夫熊猫2 / Kung Fu Panda 2 / 熊猫阿宝2 / 阿宝正传2",
+      "url": "https://movie.douban.com/subject/3233635/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p877183898.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1783457",
+      "title": "功夫熊猫 / Kung Fu Panda / 熊猫阿宝 / 阿宝正传",
+      "url": "https://movie.douban.com/subject/1783457/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1597238857.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1299398",
+      "title": "大话西游之月光宝盒 / 西遊記第壹佰零壹回之月光寶盒 / 西游记101回月光宝盒 / 齐天大圣东游记",
+      "url": "https://movie.douban.com/subject/1299398/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2561721372.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1499149",
+      "title": "功夫2 / Kung Fu Hustle 2",
+      "url": "https://movie.douban.com/subject/1499149/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2602404598.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1293607",
+      "title": "算死草 / 整人状元(台) / Lawyer, Lawyer",
+      "url": "https://movie.douban.com/subject/1293607/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2354806772.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1299745",
+      "title": "破坏之王 / 破壞之王 / 古拳决战空手道 / Love on Delivery",
+      "url": "https://movie.douban.com/subject/1299745/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2165828468.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1300566",
+      "title": "赌侠 / 賭俠 / God of Gamblers II",
+      "url": "https://movie.douban.com/subject/1300566/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1987598517.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1298644",
+      "title": "赌圣 / 賭聖 / All for the Winner",
+      "url": "https://movie.douban.com/subject/1298644/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1148006580.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1329936",
+      "title": "大内密探零零发 / 大內密探零零發 / 鹿鼎大帝(台) / Forbidden City Cop",
+      "url": "https://movie.douban.com/subject/1329936/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2455844666.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "19944106",
+      "title": "美人鱼 / Mermaid",
+      "url": "https://movie.douban.com/subject/19944106/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2316177058.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1302425",
+      "title": "喜剧之王 / 喜劇之王 / King of Comedy",
+      "url": "https://movie.douban.com/subject/1302425/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2917778954.webp",
+      "date": "2026-09-16",
+      "status": "wish"
+    }
+  ]
+}

@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "data:merge": "node scripts/merge-library.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
