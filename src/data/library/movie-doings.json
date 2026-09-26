@@ -1,0 +1,98 @@
+{
+  "category": "movie",
+  "category_name": "电影",
+  "status": "do",
+  "status_name": "在看",
+  "exported_at": "2026-09-26T12:53:04.000Z",
+  "total_count": 11,
+  "items": [
+    {
+      "id": "1431683",
+      "title": "蜡笔小新 / クレヨンしんちゃん / Kureyon Shin-chan",
+      "url": "https://movie.douban.com/subject/1431683/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2510330984.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "2210001",
+      "title": "大明王朝1566 / 大明王朝1566：嘉靖与海瑞 / 嘉靖与海瑞",
+      "url": "https://movie.douban.com/subject/2210001/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2444453078.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "38540573",
+      "title": "八恶人（电视版） / The Hateful Eight: Extended Version",
+      "url": "https://movie.douban.com/subject/38540573/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2933775232.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "4256328",
+      "title": "绝命毒师 第三季 / Breaking Bad Season 3 / 超越罪恶 第三季 / 致命毒师 第三季",
+      "url": "https://movie.douban.com/subject/4256328/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p1674838460.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "3586996",
+      "title": "绝命毒师 第二季 / Breaking Bad Season 2 / 致命毒师 第二季 / 制毒师 第二季",
+      "url": "https://movie.douban.com/subject/3586996/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2872295944.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "2995948",
+      "title": "神探狄仁杰 / 大唐神探狄仁杰 / 武朝迷案",
+      "url": "https://movie.douban.com/subject/2995948/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2240355699.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "25715365",
+      "title": "成龙历险记 第四季 / Jackie Chan Adventures Season 4",
+      "url": "https://movie.douban.com/subject/25715365/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2548566619.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "25715367",
+      "title": "成龙历险记 第五季 / Jackie Chan Adventures Season 5",
+      "url": "https://movie.douban.com/subject/25715367/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2550461549.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "25715364",
+      "title": "成龙历险记 第三季 / Jackie Chan Adventures Season 3",
+      "url": "https://movie.douban.com/subject/25715364/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2546212236.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "25715362",
+      "title": "成龙历险记 第二季 / Jackie Chan Adventures Season 2",
+      "url": "https://movie.douban.com/subject/25715362/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2152803944.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    },
+    {
+      "id": "1933857",
+      "title": "成龙历险记 第一季 / Jackie Chan Adventures Season 1",
+      "url": "https://movie.douban.com/subject/1933857/",
+      "cover": "https://doubanio.viki.moe/view/photo/s_ratio_poster/public/p2530298328.webp",
+      "date": "2026-09-16",
+      "status": "do"
+    }
+  ]
+}

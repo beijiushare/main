@@ -1,0 +1,58 @@
+{
+  "category": "book",
+  "category_name": "读书",
+  "status": "wish",
+  "status_name": "想读",
+  "exported_at": "2026-09-26T12:13:32.466Z",
+  "total_count": 6,
+  "items": [
+    {
+      "id": "25985021",
+      "title": "人类简史 : 从动物到上帝",
+      "url": "https://book.douban.com/subject/25985021/",
+      "cover": "https://doubanio.viki.moe/view/subject/l/public/s27814883.jpg",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "3465304",
+      "title": "创业史",
+      "url": "https://book.douban.com/subject/3465304/",
+      "cover": "https://doubanio.viki.moe/view/subject/l/public/s4557369.jpg",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1489184",
+      "title": "稻草人",
+      "url": "https://book.douban.com/subject/1489184/",
+      "cover": "https://doubanio.viki.moe/view/subject/l/public/s2163749.jpg",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "33464346",
+      "title": "赡养世界 : 刘慈欣少年科幻科学小说系列第二辑",
+      "url": "https://book.douban.com/subject/33464346/",
+      "cover": "https://doubanio.viki.moe/view/subject/l/public/s33660377.jpg",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "3571732",
+      "title": "全频带阻塞干扰",
+      "url": "https://book.douban.com/subject/3571732/",
+      "cover": "https://doubanio.viki.moe/view/subject/l/public/s3668863.jpg",
+      "date": "2026-09-16",
+      "status": "wish"
+    },
+    {
+      "id": "1192090",
+      "title": "球状闪电",
+      "url": "https://book.douban.com/subject/1192090/",
+      "cover": "https://doubanio.viki.moe/view/subject/l/public/s26040205.jpg",
+      "date": "2026-09-16",
+      "status": "wish"
+    }
+  ]
+}

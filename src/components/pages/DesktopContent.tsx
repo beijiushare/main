@@ -8,26 +8,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import CursorGrid from '@/components/features/CursorGrid'
 import ScrollIndicator from '@/components/features/ScrollIndicator'
 import ShinyText from '@/components/ShinyText'
-import { PixelatedCanvas } from '@/components/ui/pixelated-canvas'
 import SpotlightCard from '@/components/ui/SpotlightCard'
-import IconVcard from '@/components/icons/IconVcard'
-import IconCv from '@/components/icons/IconCv'
-import IconGithub from '@/components/icons/IconGithub'
-import IconWechatPublic from '@/components/icons/IconWechatPublic'
-import IconBlog from '@/components/icons/IconBlog'
-import IconBilibili from '@/components/icons/IconBilibili'
+import UnicornCanvas from '@/components/features/UnicornCanvas'
+import LinkRowList from '@/components/features/LinkRowList'
+import { NAV_LINKS } from '@/data/navLinks'
 import { LINK_MAP_GROUPS } from '@/data/links'
+import { SHINY_TEXT_PROPS } from '@/data/site'
 
 gsap.registerPlugin(ScrollTrigger)
-
-const LINK_ROWS = [
-  { label: 'vCard', href: '/vCard', Icon: IconVcard },
-  { label: 'CV', href: '/cv', Icon: IconCv },
-  { label: 'GitHub', href: 'https://github.com/beijiushare', Icon: IconGithub },
-  { label: '公众号', href: '/WechatPublic', Icon: IconWechatPublic },
-  { label: 'Blog', href: 'https://blog.beijiu.top/', Icon: IconBlog },
-  { label: 'Bilibili', href: 'https://space.bilibili.com/3745019517210321', Icon: IconBilibili },
-]
 
 export default function DesktopContent() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -83,40 +71,12 @@ export default function DesktopContent() {
                 <div aria-hidden="true" />
                 <div className="relative flex min-w-0 items-center justify-center">
                   <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center">
-                    <PixelatedCanvas
-                      src="/unicorn.webp"
-                      width={592}
-                      height={448}
-                      cellSize={5}
-                      dotScale={0.8}
-                      shape="circle"
-                      backgroundColor=""
-                      dropoutStrength={0.4}
-                      interactive
-                      distortionStrength={14}
-                      distortionRadius={80}
-                      distortionMode="swirl"
-                      followSpeed={0.2}
-                      jitterStrength={4}
-                      jitterSpeed={4}
-                      sampleAverage
-                      tintColor="#D946EF"
-                      tintStrength={0.12}
-                      objectFit="contain"
-                      className="pointer-events-auto"
-                    />
+                    <UnicornCanvas width={592} height={448} className="pointer-events-auto" />
                   </div>
 
                   <div className="relative z-10 flex items-center justify-center">
                     <h1 className="hero-title">
-                      <ShinyText
-                        text="BEIJIU.TOP"
-                        speed={3}
-                        color="rgba(200,200,200,0.85)"
-                        shineColor="#ffffff"
-                        spread={150}
-                        direction="left"
-                      />
+                      <ShinyText {...SHINY_TEXT_PROPS} />
                     </h1>
                   </div>
                 </div>
@@ -124,18 +84,7 @@ export default function DesktopContent() {
                 <nav className="flex min-h-[100dvh] flex-col items-center justify-center" aria-label="主要链接">
                   <div className="mobile-card-wrapper">
                     <div className="mobile-link-card desktop-link-card">
-                      {LINK_ROWS.map(({ label, href, Icon }) => (
-                        <a
-                          key={label}
-                          href={href}
-                          target={href.startsWith('http') ? '_blank' : undefined}
-                          rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className="mobile-link-row"
-                        >
-                          <Icon />
-                          <span>{label}</span>
-                        </a>
-                      ))}
+                      <LinkRowList items={NAV_LINKS} openInNewTab={false} />
                     </div>
                   </div>
                 </nav>
