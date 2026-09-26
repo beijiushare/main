@@ -29,8 +29,8 @@ export default function MobileContent() {
       </div>
 
       <div className="mobile-link-map">
-        {MOBILE_LINK_MAP_LINKS.map(({ label, href }) => (
-          <a key={href} href={href} target="_blank" rel="noopener noreferrer">
+        {MOBILE_LINK_MAP_LINKS.map(({ label, href, absoluteUrl }) => (
+          <a key={href} href={href} target="_blank" rel="noopener noreferrer" title={absoluteUrl}>
             {label}
           </a>
         ))}

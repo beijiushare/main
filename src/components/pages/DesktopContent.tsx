@@ -101,9 +101,9 @@ export default function DesktopContent() {
                 <div className="link-map-grid" aria-label="链接地图">
                   {LINK_MAP_GROUPS.map((group) => (
                     <div key={group.id} aria-label={group.name}>
-                      {group.links.map(({ display, href }) => (
-                        <a key={href} href={href} target="_blank" rel="noopener noreferrer">
-                          {display}
+                      {group.links.map(({ label, href, absoluteUrl }) => (
+                        <a key={href} href={href} target="_blank" rel="noopener noreferrer" title={absoluteUrl}>
+                          {label}
                         </a>
                       ))}
                     </div>
