@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import LibraryMedia from '@/components/library/LibraryMedia'
-import LibraryStatsCard from '@/components/library/LibraryStatsCard'
 import LibraryThemeToggle from '@/components/library/LibraryThemeToggle'
 import libraryData from '@/data/library/library.json'
 import type { DoubanResponse } from '@/lib/douban'
@@ -27,7 +26,6 @@ export const metadata: Metadata = {
 }
 
 export default function LibraryPage() {
-  const stats = libraryData.stats
 
   return (
     <main className="library-page">
@@ -41,32 +39,21 @@ export default function LibraryPage() {
             </Link>
           </div>
         </header>
-        <p className="library-description">记录读过的书和看过的电影。</p>
+        <p className="library-description">
+          记录<Link className="library-inline-link" href="/">北酒</Link>读过的书和看过的电影。
+        </p>
 
-        <section className="library-stats" aria-labelledby="library-stats-title">
-          <h2 id="library-stats-title">数据统计</h2>
-          <div className="library-stats-grid">
-            <LibraryStatsCard
-              title="书籍"
-              stats={stats.books}
-              items={[
-                { label: '读过', value: stats.books.collect, total: stats.books.total, color: '#3eaf7c' },
-                { label: '想读', value: stats.books.wish, total: stats.books.total, color: '#7b61ff' },
-              ]}
-            />
-            <LibraryStatsCard
-              title="电影"
-              stats={stats.movies}
-              items={[
-                { label: '看过', value: stats.movies.collect, total: stats.movies.total, color: '#3eaf7c' },
-                { label: '在看', value: stats.movies.doings, total: stats.movies.total, color: '#e6a23c' },
-                { label: '想看', value: stats.movies.wish, total: stats.movies.total, color: '#7b61ff' },
-              ]}
-            />
-          </div>
-        </section>
         <LibraryMedia id="movies" kind="movies" data={moviesData} />
         <LibraryMedia id="books" kind="books" data={booksData} />
+
+        <footer className="library-footer">
+          <p>
+            页面参考<a className="library-footer-link" href="https://blog.viki.moe/library" target="_blank" rel="noopener noreferrer">viki的书影音</a>
+          </p>
+          <p>
+            使用了<a className="library-footer-link" href="https://blog.viki.moe/blog-goodies#豆瓣图片代理服务" target="_blank" rel="noopener noreferrer">豆瓣图片代理</a>
+          </p>
+        </footer>
       </div>
     </main>
   )

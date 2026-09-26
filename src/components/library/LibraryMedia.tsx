@@ -20,7 +20,7 @@ function MediaSection({ id, title, items, unit }: MediaSectionProps) {
   const hasMore = visibleCount < items.length
 
   return (
-    <div className="library-section">
+    <div className="library-media-section">
       <div className="library-section-heading">
         <h3 id={id}>{title}</h3>
         <span>({items.length})</span>

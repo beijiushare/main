@@ -50,6 +50,30 @@
   color: #fff;
 }
 
+.library-inline-link,
+.library-footer-link {
+  color: #4d9fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.library-inline-link:hover,
+.library-footer-link:hover {
+  color: #fff;
+}
+
+.library-footer {
+  margin-top: 48px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.library-footer p {
+  margin: 0;
+}
+
 .library-header-actions {
   display: flex;
   align-items: center;
@@ -134,11 +158,23 @@
 }
 
 .library-section {
-  margin-top: 56px;
+  margin-top: 48px;
+}
+
+.library-section + .library-section {
+  margin-top: 48px;
+}
+
+.library-media-section {
+  margin: 0;
+}
+
+.library-media-section + .library-media-section {
+  margin-top: 24px;
 }
 
 .library-section > h2 {
-  margin: 0 0 24px;
+  margin: 0 0 16px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
   font-weight: 600;
@@ -299,98 +335,6 @@
   height: 16px;
 }
 
-.library-stats {
-  margin-top: 0;
-}
-
-.library-stats > h2 {
-  margin: 0 0 16px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.library-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.library-stats-card {
-  padding: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.library-stats-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.library-stats-heading h2 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.library-stats-heading strong {
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.library-stats-total {
-  margin-top: 4px;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
-}
-
-.library-stats-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.library-stat-row {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.library-stat-label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 12px;
-}
-
-.library-stat-label strong {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.library-stat-track {
-  height: 6px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.library-stat-track span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  transition: width 400ms ease;
-}
-
 ::view-transition-image-pair(root) {
   isolation: auto;
 }
@@ -412,27 +356,23 @@
 }
 
 [data-library-theme='light'] .library-title,
-[data-library-theme='light'] .library-section > h2,
-[data-library-theme='light'] .library-stats > h2,
-[data-library-theme='light'] .library-stats-heading h2 {
+[data-library-theme='light'] .library-section > h2 {
   color: #18181b;
 }
 
 [data-library-theme='light'] .library-description,
-[data-library-theme='light'] .library-stats-total,
 [data-library-theme='light'] .library-section-heading h3,
 [data-library-theme='light'] .library-section-heading span,
+[data-library-theme='light'] .library-footer,
 [data-library-theme='light'] .library-empty {
   color: #71717a;
 }
 
 [data-library-theme='light'] .library-back,
-[data-library-theme='light'] .library-theme-toggle,
-[data-library-theme='light'] .library-stat-label {
+[data-library-theme='light'] .library-theme-toggle {
   color: #52525b;
 }
 
-[data-library-theme='light'] .library-stats-card,
 [data-library-theme='light'] .library-theme-toggle {
   border-color: rgba(24, 24, 27, 0.14);
   background: rgba(255, 255, 255, 0.7);
@@ -444,15 +384,6 @@
   color: #18181b;
 }
 
-[data-library-theme='light'] .library-stats-heading strong,
-[data-library-theme='light'] .library-stat-label strong {
-  color: #18181b;
-}
-
-[data-library-theme='light'] .library-stat-track {
-  background: rgba(24, 24, 27, 0.1);
-}
-
 [data-library-theme='light'] .library-card {
   background: #e4e4e7;
 }
@@ -462,7 +393,7 @@
 }
 
 @media (max-width: 560px) {
-  .library-stats-grid {
-    grid-template-columns: 1fr;
+  .library-header {
+    align-items: flex-start;
   }
 }
