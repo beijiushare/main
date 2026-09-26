@@ -1,0 +1,137 @@
+.library-page {
+  min-height: 100dvh;
+  min-width: 320px;
+  background: #0a0a14;
+  color: rgba(255, 255, 255, 0.92);
+  padding: 32px 0 56px;
+  font-family: 'ZSFT-342', 'Segoe UI', system-ui, sans-serif;
+}
+
+.library-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.library-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.library-title {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+}
+
+.library-description {
+  margin: 0 0 48px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+}
+
+.library-back {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.library-back:hover {
+  color: #fff;
+}
+
+.library-inline-link,
+.library-footer-link {
+  color: #4d9fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.library-inline-link:hover,
+.library-footer-link:hover {
+  color: #fff;
+}
+
+.library-footer {
+  margin-top: 48px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.library-footer p {
+  margin: 0;
+}
+
+.library-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.library-section {
+  margin-top: 48px;
+}
+
+.library-section + .library-section {
+  margin-top: 48px;
+}
+
+.library-section > h2 {
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .library-container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 639px) {
+  .library-container {
+    max-width: 380px;
+  }
+
+  .library-title {
+    font-size: 30px;
+  }
+
+  .library-description {
+    margin-bottom: 36px;
+    font-size: 14px;
+  }
+
+  .library-header {
+    gap: 12px;
+  }
+
+  .library-header-actions {
+    gap: 10px;
+  }
+
+  .library-section,
+  .library-section + .library-section {
+    margin-top: 40px;
+  }
+
+  .library-footer {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .library-header {
+    align-items: flex-start;
+  }
+}
